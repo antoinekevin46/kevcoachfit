@@ -1,6 +1,6 @@
 {
-  "version": "17",
-  "theme_plugin_version": "0.13.0",
+  "version": "18",
+  "theme_plugin_version": "0.14.0",
   "sources_restored": true,
   "pricing_validated_and_integrated": true,
   "three_distinct_sections": true,
@@ -18,5 +18,12 @@
     "communes": 20,
     "driving_time_boundary": false,
     "external_map_service_required": false
+  },
+  "vitalivan_first_visit": {
+    "course_guide_cards": 4,
+    "planning_visual": true,
+    "faq_items": 8,
+    "photo_placeholders": 5,
+    "reviews": "placeholder only; no invented testimonials"
   }
 }

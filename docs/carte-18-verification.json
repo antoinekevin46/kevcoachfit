@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "page": "vitalivan",
+      "width": 320,
+      "markers": 20,
+      "zoom": "passed",
+      "select": "passed",
+      "modes": "passed",
+      "keyboard": "passed",
+      "touch_scroll": "pan-y by default",
+      "pinch": "not run",
+      "drag": "not run"
+    },
+    {
+      "page": "ak-anti-nuisible",
+      "width": 320,
+      "markers": 20,
+      "zoom": "passed",
+      "select": "passed",
+      "modes": "passed",
+      "keyboard": "passed",
+      "touch_scroll": "pan-y by default",
+      "pinch": "not run",
+      "drag": "not run"
+    },
+    {
+      "page": "vitalivan",
+      "width": 390,
+      "markers": 20,
+      "zoom": "passed",
+      "select": "passed",
+      "modes": "passed",
+      "keyboard": "passed",
+      "touch_scroll": "pan-y by default",
+      "pinch": "passed",
+      "drag": "not run"
+    },
+    {
+      "page": "ak-anti-nuisible",
+      "width": 390,
+      "markers": 20,
+      "zoom": "passed",
+      "select": "passed",
+      "modes": "passed",
+      "keyboard": "passed",
+      "touch_scroll": "pan-y by default",
+      "pinch": "passed",
+      "drag": "not run"
+    },
+    {
+      "page": "vitalivan",
+      "width": 1440,
+      "markers": 20,
+      "zoom": "passed",
+      "select": "passed",
+      "modes": "passed",
+      "keyboard": "passed",
+      "touch_scroll": "pan-y by default",
+      "pinch": "not run",
+      "drag": "passed"
+    },
+    {
+      "page": "ak-anti-nuisible",
+      "width": 1440,
+      "markers": 20,
+      "zoom": "passed",
+      "select": "passed",
+      "modes": "passed",
+      "keyboard": "passed",
+      "touch_scroll": "pan-y by default",
+      "pinch": "not run",
+      "drag": "passed"
+    }
+  ],
+  "javascript_errors": [],
+  "network_requests": []
+}

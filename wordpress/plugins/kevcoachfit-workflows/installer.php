@@ -30,10 +30,10 @@ function kcf_prepare_workshop_pages($directory,$new_design=false){
     $theme_result=kcf_ensure_bundled_theme();if(is_wp_error($theme_result)){return $theme_result;}
     $pages=get_option('kcf_workshop_pages',array());
     $version=get_option('kcf_workshop_design','01');
-    $transition=($new_design||!$pages)&&'17'!==$version;
+    $transition=($new_design||!$pages)&&'18'!==$version;
     if($transition){
         if($pages){update_option('kcf_workshop_archive_'.$version,$pages,false);}
-        $pages=get_option('kcf_workshop_pending_17',array());$version='17';
+        $pages=get_option('kcf_workshop_pending_18',array());$version='18';
     }
     foreach($titles as $slug=>$title){
         if(!empty($pages[$slug])&&get_post($pages[$slug])){continue;}
@@ -41,11 +41,11 @@ function kcf_prepare_workshop_pages($directory,$new_design=false){
         $content=str_replace('/wp-content/themes/kevcoachfit/',trailingslashit(get_theme_root_uri()).'kevcoachfit/',$content);
         $suffix=' — Atelier privé · Visuel '.$version;
         $id=wp_insert_post(array('post_type'=>'page','post_status'=>'draft','post_title'=>$title.$suffix,'post_name'=>('01'===$version?'atelier-':'atelier-'.$version.'-').$slug,'post_content'=>$content,'comment_status'=>'closed','ping_status'=>'closed','meta_input'=>array('_kcf_workshop_source'=>$slug,'_kcf_workshop_design'=>$version)),true);
-        if(is_wp_error($id)){update_option($transition?'kcf_workshop_pending_17':'kcf_workshop_pages',$pages,false);return $id;}
+        if(is_wp_error($id)){update_option($transition?'kcf_workshop_pending_18':'kcf_workshop_pages',$pages,false);return $id;}
         $pages[$slug]=$id;
-        if($transition){update_option('kcf_workshop_pending_17',$pages,false);}
+        if($transition){update_option('kcf_workshop_pending_18',$pages,false);}
     }
-    update_option('kcf_workshop_pages',$pages,false);update_option('kcf_workshop_design',$version,false);delete_option('kcf_workshop_pending_17');kcf_seed_sessions();return $pages;
+    update_option('kcf_workshop_pages',$pages,false);update_option('kcf_workshop_design',$version,false);delete_option('kcf_workshop_pending_18');kcf_seed_sessions();return $pages;
 }
 function kcf_workshop_admin(){
     if(!current_user_can('manage_options')){wp_die('Accès refusé.');}
@@ -57,11 +57,11 @@ function kcf_workshop_admin(){
     if(is_dir(__DIR__.'/starter-pages')){echo '<form method="post" action="'.esc_url(admin_url('admin-post.php')).'"><input type="hidden" name="action" value="kcf_prepare_workshop">';wp_nonce_field('kcf_prepare_workshop');submit_button('Préparer les pages de démonstration');echo '</form>';}
     else{echo '<p>Dans l’environnement cloud, les pages sont préparées par les scripts. Le ZIP à installer sur votre hébergement inclut le dossier nécessaire.</p>';}
     $pages=get_option('kcf_workshop_pages',array());
-    if($pages&&'17'!==get_option('kcf_workshop_design','01')&&is_dir(__DIR__.'/starter-pages')){
-        echo '<h2>Nouvelle direction visuelle</h2><p>Créez sept nouveaux brouillons : trois espaces autonomes, cartes interactives locales, navigation par activité, tarifs par période et référencement local. Aucun nouveau domaine n’est nécessaire pour cet essai. Vos brouillons précédents sont conservés. Le thème public et la page d’accueil publique restent en place.</p><form method="post" action="'.esc_url(admin_url('admin-post.php')).'"><input type="hidden" name="action" value="kcf_prepare_workshop_design">';wp_nonce_field('kcf_prepare_workshop_design');submit_button('Préparer le nouveau visuel 17');echo '</form>';
+    if($pages&&'18'!==get_option('kcf_workshop_design','01')&&is_dir(__DIR__.'/starter-pages')){
+        echo '<h2>Nouvelle direction visuelle</h2><p>Créez sept nouveaux brouillons : Vitali’Van enrichi avec guide de choix, planning visuel, présentation du coach, FAQ, accès aux salles et emplacements de photos et témoignages. Aucun nouveau domaine n’est nécessaire pour cet essai. Vos brouillons précédents sont conservés. Le thème public et la page d’accueil publique restent en place.</p><form method="post" action="'.esc_url(admin_url('admin-post.php')).'"><input type="hidden" name="action" value="kcf_prepare_workshop_design">';wp_nonce_field('kcf_prepare_workshop_design');submit_button('Préparer le nouveau visuel 18');echo '</form>';
     }
     if($pages){echo '<ul>';foreach($pages as $slug=>$id){if(!get_post($id)){continue;}echo '<li><a href="'.esc_url(kcf_workshop_url($slug)).'" target="_blank" rel="noopener">'.esc_html(get_the_title($id)).'</a> — <a href="'.esc_url(get_edit_post_link($id)).'">Modifier</a></li>';}echo '</ul><p>Les inscriptions et demandes sont des essais privés. Google Agenda, les trajets, les e-mails et les SMS restent à connecter.</p>';}
-    foreach(array('01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16') as $archived_version){
+    foreach(array('01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17') as $archived_version){
         $old=get_option('kcf_workshop_archive_'.$archived_version,array());
         if($old){echo '<h2>Brouillons précédents conservés · '.esc_html($archived_version).'</h2><ul>';foreach($old as $id){if(get_post($id)){echo '<li><a href="'.esc_url(get_edit_post_link($id)).'">'.esc_html(get_the_title($id)).'</a></li>';}}echo '</ul>';}
     }

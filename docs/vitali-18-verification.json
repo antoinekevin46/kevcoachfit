@@ -1,0 +1,46 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "guide_cards": 4,
+      "photo_slots": 5,
+      "faq_items": 8,
+      "original_programs": 4,
+      "planning_zoom": "passed",
+      "faq_keyboard": "passed",
+      "expanded_faq_overflow": false
+    },
+    {
+      "width": 390,
+      "guide_cards": 4,
+      "photo_slots": 5,
+      "faq_items": 8,
+      "original_programs": 4,
+      "planning_zoom": "passed",
+      "faq_keyboard": "passed",
+      "expanded_faq_overflow": false
+    },
+    {
+      "width": 768,
+      "guide_cards": 4,
+      "photo_slots": 5,
+      "faq_items": 8,
+      "original_programs": 4,
+      "planning_zoom": "passed",
+      "faq_keyboard": "passed",
+      "expanded_faq_overflow": false
+    },
+    {
+      "width": 1440,
+      "guide_cards": 4,
+      "photo_slots": 5,
+      "faq_items": 8,
+      "original_programs": 4,
+      "planning_zoom": "passed",
+      "faq_keyboard": "passed",
+      "expanded_faq_overflow": false
+    }
+  ],
+  "large_text": "320px, 200%, all FAQs open: passed",
+  "javascript_errors": []
+}
