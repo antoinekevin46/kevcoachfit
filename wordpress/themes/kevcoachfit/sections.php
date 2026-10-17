@@ -33,7 +33,10 @@ function kcf_section_link($item) {
 }
 function kcf_section_header($section) {
     $info=kcf_section_info($section); if (!$info) { return ''; }
-    $html='<div class="wp-block-group kcf-site-header kcf-section-header kcf-section-'.$section.'"><div class="wp-block-group kcf-brand"><p class="wp-block-site-title"><a href="'.esc_url(kcf_section_url($info['home'])).'">'.esc_html($info['brand']).'</a></p><p class="kcf-brand-location">'.esc_html($info['tag']).'</p></div><nav class="wp-block-navigation" aria-label="'.esc_attr('Navigation '.$info['brand']).'"><ul class="wp-block-navigation__container">';
+    $has_rdv=in_array($section,array('sport','portail'),true);
+    $rdv=$has_rdv?'<a class="kcf-header-rdv" href="'.esc_url(kcf_section_url('reserver')).'" aria-label="Rendez-vous et réservation des cours"><span class="kcf-rdv-desktop">Réserver</span><span class="kcf-rdv-mobile">RDV</span></a>':'';
+    $header_class=$has_rdv?' kcf-header-has-rdv':'';
+    $html='<div class="wp-block-group kcf-site-header kcf-section-header'.$header_class.' kcf-section-'.$section.'"><div class="wp-block-group kcf-brand"><p class="wp-block-site-title"><a href="'.esc_url(kcf_section_url($info['home'])).'">'.esc_html($info['brand']).'</a></p><p class="kcf-brand-location">'.esc_html($info['tag']).'</p></div>'.$rdv.'<nav class="wp-block-navigation" aria-label="'.esc_attr('Navigation '.$info['brand']).'"><ul class="wp-block-navigation__container">';
     $page_links=array(array('Accueil','accueil',''),array('Vitali’Van','vitalivan',''),array('A.K Nuisibles','ak-anti-nuisible',''),array('Miel & vin','terroir-loupiac',''));
     foreach($page_links as $item) { $html.='<li class="wp-block-navigation-item">'.kcf_section_link($item).'</li>'; }
     return '<header class="wp-block-template-part">'.$html.'</ul></nav></div></header>';

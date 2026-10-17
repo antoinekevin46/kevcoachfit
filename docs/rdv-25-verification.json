@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-17",
+  "pages": [
+    {
+      "id": 35,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 36,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 39,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 40,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 63,
+      "status": "draft",
+      "verified": true
+    },
+    {
+      "id": 64,
+      "status": "draft",
+      "verified": true
+    },
+    {
+      "id": 68,
+      "status": "draft",
+      "verified": true
+    },
+    {
+      "id": 69,
+      "status": "draft",
+      "verified": true
+    }
+  ],
+  "public_destination": "https://kevcoachfit.com/reserver/",
+  "public_bookings_enabled": false,
+  "four_page_menu_preserved": true,
+  "shortcuts": [
+    "RDV on mobile",
+    "Réserver on desktop"
+  ]
+}

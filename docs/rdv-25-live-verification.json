@@ -1,0 +1,23 @@
+{
+  "pages": [
+    {
+      "url": "https://kevcoachfit.com/",
+      "mobile_width": 390,
+      "overflow": false,
+      "mobile_menu": "four links preserved",
+      "booking_shortcut": "visible after scrolling; clicked and reached booking information page",
+      "public_display": "verified from actual anonymous response"
+    },
+    {
+      "url": "https://kevcoachfit.com/vitalivan/",
+      "mobile_width": 390,
+      "overflow": false,
+      "mobile_menu": "four links preserved",
+      "booking_shortcut": "visible after scrolling; clicked and reached booking information page",
+      "public_display": "verified from actual anonymous response"
+    }
+  ],
+  "javascript_errors": [],
+  "transport": "actual anonymous responses fetched over verified HTTPS and passed unchanged to Chromium; GET requests only",
+  "instagram_feed": "profile links only; no account authorization or automatic feed"
+}

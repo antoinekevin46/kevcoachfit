@@ -1,0 +1,54 @@
+{
+  "renders": [
+    {
+      "source_page": 35,
+      "width": 320,
+      "booking_shortcut_visible": true,
+      "overflow": false
+    },
+    {
+      "source_page": 36,
+      "width": 320,
+      "booking_shortcut_visible": true,
+      "overflow": false
+    },
+    {
+      "source_page": 35,
+      "width": 390,
+      "booking_shortcut_visible": true,
+      "overflow": false
+    },
+    {
+      "source_page": 36,
+      "width": 390,
+      "booking_shortcut_visible": true,
+      "overflow": false
+    },
+    {
+      "source_page": 35,
+      "width": 768,
+      "booking_shortcut_visible": true,
+      "overflow": false
+    },
+    {
+      "source_page": 36,
+      "width": 768,
+      "booking_shortcut_visible": true,
+      "overflow": false
+    },
+    {
+      "source_page": 35,
+      "width": 1440,
+      "booking_shortcut_visible": true,
+      "overflow": false
+    },
+    {
+      "source_page": 36,
+      "width": 1440,
+      "booking_shortcut_visible": true,
+      "overflow": false
+    }
+  ],
+  "javascript_errors": [],
+  "booking_activation": false
+}
