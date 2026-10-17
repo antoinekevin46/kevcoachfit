@@ -8,7 +8,7 @@ async def main():
  async with async_playwright() as p:
   browser=await p.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox','--disable-dev-shm-usage'])
   page=await browser.new_page();page.set_default_timeout(15000);page.on('pageerror',lambda e:errors.append(str(e)))
-  await page.route('http://127.0.0.1:8080/vitali-check',lambda route:route.fulfill(path=str(ROOT/'artifacts/kevcoachfit-vitrine-18.html'),content_type='text/html'))
+  await page.route('http://127.0.0.1:8080/vitali-check',lambda route:route.fulfill(path=str(ROOT/'artifacts/kevcoachfit-vitrine-19.html'),content_type='text/html'))
   await page.goto('http://127.0.0.1:8080/vitali-check')
   await page.select_option('#page-picker','vitalivan');await page.wait_for_function("document.getElementById('viewer').dataset.page==='vitalivan'")
   f=page.frames[1]
@@ -39,9 +39,9 @@ async def main():
     await snap.set_content(await page.locator('#viewer').get_attribute('srcdoc'))
     await snap.locator('img').evaluate_all('imgs=>{imgs.forEach(i=>i.loading="eager");return Promise.race([Promise.all(imgs.map(i=>i.decode().catch(()=>{}))),new Promise(resolve=>setTimeout(resolve,3000))]);}')
     await snap.add_style_tag(content='.kcf-jump-links{position:static !important}')
-    await snap.locator('.kcf-course-guide').screenshot(path=str(ROOT/'docs'/f'vitali-18-guide-{width}.png'))
-    await snap.locator('.kcf-coach-section').screenshot(path=str(ROOT/'docs'/f'vitali-18-coach-{width}.png'))
-    await snap.locator('.kcf-planning-layout').screenshot(path=str(ROOT/'docs'/f'vitali-18-planning-{width}.png'))
+    await snap.locator('.kcf-course-guide').screenshot(path=str(ROOT/'docs'/f'vitali-19-guide-{width}.png'))
+    await snap.locator('.kcf-coach-section').screenshot(path=str(ROOT/'docs'/f'vitali-19-coach-{width}.png'))
+    await snap.locator('.kcf-planning-layout').screenshot(path=str(ROOT/'docs'/f'vitali-19-planning-{width}.png'))
     await snap.close()
    results.append({'width':width,'guide_cards':4,'photo_slots':5,'faq_items':8,'original_programs':4,'planning_zoom':'passed','faq_keyboard':'passed','expanded_faq_overflow':False})
    await f.locator('.kcf-faq-item').evaluate_all('list=>list.forEach(d=>d.open=false)')
@@ -51,6 +51,6 @@ async def main():
   assert await f.evaluate('document.documentElement.scrollWidth<=innerWidth+1'),'large text with open FAQ overflow'
   assert not errors,errors
   await browser.close()
- (ROOT/'docs/vitali-18-verification.json').write_text(json.dumps({'results':results,'large_text':'320px, 200%, all FAQs open: passed','javascript_errors':errors},ensure_ascii=False,indent=2)+'\n')
+ (ROOT/'docs/vitali-19-verification.json').write_text(json.dumps({'results':results,'large_text':'320px, 200%, all FAQs open: passed','javascript_errors':errors},ensure_ascii=False,indent=2)+'\n')
  print('Guide, 5 emplacements photo, 8 questions, planning agrandi, clavier et texte à 200 % vérifiés.')
 asyncio.run(main())

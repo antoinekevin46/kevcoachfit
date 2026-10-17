@@ -1,0 +1,42 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "faq": 6,
+      "steps": 3,
+      "anchors": "passed",
+      "prefilled_email": "passed",
+      "keyboard": "passed",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "faq": 6,
+      "steps": 3,
+      "anchors": "passed",
+      "prefilled_email": "passed",
+      "keyboard": "passed",
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "faq": 6,
+      "steps": 3,
+      "anchors": "passed",
+      "prefilled_email": "passed",
+      "keyboard": "passed",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "faq": 6,
+      "steps": 3,
+      "anchors": "passed",
+      "prefilled_email": "passed",
+      "keyboard": "passed",
+      "overflow": false
+    }
+  ],
+  "large_text": "320px, 200%, all FAQ open: passed",
+  "javascript_errors": []
+}

@@ -86,7 +86,7 @@ document.querySelectorAll('[data-order-total]').forEach(total=>{const form=total
   await browser.close()
  payload=json.dumps({'documents':documents,'assets':assets,'labels':LABELS},ensure_ascii=False).replace('<','\\u003c')
  options=''.join('<option value="'+k+'">'+v+'</option>' for k,v in LABELS.items())
- shell=r'''<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KevCoachFit — Vitrine 18</title><style>*{box-sizing:border-box}body{margin:0;background:#111;color:white;font:14px/1.4 system-ui,sans-serif}.toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid #555}label{font-weight:700}select{max-width:100%;background:#202020;color:white;border:1px solid #777;border-radius:24px;padding:9px 14px;font:inherit}small{color:#ccc}.viewer{width:100%;height:calc(100dvh - 78px);border:0;display:block;background:white}@media(max-width:600px){.toolbar{gap:6px;padding:8px 12px}small{width:100%;font-size:11px}.viewer{height:calc(100dvh - 94px)}} </style><div class="toolbar"><label for="page-picker">Vitrine 18</label><select id="page-picker">OPTIONS</select><small>Maquette privée · formulaires de démonstration · tarifs par période validés</small></div><iframe id="viewer" class="viewer" title="Aperçu du site" sandbox="allow-scripts allow-same-origin allow-popups"></iframe><script>
+ shell=r'''<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KevCoachFit — Vitrine 19</title><style>*{box-sizing:border-box}body{margin:0;background:#111;color:white;font:14px/1.4 system-ui,sans-serif}.toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid #555}label{font-weight:700}select{max-width:100%;background:#202020;color:white;border:1px solid #777;border-radius:24px;padding:9px 14px;font:inherit}small{color:#ccc}.viewer{width:100%;height:calc(100dvh - 78px);border:0;display:block;background:white}@media(max-width:600px){.toolbar{gap:6px;padding:8px 12px}small{width:100%;font-size:11px}.viewer{height:calc(100dvh - 94px)}} </style><div class="toolbar"><label for="page-picker">Vitrine 19</label><select id="page-picker">OPTIONS</select><small>Maquette privée · formulaires de démonstration · tarifs par période validés</small></div><iframe id="viewer" class="viewer" title="Aperçu du site" sandbox="allow-scripts allow-same-origin allow-popups"></iframe><script>
 const data=PAYLOAD;
 const picker=document.getElementById('page-picker'),viewer=document.getElementById('viewer');
 function show(slug,anchor=''){
@@ -100,6 +100,6 @@ picker.addEventListener('change',()=>show(picker.value));
 window.addEventListener('message',event=>{if(event.source===viewer.contentWindow&&event.data?.kcfPage)show(event.data.kcfPage,event.data.anchor||'');});
 show('accueil');
 </script></html>'''.replace('OPTIONS',options).replace('PAYLOAD',payload)
- out=ROOT/'artifacts/kevcoachfit-vitrine-18.html';out.write_text(shell);out.chmod(0o644)
+ out=ROOT/'artifacts/kevcoachfit-vitrine-19.html';out.write_text(shell);out.chmod(0o644)
  print('Vitrine autonome créée :',len(documents),'pages,',len(assets),'ressources intégrées,',out.stat().st_size,'octets.')
 asyncio.run(main())

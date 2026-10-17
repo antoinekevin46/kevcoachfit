@@ -1,7 +1,7 @@
 /*
 Theme Name: KevCoachFit
 Description: Thème de blocs Gutenberg pour les trois univers de KevCoachFit.
-Version: 0.14.0
+Version: 0.15.0
 Requires at least: 6.6
 Text Domain: kevcoachfit
 */
@@ -894,3 +894,24 @@ body.kcf-universe-terroir { background:#f7f1e6; }
  .kcf-choice-card h3 { font-size:clamp(1.6rem,7vw,2.2rem); }
  .kcf-faq-item summary { font-size:1rem; }
 }
+
+/* A.K 19: a simple contact journey, using the original yellow/black identity. */
+.kcf-ak-shortcuts { display:flex; flex-wrap:wrap; gap:8px 12px; margin-block:24px 40px; }
+.kcf-ak-shortcuts a { display:inline-flex; align-items:center; min-height:44px; padding:8px 16px; border:1px solid #ffe60077; border-radius:30px; color:#ffe600; text-decoration:none; font-weight:700; line-height:1.5; }
+.kcf-ak-process,.kcf-ak-faq,.kcf-ak-contact-card { margin-block:clamp(32px,5vw,64px); }
+.kcf-ak-process > h2,.kcf-ak-faq > h2,.kcf-ak-contact-card > h2 { font-family:'KCF Display',Impact,sans-serif; font-size:clamp(2rem,4vw,3.2rem); line-height:1.12; margin-block:16px 28px; }
+.kcf-ak-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; margin-block:28px; }
+.kcf-ak-step { min-width:0; border:1px solid #ffe60066; border-top:4px solid #ffe600; padding:clamp(20px,3vw,30px); background:#1b1b13; }
+.kcf-ak-step .kcf-ak-step-number { font-family:'KCF Display',Impact,sans-serif; font-size:2rem; color:#ffe600; line-height:1; margin:0 0 20px; }
+.kcf-ak-step h3 { font-family:'KCF Display',Impact,sans-serif; font-size:clamp(1.5rem,2.8vw,2rem); line-height:1.2; margin:0 0 20px; }
+.kcf-ak-step p { line-height:1.8; }
+.kcf-ak-prelaunch-note { border-left:3px solid #ffe600; padding:12px 18px; }
+.kcf-ak-faq-item { padding:20px 0; border-bottom:1px solid #ffe60055; }
+.kcf-ak-faq-item summary { cursor:pointer; font-size:1.0625rem; line-height:1.65; font-weight:700; padding:6px 0; }
+.kcf-ak-faq-item[open] summary { color:#ffe600; margin-bottom:14px; }
+.kcf-ak-faq-item p { max-width:80ch; line-height:1.9; }
+.kcf-ak-faq-item summary:focus-visible { outline:2px solid #ffe600; outline-offset:5px; }
+.kcf-ak-contact-card { border:1px solid #ffe600; padding:clamp(24px,4vw,44px); background:#1b1b13; }
+.kcf-ak-contact-card > p { max-width:80ch; line-height:1.8; }
+.kcf-ak-contact-card .kcf-ak-mail-note { font-size:.875rem; color:#ddd9bd; }
+@media(max-width:800px) { .kcf-ak-steps { grid-template-columns:minmax(0,1fr); } }
