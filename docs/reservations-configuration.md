@@ -8,7 +8,7 @@ Le thème et le module atelier 0.11.1 restent actifs. Les sept maquettes 20 rest
 
 L’édition gratuite d’Amelia présente dans le dépôt officiel fournit une implémentation Google de type Starter sans synchronisation effective. Sa liste d’attente ne constitue pas la proposition FIFO individuelle de deux heures demandée. Aucune licence n’a été contournée ou modifiée.
 
-Le module indépendant **KevCoachFit — réservations et agenda 1.0.0** est préparé et testé localement. Son ZIP installable est déposé dans la médiathèque WordPress (pièce jointe 81) :
+Le module indépendant **KevCoachFit — réservations et agenda 1.0.0** est maintenant installé et actif sur le WordPress distant (vérification du 17 octobre 2026). Il reste en mode privé. Les formulaires fonctionnels sont reliés aux brouillons Réserver (68) et Mon inscription (69), et leur rendu serveur a été vérifié. Trente séances sont préparées. Google Agenda reste déconnecté et la réception des e-mails ainsi que la régularité de la tâche serveur restent à vérifier. Son ZIP installable est déposé dans la médiathèque WordPress (pièce jointe 81) :
 
 https://kevcoachfit.com/wp-content/uploads/2026/10/kevcoachfit-reservations-1.0.0-8e045b4390a8.zip
 
@@ -56,7 +56,7 @@ Envoyer l’e-mail de test depuis le menu et confirmer sa réception, y compris 
 
 Configurer un appel régulier de WP-Cron chez l’hébergeur, idéalement chaque minute. Sans tâche serveur, les traitements dépendent des visites. Le menu affiche la prochaine échéance et le dernier passage. Vérifier les refus et expirations sur le vrai hébergement ; les tests effectués ici sont locaux.
 
-L’ouverture réelle reste bloquée tant que les e-mails et la tâche planifiée n’ont pas été confirmés et que les deux pages fonctionnelles ne sont pas publiées. Aucune ouverture publique effectuée pendant cette préparation. La liaison des formulaires opérationnels aux maquettes reste à faire après installation, en relisant les modifications de Kévin pour ne pas les écraser. Le script `bind-reservation-drafts.py` prépare cette liaison, conserve les textes et les effets visuels et a été vérifié hors ligne. Il refuse de modifier quoi que ce soit avant que le nouveau module soit accessible.
+L’ouverture réelle reste bloquée tant que les e-mails et la tâche planifiée n’ont pas été confirmés et que les deux pages fonctionnelles ne sont pas publiées. Aucune ouverture publique effectuée pendant cette préparation. La liaison des formulaires opérationnels aux brouillons 68 et 69 a été effectuée avec `bind-reservation-drafts.py`, après sauvegarde et relecture des contenus distants. Les shortcodes sont présents et leur rendu fonctionnel est vérifié. Les pages restent en brouillon et les réservations publiques restent fermées. Les sauvegardes et le rapport de vérification sont conservés dans `artifacts/reservations-binding/`.
 
 Les SMS ne sont pas implémentés : il faudrait un prestataire, un compte et généralement des crédits. Le calcul automatique des trajets n’est pas implémenté. Les interventions A.K gardent leur prise de contact sur devis et leur ouverture à confirmer après formation ; aucune durée d’intervention inventée.
 
