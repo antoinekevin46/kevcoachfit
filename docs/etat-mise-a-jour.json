@@ -1,6 +1,6 @@
 {
-  "version": "18",
-  "theme_plugin_version": "0.14.0",
+  "version": "20",
+  "theme_plugin_version": "0.16.0",
   "sources_restored": true,
   "pricing_validated_and_integrated": true,
   "three_distinct_sections": true,
@@ -25,5 +25,17 @@
     "faq_items": 8,
     "photo_placeholders": 5,
     "reviews": "placeholder only; no invented testimonials"
-  }
+  },
+  "weekly_followup": {
+    "next_date": "2026-10-24",
+    "timezone": "Europe/Paris",
+    "autonomous_chat_notification_enabled": false,
+    "calendar_import_file": "docs/rappel-hebdomadaire-kevcoachfit.ics",
+    "notes": "docs/bloc-notes-projet.md"
+  },
+  "ak_additional_services": [
+    "fourmis",
+    "cafards/blattes"
+  ],
+  "agreed_hours_preserved": true
 }

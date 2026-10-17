@@ -1,4 +1,4 @@
-# KevCoachFit — version de test 19
+# KevCoachFit — version de test 20
 
 Un WordPress, trois espaces distincts : Vitali’Van, A.K Nuisibles et Terroir Antoine. Aucun domaine supplémentaire nécessaire pour cet essai. Sources restaurées à partir du pack 15 fourni par Kévin, puis mises à jour avec les tarifs explicitement validés.
 
@@ -11,13 +11,14 @@ Depuis `/workspace/kevcoachfit` :
 ```sh
 ./scripts/bootstrap.sh
 python3 scripts/build-package.py
-docker compose run --rm cli wp eval-file /project/scripts/test-design-19.php
+docker compose run --rm cli wp eval-file /project/scripts/test-design-20.php
 docker compose run --rm cli wp eval-file /project/scripts/test-pack.php
 python3 scripts/test-seo.py
 python3 scripts/build-showcase.py
 python3 scripts/check-showcase.py
 python3 scripts/check-map.py
 python3 scripts/check-vitalivan.py
+python3 scripts/check-ak.py
 ```
 
 Le bootstrap crée les mots de passe locaux aléatoires dans `.env` si nécessaire, démarre les deux services et prépare sept brouillons privés. Il est réexécutable. Ne pas afficher ni partager `.env`. Les images Docker sont épinglées par empreinte. La validation est locale ; aucun de ces scripts ne modifie kevcoachfit.com. Le port est limité à la boucle locale pour les contrôles internes ; les fichiers de vitrine constituent les livrables à consulter.
@@ -28,9 +29,9 @@ Les scripts de tests travaillent dans cet atelier local. Le contrôle HTTP SEO p
 
 - `wordpress/themes/kevcoachfit/` : thème de blocs, identités et navigation par activité, effets et métadonnées.
 - `wordpress/plugins/kevcoachfit-workflows/` : atelier de démonstration ; pages source dans `starter-pages/`.
-- `scripts/build-package.py` : produit le ZIP installable `artifacts/kevcoachfit-pack-19.zip` et son thème inclus. Les fichiers de démonstration générés sont ignorés par Git.
-- `scripts/build-showcase.py` : produit `artifacts/kevcoachfit-vitrine-19.html`, avec ressources intégrées et formulaires sans envoi.
-- `docs/installation-19.md` : revue et installation ultérieure ; les nouveaux brouillons conservent les précédents.
+- `scripts/build-package.py` : produit le ZIP installable `artifacts/kevcoachfit-pack-20.zip` et son thème inclus. Les fichiers de démonstration générés sont ignorés par Git.
+- `scripts/build-showcase.py` : produit `artifacts/kevcoachfit-vitrine-20.html`, avec ressources intégrées et formulaires sans envoi.
+- `docs/installation-20.md` : revue et installation ultérieure ; les nouveaux brouillons conservent les précédents.
 - `docs/tarifs-valides.md` : tarifs par période confirmés.
 - `docs/fiche-google-ak-nuisibles.md` : champs et description A.K à confirmer avant ouverture.
 - `docs/fiche-google-coaching.md` : description et observations sur les fiches suspendues, sans démarche Google effectuée.
@@ -44,3 +45,7 @@ Les scripts de tests travaillent dans cet atelier local. Le contrôle HTTP SEO p
 Les réservations publiques, Google Agenda, les trajets, l’envoi des e-mails et SMS et le traitement planifié de la liste d’attente restent à terminer. Abby n’est pas connecté. Le terroir conserve deux vendeurs et des prix produits partiellement provisoires. A.K reste une activité en préparation jusqu’à confirmation. Pas d’achat ni de configuration DNS, et pas d’accès WordPress distant utilisé pour écrire.
 
 Git conserve les sources et les visuels nécessaires à la reconstruction ; il ne remplace pas une sauvegarde du WordPress de production avec sa base de données. Les données locales, mots de passe et archives de livraison sont exclus du dépôt. Conserver également les ZIP livrés et les sauvegardes de l’hébergeur.
+
+## Bloc-notes et suivi
+
+`docs/bloc-notes-projet.md` conserve les horaires, règles de réservation et éléments à demander une fois par semaine. Prochain point proposé : 24 octobre 2026. Aucun envoi automatique depuis le chat n’est configuré. `docs/rappel-hebdomadaire-kevcoachfit.ics` peut être importé dans un agenda pour un rappel le samedi à 10 h (Europe/Paris).

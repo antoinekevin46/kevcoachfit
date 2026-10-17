@@ -7,7 +7,7 @@ async def main():
  async with async_playwright() as p:
   browser=await p.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox','--disable-dev-shm-usage'])
   page=await browser.new_page();errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
-  await page.route('http://127.0.0.1:8080/ak-check',lambda route:route.fulfill(path=str(ROOT/'artifacts/kevcoachfit-vitrine-19.html'),content_type='text/html'))
+  await page.route('http://127.0.0.1:8080/ak-check',lambda route:route.fulfill(path=str(ROOT/'artifacts/kevcoachfit-vitrine-20.html'),content_type='text/html'))
   await page.goto('http://127.0.0.1:8080/ak-check')
   await page.select_option('#page-picker','ak-anti-nuisible')
   await page.wait_for_function("document.getElementById('viewer').dataset.page==='ak-anti-nuisible'")
@@ -16,6 +16,10 @@ async def main():
    await page.set_viewport_size({'width':width,'height':1000})
    assert await f.locator('.kcf-ak-faq-item').count()==6
    assert await f.locator('.kcf-ak-step').count()==3
+   assert await f.locator('.kcf-ak-extra-card').count()==2
+   assert await f.locator('.kcf-ak-hours-card').count()==3
+   assert '7 h à 19 h' in await f.locator('.kcf-ak-availability').inner_text()
+   assert '7 h à 16 h' in await f.locator('.kcf-ak-availability').inner_text()
    for link in await f.locator('.kcf-ak-shortcuts a').all():
     assert await f.locator(await link.get_attribute('href')).count()==1
    mail=await f.locator('.kcf-ak-contact-card a[href^="mailto:"]').get_attribute('href')
@@ -28,6 +32,12 @@ async def main():
    await f.locator('.kcf-ak-faq-item').evaluate_all('list=>list.forEach(d=>d.open=true)')
    assert await f.evaluate('document.documentElement.scrollWidth<=innerWidth+1'),width
    await f.locator('.kcf-ak-faq-item').evaluate_all('list=>list.forEach(d=>d.open=false)')
+   if width in [390,1440]:
+    snap=await browser.new_page(viewport={'width':width,'height':1000})
+    await snap.set_content(await page.locator('#viewer').get_attribute('srcdoc'))
+    await snap.locator('.kcf-ak-extra-services').screenshot(path=str(ROOT/'docs'/f'ak-20-services-{width}.png'))
+    await snap.locator('.kcf-ak-availability').screenshot(path=str(ROOT/'docs'/f'ak-20-horaires-{width}.png'))
+    await snap.close()
    results.append({'width':width,'faq':6,'steps':3,'anchors':'passed','prefilled_email':'passed','keyboard':'passed','overflow':False})
   await page.set_viewport_size({'width':320,'height':1000})
   await f.locator('.kcf-ak-faq-item').evaluate_all('list=>list.forEach(d=>d.open=true)')
@@ -35,6 +45,6 @@ async def main():
   assert await f.evaluate('document.documentElement.scrollWidth<=innerWidth+1'),'200% overflow'
   assert not errors,errors
   await browser.close()
- (ROOT/'docs/ak-19-verification.json').write_text(json.dumps({'results':results,'large_text':'320px, 200%, all FAQ open: passed','javascript_errors':errors},ensure_ascii=False,indent=2)+'\n')
+ (ROOT/'docs/ak-20-verification.json').write_text(json.dumps({'results':results,'large_text':'320px, 200%, all FAQ open: passed','javascript_errors':errors},ensure_ascii=False,indent=2)+'\n')
  print('A.K : 4 largeurs, 6 FAQ clavier, 3 étapes, liens de devis et texte à 200 % vérifiés.')
 asyncio.run(main())

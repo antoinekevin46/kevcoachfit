@@ -37,7 +37,7 @@ try:
   if slug=='vitalivan':check('janvier–juin' in head,'sports: periods in metadata')
   if slug=='ak-anti-nuisible':check('Activité en préparation' in head,'pest: truthful prelaunch metadata')
  check(len(titles)==len(set(titles)),'all SEO titles unique')
- Path(ROOT/'docs/seo-16-verification.json').write_text(json.dumps({'checks':checks,'passed':len(checks),'target':'local WordPress 6.8.3; no remote site writes'},ensure_ascii=False,indent=2)+'\n')
+ Path(ROOT/'docs/seo-20-verification.json').write_text(json.dumps({'checks':checks,'passed':len(checks),'target':'local WordPress 6.8.3; no remote site writes'},ensure_ascii=False,indent=2)+'\n')
  print(str(len(checks))+' contrôles SEO sur les vraies réponses HTTP : succès.')
 finally:
  subprocess.run(cmd+['restore'],cwd=ROOT,check=True)

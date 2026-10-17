@@ -1,7 +1,7 @@
 /*
 Theme Name: KevCoachFit
 Description: Thème de blocs Gutenberg pour les trois univers de KevCoachFit.
-Version: 0.15.0
+Version: 0.16.0
 Requires at least: 6.6
 Text Domain: kevcoachfit
 */
@@ -915,3 +915,13 @@ body.kcf-universe-terroir { background:#f7f1e6; }
 .kcf-ak-contact-card > p { max-width:80ch; line-height:1.8; }
 .kcf-ak-contact-card .kcf-ak-mail-note { font-size:.875rem; color:#ddd9bd; }
 @media(max-width:800px) { .kcf-ak-steps { grid-template-columns:minmax(0,1fr); } }
+
+/* A.K 20: additional services and the agreed appointment windows. */
+.kcf-ak-extra-services,.kcf-ak-availability { margin-block:clamp(32px,5vw,64px); }
+.kcf-ak-extra-services > h2,.kcf-ak-availability > h2 { font-family:'KCF Display',Impact,sans-serif; font-size:clamp(2rem,4vw,3.2rem); line-height:1.15; }
+.kcf-ak-extra-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.kcf-ak-hours-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.kcf-ak-extra-card,.kcf-ak-hours-card { min-width:0; padding:clamp(20px,3vw,30px); border:1px solid #ffe60066; background:#1b1b13; }
+.kcf-ak-extra-card h3,.kcf-ak-hours-card h3 { color:#ffe600; font-size:clamp(1.3rem,2.5vw,1.7rem); line-height:1.3; }
+.kcf-ak-extra-card p,.kcf-ak-hours-card p { line-height:1.8; }
+@media(max-width:800px) { .kcf-ak-extra-grid,.kcf-ak-hours-grid { grid-template-columns:minmax(0,1fr); } }

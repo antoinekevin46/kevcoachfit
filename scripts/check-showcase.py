@@ -10,7 +10,7 @@ async def main():
   browser=await p.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox','--disable-dev-shm-usage'])
   page=await browser.new_page();page.set_default_timeout(10000)
   page.on('pageerror',lambda e:errors.append(str(e)))
-  await page.route('http://127.0.0.1:8080/offline-check',lambda route:route.fulfill(path=str(ROOT/'artifacts/kevcoachfit-vitrine-19.html'),content_type='text/html'))
+  await page.route('http://127.0.0.1:8080/offline-check',lambda route:route.fulfill(path=str(ROOT/'artifacts/kevcoachfit-vitrine-20.html'),content_type='text/html'))
   await page.goto('http://127.0.0.1:8080/offline-check');await page.wait_for_timeout(500)
   page.on('request',lambda r:requests.append(r.url) if r.url.startswith(('http:','https:')) else None)
   for width in [320,390,768,1440]:
@@ -31,7 +31,7 @@ async def main():
      for text in ['120 €','220 €','80 €','147 €','Janvier–juin','Septembre–Noël']:assert text in prices,(slug,text)
      assert not re.search(r'\b(?:60|110)\s*€\s*/\s*trimestre',await frame.locator('body').inner_text())
     if width in [390,1440] and slug in ['vitalivan','ak-anti-nuisible','terroir-loupiac']:
-     await page.screenshot(path=str(ROOT/'docs'/f'vitrine-19-{slug}-{width}.png'),full_page=False)
+     await page.screenshot(path=str(ROOT/'docs'/f'vitrine-20-{slug}-{width}.png'),full_page=False)
     results.append({'page':slug,'width':width,'brand':state['brand'],'overflow':state['overflow'],'h1':state['h1']})
   # Large-text reflow on the new fees and independent headers.
   for slug in ['vitalivan','ak-anti-nuisible','terroir-loupiac','reserver']:
@@ -48,6 +48,6 @@ async def main():
   assert not requests,requests
   assert not errors,errors
   await browser.close()
- (ROOT/'docs/vitrine-19-verification.json').write_text(json.dumps({'renders':results,'large_text':'4 pages at 320px and 200%','mobile_menu':'passed','cross_section_link':'passed','network_requests':requests,'javascript_errors':errors},ensure_ascii=False,indent=2)+'\n')
+ (ROOT/'docs/vitrine-20-verification.json').write_text(json.dumps({'renders':results,'large_text':'4 pages at 320px and 200%','mobile_menu':'passed','cross_section_link':'passed','network_requests':requests,'javascript_errors':errors},ensure_ascii=False,indent=2)+'\n')
  print('28 rendus vérifiés, tarifs, menus, images et grands textes : succès ; aucune requête réseau depuis la vitrine.')
 asyncio.run(main())

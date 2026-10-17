@@ -11,7 +11,7 @@ async def main():
    context=await browser.new_context(viewport={'width':width,'height':1000},has_touch=width<600)
    page=await context.new_page();page.set_default_timeout(12000)
    page.on('pageerror',lambda e:errors.append(str(e)))
-   await page.route('http://127.0.0.1:8080/map-check',lambda route:route.fulfill(path=str(ROOT/'artifacts/kevcoachfit-vitrine-19.html'),content_type='text/html'))
+   await page.route('http://127.0.0.1:8080/map-check',lambda route:route.fulfill(path=str(ROOT/'artifacts/kevcoachfit-vitrine-20.html'),content_type='text/html'))
    await page.goto('http://127.0.0.1:8080/map-check');await page.wait_for_timeout(200)
    page.on('request',lambda r:requests.append(r.url) if r.url.startswith(('http:','https:')) else None)
    for slug in ['vitalivan','ak-anti-nuisible']:
@@ -62,13 +62,13 @@ async def main():
      await page.mouse.down();await page.mouse.move(box['x']+box['width']/2+55,box['y']+box['height']/2+20,steps=6);await page.mouse.up()
      assert before!=await root.locator('.kcf-map-stage').get_attribute('transform'),(slug,'drag')
     await root.locator('[data-map-action="reset"]').click()
-    if width in [390,1440]:await canvas.screenshot(path=str(ROOT/'docs'/f'carte-19-{slug}-{width}.png'))
+    if width in [390,1440]:await canvas.screenshot(path=str(ROOT/'docs'/f'carte-20-{slug}-{width}.png'))
     assert await frame.evaluate('document.documentElement.scrollWidth<=innerWidth+1'),(slug,width,'overflow')
     checks.append({'page':slug,'width':width,'markers':20,'zoom':'passed','select':'passed','modes':'passed','keyboard':'passed','touch_scroll':'pan-y by default','pinch':'passed' if width==390 else 'not run','drag':'passed' if width==1440 else 'not run'})
    await context.close()
   assert not errors,errors
   assert not requests,requests
   await browser.close()
- (ROOT/'docs/carte-19-verification.json').write_text(json.dumps({'checks':checks,'javascript_errors':errors,'network_requests':requests},ensure_ascii=False,indent=2)+'\n')
+ (ROOT/'docs/carte-20-verification.json').write_text(json.dumps({'checks':checks,'javascript_errors':errors,'network_requests':requests},ensure_ascii=False,indent=2)+'\n')
  print('Cartes vérifiées sur 6 rendus : zoom, sélection, vues, clavier, déplacement et pincement tactile ; aucune requête réseau.')
 asyncio.run(main())

@@ -1,0 +1,205 @@
+{
+  "renders": [
+    {
+      "page": "accueil",
+      "width": 320,
+      "brand": "KevCoachFit",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "vitalivan",
+      "width": 320,
+      "brand": "Vitali’Van",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "ak-anti-nuisible",
+      "width": 320,
+      "brand": "A.K Nuisibles",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "terroir-loupiac",
+      "width": 320,
+      "brand": "Terroir Antoine",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "contact",
+      "width": 320,
+      "brand": "KevCoachFit",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "reserver",
+      "width": 320,
+      "brand": "Vitali’Van",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "mes-reservations",
+      "width": 320,
+      "brand": "Vitali’Van",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "accueil",
+      "width": 390,
+      "brand": "KevCoachFit",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "vitalivan",
+      "width": 390,
+      "brand": "Vitali’Van",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "ak-anti-nuisible",
+      "width": 390,
+      "brand": "A.K Nuisibles",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "terroir-loupiac",
+      "width": 390,
+      "brand": "Terroir Antoine",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "contact",
+      "width": 390,
+      "brand": "KevCoachFit",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "reserver",
+      "width": 390,
+      "brand": "Vitali’Van",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "mes-reservations",
+      "width": 390,
+      "brand": "Vitali’Van",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "accueil",
+      "width": 768,
+      "brand": "KevCoachFit",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "vitalivan",
+      "width": 768,
+      "brand": "Vitali’Van",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "ak-anti-nuisible",
+      "width": 768,
+      "brand": "A.K Nuisibles",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "terroir-loupiac",
+      "width": 768,
+      "brand": "Terroir Antoine",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "contact",
+      "width": 768,
+      "brand": "KevCoachFit",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "reserver",
+      "width": 768,
+      "brand": "Vitali’Van",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "mes-reservations",
+      "width": 768,
+      "brand": "Vitali’Van",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "accueil",
+      "width": 1440,
+      "brand": "KevCoachFit",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "vitalivan",
+      "width": 1440,
+      "brand": "Vitali’Van",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "ak-anti-nuisible",
+      "width": 1440,
+      "brand": "A.K Nuisibles",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "terroir-loupiac",
+      "width": 1440,
+      "brand": "Terroir Antoine",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "contact",
+      "width": 1440,
+      "brand": "KevCoachFit",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "reserver",
+      "width": 1440,
+      "brand": "Vitali’Van",
+      "overflow": false,
+      "h1": 1
+    },
+    {
+      "page": "mes-reservations",
+      "width": 1440,
+      "brand": "Vitali’Van",
+      "overflow": false,
+      "h1": 1
+    }
+  ],
+  "large_text": "4 pages at 320px and 200%",
+  "mobile_menu": "passed",
+  "cross_section_link": "passed",
+  "network_requests": [],
+  "javascript_errors": []
+}

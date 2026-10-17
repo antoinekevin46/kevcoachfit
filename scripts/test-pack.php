@@ -23,4 +23,4 @@ finally {
  require_once ABSPATH.'wp-admin/includes/file.php';WP_Filesystem();global $wp_filesystem;$wp_filesystem->delete($root,true);wp_clean_themes_cache(false);
 }
 if($error){WP_CLI::error($error);}
-WP_CLI::success('Pack 18: actual fresh install, upgrade, repeated preparation, required assets, rights, unrelated files and public settings verified.');
+WP_CLI::success('Pack 20: actual fresh install, upgrade, repeated preparation, required assets, rights, unrelated files and public settings verified.');

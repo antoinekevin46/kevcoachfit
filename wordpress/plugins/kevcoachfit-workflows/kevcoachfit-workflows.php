@@ -2,7 +2,7 @@
 /**
  * Plugin Name: KevCoachFit — atelier
  * Description: Réservations de démonstration, listes d’attente et demandes distinctes pour les deux producteurs.
- * Version: 0.15.0
+ * Version: 0.16.0
  * Requires PHP: 8.0
  * Requires at least: 6.6
  */
