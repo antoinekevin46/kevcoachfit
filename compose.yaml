@@ -30,6 +30,7 @@ services:
       - wp:/var/www/html
       - ./wordpress/themes/kevcoachfit:/var/www/html/wp-content/themes/kevcoachfit
       - ./wordpress/plugins/kevcoachfit-workflows:/var/www/html/wp-content/plugins/kevcoachfit-workflows
+      - ./wordpress/plugins/kevcoachfit-reservations:/var/www/html/wp-content/plugins/kevcoachfit-reservations
   cli:
     image: wordpress@sha256:36243da432a0f0a3b56dc3240ecee9b159108d71305e7c064d987a20a465bfde
     profiles: [tools]
@@ -44,6 +45,7 @@ services:
       - wp:/var/www/html
       - ./wordpress/themes/kevcoachfit:/var/www/html/wp-content/themes/kevcoachfit
       - ./wordpress/plugins/kevcoachfit-workflows:/var/www/html/wp-content/plugins/kevcoachfit-workflows
+      - ./wordpress/plugins/kevcoachfit-reservations:/var/www/html/wp-content/plugins/kevcoachfit-reservations
       - .:/project
 volumes:
   wp:

@@ -51,7 +51,7 @@
           const expiry=document.createElement('p');expiry.textContent='Confirmez avant le '+new Intl.DateTimeFormat('fr-FR',{dateStyle:'short',timeStyle:'short',timeZone:'Europe/Paris'}).format(new Date(value.offered_until));manager.append(expiry);
           addButton('Accepter la place',()=>refresh('confirm'));
         }
-        if(['reserved','offered','waiting'].includes(value.status)&&Date.now()<=new Date(value.starts_at).getTime()-7200000){addButton('Annuler mon inscription',()=>{if(window.confirm('Annuler cette inscription de démonstration ?'))refresh('cancel');});}
+        if(['offered','waiting'].includes(value.status)||(value.status==='reserved'&&Date.now()<=new Date(value.starts_at).getTime()-7200000)){addButton('Annuler mon inscription',()=>{if(window.confirm('Annuler cette inscription de démonstration ?'))refresh('cancel');});}
         addButton('Actualiser le suivi',()=>refresh('status'));
         const note=document.createElement('p');note.className='kcf-field-note';note.textContent='Démonstration : les e-mails et SMS ne sont pas encore connectés. Revenez sur ce lien pour consulter votre statut.';manager.append(note);
       }catch(error){manager.textContent=error.message;}

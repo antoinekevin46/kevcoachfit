@@ -1,0 +1,37 @@
+.kcfr-form{border:1px solid #e5e5e5;padding:clamp(20px,4vw,40px);margin:32px 0;background:#ffffff;color:#111111}
+.kcfr-form label{display:block;font-weight:700;margin:18px 0 8px;font-size:1rem}
+.kcfr-form input:not([type=checkbox]),.kcfr-form select,.kcfr-form textarea{display:block;width:100%;min-width:0;max-width:100%;border:1px solid #111111;border-radius:0;padding:13px 12px;color:#111111;background:#ffffff;font:inherit;font-size:1rem;min-height:48px;box-shadow:none}
+.kcfr-form input:focus-visible,.kcfr-form select:focus-visible,.kcfr-form textarea:focus-visible{outline:3px solid #111111;outline-offset:3px}
+.kcfr-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.kcfr-form-grid>div{min-width:0}
+.kcfr-form .kcfr-check{display:flex;gap:12px;align-items:flex-start;font-weight:400;line-height:1.6;margin:24px 0}.kcfr-check input{width:20px;height:20px;flex-shrink:0;margin-top:4px;accent-color:#111111}
+.kcfr-form button,.kcfr-management button{background:#111111;color:#ffffff;border:1px solid #111111;border-radius:30px;padding:14px 24px;min-height:48px;font:inherit;font-size:1rem;font-weight:700;cursor:pointer;margin:12px 12px 0 0;box-shadow:none}
+.kcfr-form button:disabled{cursor:wait;background:#e5e5e5;color:#111111}
+.kcfr-form-result:not(:empty){border-top:1px solid #111111;margin-top:24px;padding-top:20px;line-height:1.7}.kcfr-form-result[data-state=error]{font-weight:700}
+.kcfr-management-link{display:block;font-weight:700;text-decoration:underline;margin-top:16px}
+.kcfr-field-note,.kcfr-demo{font-size:.9375rem;line-height:1.7}.kcfr-demo{border-left:3px solid #111111;padding:12px 20px;background:#e5e5e5;margin-block:24px}
+.kcfr-honeypot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.kcfr-form fieldset{border:0;padding:0;margin:0;min-width:0}.kcfr-form legend{font-weight:700;font-size:1.25rem;margin-bottom:16px}
+.kcfr-order-line{display:grid;grid-template-columns:minmax(0,1fr) 80px;gap:16px;align-items:center;border-bottom:1px solid #e5e5e5;padding:12px 0}.kcfr-order-line label{margin:0}.kcfr-order-line small{display:block;font-weight:400;margin-top:6px}.kcfr-order-total{font-size:1.25rem}
+@media(max-width:650px){.kcfr-form-grid{grid-template-columns:1fr;gap:0}.kcfr-form{padding:20px 16px}.kcfr-form select{font-size:.9375rem}.kcfr-order-line{grid-template-columns:minmax(0,1fr) 64px}}
+
+/* Keep each control inside its own card, including padding and borders. */
+.kcfr-form,.kcfr-form *,.kcfr-management,.kcfr-management *{box-sizing:border-box}
+.kcfr-form,.kcfr-management{width:100%;max-width:100%;min-width:0}
+.kcfr-form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.kcfr-form-grid>div,.kcfr-order-line>*{min-width:0}
+.kcfr-form fieldset,.kcfr-form legend{max-width:100%;min-width:0}
+.kcfr-form input:not([type=checkbox]),.kcfr-form select,.kcfr-form textarea{width:100%;max-width:100%;min-width:0}
+.kcfr-form textarea{resize:vertical}
+.kcfr-form label,.kcfr-form legend,.kcfr-form p,.kcfr-form-result,.kcfr-management,.kcfr-management-link{overflow-wrap:anywhere}
+.kcfr-form button,.kcfr-management button{max-width:100%;white-space:normal;overflow-wrap:anywhere;margin-right:0}
+.kcfr-session-preview:not(:empty){padding:14px 16px;margin:12px 0 24px;background:#edf3e7;border-left:3px solid #174e3b;color:#174e3b;font-size:1rem;line-height:1.7}
+.kcfr-session-preview:empty{display:none}
+.kcfr-form input[type=date],.kcfr-form input[type=time]{min-width:0;max-width:100%;text-align:left}
+.kcfr-form input::-webkit-datetime-edit{min-width:0;padding:0}
+.kcfr-form input::-webkit-date-and-time-value{text-align:left}
+@media(max-width:650px){
+ .kcfr-form-grid{grid-template-columns:minmax(0,1fr)}
+ .kcfr-form input:not([type=checkbox]),.kcfr-form select,.kcfr-form textarea{font-size:16px}
+ .kcfr-form button,.kcfr-management button{display:block;width:100%;margin:16px 0 0;padding:14px 16px}
+ .kcfr-form .kcfr-check{font-size:1rem}
+}

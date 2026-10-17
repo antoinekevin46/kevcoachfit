@@ -80,13 +80,13 @@ function kcf_refresh_locked( $session, $now ) {
     $table = $wpdb->prefix . 'kcf_bookings';
     $wpdb->query( $wpdb->prepare( "UPDATE $table SET status='expired' WHERE session_id=%d AND status='offered' AND offered_until<=%s", $session->id, kcf_utc( $now ) ) );
     if(kcf_collective_closed($session->starts_at)){return;}
-    // Preserve a full two-hour response window; do not offer a seat after class starts.
-    if ( kcf_timestamp( $session->starts_at ) < $now + 2 * HOUR_IN_SECONDS ) { return; }
+    // Offer for at most two hours, always ending by the start of the class.
+    if ( kcf_timestamp( $session->starts_at ) <= $now ) { return; }
     $free = max( 0, $session->capacity - kcf_occupancy( $session->id ) );
     if ( ! $free ) { return; }
     $waiting = $wpdb->get_col( $wpdb->prepare( "SELECT id FROM $table WHERE session_id=%d AND status='waiting' ORDER BY id ASC LIMIT %d", $session->id, $free ) );
     foreach ( $waiting as $id ) {
-        $wpdb->update( $table, array( 'status' => 'offered', 'offered_until' => kcf_utc( $now + 2 * HOUR_IN_SECONDS ) ), array( 'id' => $id ) );
+        $wpdb->update( $table, array( 'status' => 'offered', 'offered_until' => kcf_utc( min($now + 2 * HOUR_IN_SECONDS, kcf_timestamp($session->starts_at)) ) ), array( 'id' => $id ) );
     }
 }
 function kcf_book_session( $session_id, $input, $now = null ) {
@@ -135,7 +135,7 @@ function kcf_manage_booking( $id, $token, $operation = 'status', $now = null ) {
     kcf_refresh_locked( $session, $now );
     $booking = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM {$wpdb->prefix}kcf_bookings WHERE id=%d FOR UPDATE", $id ) );
     if ( 'cancel' === $operation ) {
-        if ( $now > kcf_timestamp( $session->starts_at ) - 2 * HOUR_IN_SECONDS ) {
+        if ( 'reserved' === $booking->status && $now > kcf_timestamp( $session->starts_at ) - 2 * HOUR_IN_SECONDS ) {
             $wpdb->query( 'COMMIT' ); return kcf_error( 'cutoff', 'L’annulation en ligne ferme deux heures avant le cours.', 409 );
         }
         $wpdb->update( $wpdb->prefix . 'kcf_bookings', array( 'status' => 'cancelled' ), array( 'id' => $id ) );
@@ -199,7 +199,7 @@ function kcf_save_request( $input ) {
         if ( 7 === (int) $parsed->format('N') || $at < '07:00' ) { return kcf_error( 'hours', 'Les demandes concernent le lundi au samedi, à partir de 7 h.' ); }
         $end = array( 1=>'17:00', 2=>'17:30', 4=>'18:00', 5=>'19:00', 6=>'16:00' )[(int)$parsed->format('N')] ?? null;
         if ( 3 === (int)$parsed->format('N') && $parsed->format('Y-m') >= '2027-01' ) { $end = '17:45'; }
-        if ( $end && $parsed->modify('+60 minutes')->format('H:i') > $end ) { return kcf_error( 'hours', 'La séance et l’échange doivent se terminer avant les cours ou la fin de journée.' ); }
+        if ( $end && $parsed->modify('+60 minutes') > new DateTimeImmutable($date.' '.$end,kcf_timezone()) ) { return kcf_error( 'hours', 'La séance et l’échange doivent se terminer avant les cours ou la fin de journée.' ); }
         $details = array('preferred_date'=>$date, 'preferred_time'=>$at, 'address'=>$address, 'onsite_minutes'=>60, 'requires_travel_validation'=>true, 'requires_calendar_validation'=>true, 'demo'=>true);
     } else { return kcf_error( 'kind', 'Type de demande inconnu.' ); }
     $note = sanitize_textarea_field( $input['note'] ?? '' );

@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-17",
+  "scope": "local WordPress plus read-only remote audit; installable ZIP staged in remote media library",
+  "core_assertions": 80,
+  "original_workflow_regressions": 3,
+  "ui_verification": "docs/reservations-ui-verification.json",
+  "google_requests": "mocked; no real Google authorization",
+  "email_delivery": "intercepted; no real client messages",
+  "remote_extension_installed": false,
+  "public_bookings_enabled": false,
+  "native_rest_zip_install": "not exposed; owner must upload/activate the prepared extension in WordPress",
+  "draft_binding": "prepared and tested offline; not applied before installation",
+  "package": "docs/reservations-package.json"
+}

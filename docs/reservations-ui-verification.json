@@ -1,0 +1,37 @@
+{
+  "renders": [
+    {
+      "width": 320,
+      "forms": 2,
+      "overflow": false,
+      "mode": "private"
+    },
+    {
+      "width": 390,
+      "forms": 2,
+      "overflow": false,
+      "mode": "private"
+    },
+    {
+      "width": 768,
+      "forms": 2,
+      "overflow": false,
+      "mode": "private"
+    },
+    {
+      "width": 1440,
+      "forms": 2,
+      "overflow": false,
+      "mode": "private"
+    }
+  ],
+  "admin_settings": "loaded, secret masked, private mode, capacity change 15 to 16 to 15 verified",
+  "http_booking_and_cancellation": "passed in private mode; no real email",
+  "concurrent_http_bookings": {
+    "requests": 20,
+    "reserved": 15,
+    "waiting": 5,
+    "parallelism": 4
+  },
+  "javascript_errors": []
+}

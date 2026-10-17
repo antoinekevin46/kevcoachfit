@@ -53,3 +53,7 @@ Git conserve les sources et les visuels nécessaires à la reconstruction ; il n
 ## Maquettes dans WordPress
 
 À la demande de Kévin du 17 octobre 2026, sept nouveaux brouillons de la version 20 ont été transférés sans remplacer les pages publiques ni le thème actif. Liens et fonctionnement dans `docs/maquette-wordpress-20.md`. Relire les changements distants avant toute mise à jour. Les réservations restent des démonstrations sans envoi.
+
+## Réservations gratuites et Google Agenda
+
+Module indépendant dans `wordpress/plugins/kevcoachfit-reservations/` ; guide `docs/reservations-configuration.md`. Le ZIP est préparé, pas installé sur le WordPress distant. En local : activer avec `docker compose run --rm cli wp plugin activate kevcoachfit-reservations`, puis exécuter `docker compose run --rm cli wp eval-file /project/scripts/test-reservations.php`, `python3 scripts/check-reservations-ui.py` et `python3 scripts/build-reservations-package.py`. Google et e-mails sont simulés dans les tests PHP ; aucun jeton Google réel n’est disponible. Les fonctions publiques restent fermées par défaut.

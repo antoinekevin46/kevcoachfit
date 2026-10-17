@@ -81,3 +81,13 @@ Cette reconnexion autorise les vérifications demandées, pas la publication de 
 Kévin a explicitement demandé le transfert sur WordPress après le succès de la reconnexion. Sept nouveaux brouillons « Maquette 20 » créés (Accueil 63, Vitali’Van 64, A.K Nuisibles 65, Terroir 66, Contact 67, Réserver 68, Mon inscription 69) et treize médias transférés. Mise en forme et effets propres aux brouillons, sans mise à jour du thème public. Les anciens brouillons sont conservés. Voir `maquette-wordpress-20.md` pour les liens et la modification.
 
 Cette demande remplace la consigne antérieure de garder toutes les maquettes uniquement ici ; elle n’autorise pas une publication. Toujours relire les brouillons distants avant de les modifier à nouveau afin de conserver les changements faits par Kévin dans WordPress. Les formulaires de ces pages restent sans envoi réel ; Google Agenda et notifications ne sont pas connectés.
+
+## Réservations et agenda — demande du 17 octobre 2026
+
+Kévin demande la mise en place des réservations, de Google Agenda et la recherche de bugs. Choix explicite : sans licence payante. Ne pas redemander ce budget ni les horaires. Audit Amelia et tests du connecteur effectués en lecture seule ; aucun cours ou client ajouté dans Amelia.
+
+Module indépendant gratuit préparé dans `wordpress/plugins/kevcoachfit-reservations`, archive installable dans la médiathèque distante (pièce jointe 81), non encore installée. Instructions et statut exact dans `reservations-configuration.md`. L’étape indispensable est un téléversement/activation du ZIP dans Extensions par Kévin, puis autorisation OAuth Google dans son compte. Aucun abonnement engagé, aucune réservation publique activée, aucun e-mail/SMS réel envoyé pendant les tests.
+
+Après activation : vérifier `/wp-json/kcfr/v1/health` avec les accès existants, relire les maquettes distantes (préserver ses modifications), intégrer les formulaires fonctionnels et les liens de gestion. Les formulaires de la vitrine actuelle bloquent volontairement les envois : limiter ce blocage aux anciens formulaires de démonstration lors de l’intégration. Vérifier l’envoi d’e-mails sur le vrai hébergement, le passage régulier du traitement des attentes et la connexion Google avant de déclarer le système opérationnel.
+
+80 tests de logique locaux et scénario HTTP concurrent : 20 demandes, 15 réservées et 5 en attente. Google et e-mails simulés ; connexion Google réelle toujours manquante. Coaching et A.K restent à confirmer manuellement pour les trajets et durées non calculés. SMS reportés, sans compte de fournisseur.

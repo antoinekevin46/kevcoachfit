@@ -47,5 +47,19 @@
     "contact": 67,
     "reserver": 68,
     "mes-reservations": 69
+  },
+  "reservations_setup": {
+    "plugin": "kevcoachfit-reservations",
+    "version": "1.0.0",
+    "paid_license": false,
+    "installed_remote": false,
+    "package_media_id": 81,
+    "core_assertions": 80,
+    "concurrent_http_requests": 20,
+    "reserved": 15,
+    "waiting": 5,
+    "google_real_authorization": false,
+    "sms_connected": false,
+    "automatic_travel": false
   }
 }

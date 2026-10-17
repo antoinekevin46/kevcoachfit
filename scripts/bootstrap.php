@@ -12,6 +12,10 @@ update_option('WPLANG','fr_FR');
 update_user_meta(get_user_by('login','atelier_kevin')->ID,'show_admin_bar_front','false');
 update_option('blog_public','0');
 activate_plugin('kevcoachfit-workflows/kevcoachfit-workflows.php');
+if(is_readable(WP_PLUGIN_DIR.'/kevcoachfit-reservations/kevcoachfit-reservations.php')){
+    $connected=activate_plugin('kevcoachfit-reservations/kevcoachfit-reservations.php');
+    if(is_wp_error($connected)){WP_CLI::error($connected->get_error_message());}
+}
 switch_theme('kevcoachfit');
 wp_set_current_user(get_user_by('login','atelier_kevin')->ID);
 $pages=kcf_prepare_workshop_pages(WP_PLUGIN_DIR.'/kevcoachfit-workflows/starter-pages',true);
