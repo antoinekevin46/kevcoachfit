@@ -122,3 +122,10 @@ Les formulaires opérationnels restent dans les brouillons privés 68 et 69. Le 
 Liens de profils Instagram confirmés : Kévin @kev_coach_fit et Yohan @yoantoine46. Accès rendus visibles dans les deux espaces et conservés dans les brouillons correspondants. Aucun flux automatique de publications ni publication croisée vers Instagram : aucune autorisation de compte Instagram n’a été effectuée. Aucun compte A.K ou miel inventé. Expliquer cette distinction simplement si Kévin demande ce qui est connecté.
 
 Sauvegardes avant/après dans `artifacts/public-release-22/`, rapport `public-release-22-verification.json`. Les quatre espaces ont été préparés et vérifiés à quatre largeurs en local avant transfert, puis chaque page publique a été contrôlée par requête anonyme. Les titres SEO et les URL canoniques existants sont conservés. A.K reste présenté en préparation et les tarifs provisoires miel/alcools restent signalés. Aucun e-mail client envoyé pendant l’opération.
+
+
+## Flux Instagram demandés — 17 octobre 2026
+
+Après la distinction entre liens de profil et publications automatiques, Kévin répond « Ok tu peux le faire ». L’extension gratuite `instagram-feed/instagram-feed` 6.14.0 était déjà installée inactive ; elle a été activée. Source officielle WordPress et prise en charge de plusieurs flux séparés vérifiées. Les pages Vitali’Van et Terroir continuent de répondre, liens de profil préservés.
+
+Les flux automatiques ne sont pas encore affichés. Les sources existantes ne sont pas consultables via les routes REST disponibles ; Kévin doit sélectionner ou autoriser son compte dans le constructeur, et Yohan ou son gestionnaire doit faire de même pour son compte si nécessaire. Ne pas réclamer de mot de passe ni token dans le chat. Écran : `admin.php?page=sbi-feed-builder`. Après création des flux, récupérer leurs vrais shortcodes (ne pas deviner les IDs), intégrer chacun dans son espace public et dans son brouillon correspondant, puis vérifier visuellement les publications réelles. Voir `instagram-connexion.md` et `instagram-setup-verification.json`. Aucune publication croisée du site vers les réseaux ni achat Pro.

@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-17",
+  "plugin": "instagram-feed/instagram-feed",
+  "version": "6.14.0",
+  "before": "inactive",
+  "after": "active",
+  "license_purchased": false,
+  "official_plugin": "https://wordpress.org/plugins/instagram-feed/",
+  "multiple_separate_feeds": "supported by official plugin description and FAQ",
+  "wordpress_setup_url": "https://kevcoachfit.com/wp-admin/admin.php?page=sbi-feed-builder",
+  "profile_targets": {
+    "sport": "kev_coach_fit",
+    "wine": "yoantoine46"
+  },
+  "public_pages_checked": [
+    "https://kevcoachfit.com/vitalivan/",
+    "https://kevcoachfit.com/terroir-loupiac/"
+  ],
+  "profile_links_preserved": true,
+  "automatic_feeds_embedded": false,
+  "connected_sources": "not readable through the available authenticated REST endpoints; owner must select or authorize accounts in the plugin",
+  "no_account_password_requested": true,
+  "remaining": "Account authorization or source selection, create two separate feeds, then insert their real shortcodes into matching existing social sections."
+}
