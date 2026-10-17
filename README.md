@@ -57,3 +57,5 @@ Git conserve les sources et les visuels nécessaires à la reconstruction ; il n
 ## Réservations gratuites et Google Agenda
 
 Module indépendant dans `wordpress/plugins/kevcoachfit-reservations/` ; guide `docs/reservations-configuration.md`. Le ZIP est préparé, pas installé sur le WordPress distant. En local : activer avec `docker compose run --rm cli wp plugin activate kevcoachfit-reservations`, puis exécuter `docker compose run --rm cli wp eval-file /project/scripts/test-reservations.php`, `python3 scripts/check-reservations-ui.py` et `python3 scripts/build-reservations-package.py`. Google et e-mails sont simulés dans les tests PHP ; aucun jeton Google réel n’est disponible. Les fonctions publiques restent fermées par défaut.
+
+Relecture des brouillons après installation des réservations : [validation 21](docs/verification-21.md), contrôles mobile, formulaires et textes. Google Agenda reste à autoriser ; aucune ouverture publique.

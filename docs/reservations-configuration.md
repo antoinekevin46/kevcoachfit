@@ -8,7 +8,7 @@ Le thème et le module atelier 0.11.1 restent actifs. Les sept maquettes 20 rest
 
 L’édition gratuite d’Amelia présente dans le dépôt officiel fournit une implémentation Google de type Starter sans synchronisation effective. Sa liste d’attente ne constitue pas la proposition FIFO individuelle de deux heures demandée. Aucune licence n’a été contournée ou modifiée.
 
-Le module indépendant **KevCoachFit — réservations et agenda 1.0.0** est maintenant installé et actif sur le WordPress distant (vérification du 17 octobre 2026). Il reste en mode privé. Les formulaires fonctionnels sont reliés aux brouillons Réserver (68) et Mon inscription (69), et leur rendu serveur a été vérifié. Trente séances sont préparées. Google Agenda reste déconnecté et la réception des e-mails ainsi que la régularité de la tâche serveur restent à vérifier. Son ZIP installable est déposé dans la médiathèque WordPress (pièce jointe 81) :
+Le module indépendant **KevCoachFit — réservations et agenda 1.0.0** est maintenant installé et actif sur le WordPress distant (vérification du 17 octobre 2026). Il reste en mode privé. Les formulaires fonctionnels sont reliés aux brouillons Réserver (68) et Mon inscription (69), et leur rendu serveur a été vérifié. Trente séances sont préparées. Google Agenda reste déconnecté et la réception de l’e-mail de test est confirmée par Kévin ; la régularité de la tâche serveur reste à vérifier. Son ZIP installable est déposé dans la médiathèque WordPress (pièce jointe 81) :
 
 https://kevcoachfit.com/wp-content/uploads/2026/10/kevcoachfit-reservations-1.0.0-8e045b4390a8.zip
 
@@ -38,7 +38,7 @@ L’API WordPress actuelle permet la modification des pages et le téléversemen
 
 ## Connexion Google — après installation
 
-La connexion doit être autorisée avec le compte Google de Kévin. Elle n’est pas encore effectuée.
+La connexion doit être autorisée avec le compte Google de Kévin. Elle n’est pas encore effectuée. Le projet `vitalivanreservations`, Calendar API et le client OAuth Web ont été créés par Kévin ; la saisie des paramètres dans WordPress et le consentement sont en attente.
 
 1. Dans Google Cloud, utiliser un projet personnel, activer **Google Calendar API**, configurer l’écran de consentement OAuth et créer un client **Application Web**.
 2. Ajouter exactement l’URI de redirection affichée dans le menu WordPress. Sur le domaine actuel : `https://kevcoachfit.com/wp-admin/admin-post.php?action=kcfr_google_callback`.
@@ -52,7 +52,7 @@ En mode Test d’une application Google externe, les jetons peuvent expirer apr�
 
 ## Vérification avant ouverture réelle
 
-Envoyer l’e-mail de test depuis le menu et confirmer sa réception, y compris les indésirables. La réussite de `wp_mail` signifie que WordPress a accepté l’envoi, pas que le destinataire l’a reçu. Si nécessaire, configurer le transport e-mail de l’hébergeur avant ouverture.
+L’e-mail de test a été reçu et confirmé par Kévin le 17 octobre ; le réglage de réception vérifiée est enregistré. La réussite de `wp_mail` signifie que WordPress a accepté l’envoi, pas que le destinataire l’a reçu. Si nécessaire, configurer le transport e-mail de l’hébergeur avant ouverture.
 
 Configurer un appel régulier de WP-Cron chez l’hébergeur, idéalement chaque minute. Sans tâche serveur, les traitements dépendent des visites. Le menu affiche la prochaine échéance et le dernier passage. Vérifier les refus et expirations sur le vrai hébergement ; les tests effectués ici sont locaux.
 

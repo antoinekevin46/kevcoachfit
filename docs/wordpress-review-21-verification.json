@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-17",
+  "drafts": [
+    {
+      "id": 64,
+      "status": "draft",
+      "saved_and_verified": true
+    },
+    {
+      "id": 65,
+      "status": "draft",
+      "saved_and_verified": true
+    },
+    {
+      "id": 68,
+      "status": "draft",
+      "saved_and_verified": true
+    },
+    {
+      "id": 69,
+      "status": "draft",
+      "saved_and_verified": true
+    }
+  ],
+  "public_pages_unchanged": true,
+  "public_page_count": 12,
+  "live": false,
+  "mail_verified": true,
+  "google_connected": false,
+  "customer_notifications_sent_by_review": false
+}

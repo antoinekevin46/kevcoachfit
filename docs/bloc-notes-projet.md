@@ -29,7 +29,7 @@ Aucun outil d’envoi programmé n’est disponible dans ce chat : aucune notifi
 - 15 personnes maximum par cours ; réservation à chaque séance, même pour les abonnés.
 - Une place libre peut être réservée jusqu’au début du cours.
 - Annulation jusqu’à 2 h avant le début.
-- Liste d’attente dans l’ordre d’inscription : proposer une place libérée, laisser 2 h pour confirmer. Ne pas dépasser le début du cours ; le moteur local ne fait pas d’offre s’il ne reste pas les 2 h complètes.
+- Liste d’attente dans l’ordre d’inscription : proposer une place libérée, laisser 2 h pour confirmer. Le délai est de 2 h au maximum, limité au début du cours ; une offre reste possible s’il reste moins de 2 h.
 - Notifications e-mail et SMS souhaitées pour l’offre de place. Premier cours : e-mail d’accueil avec invitation à appeler Kévin pour toute question, tapis, eau et consignes adaptées au programme.
 - Google Agenda choisi. Objectif : un agenda commun évitant les conflits entre cours, coaching et A.K ; tenir compte des déplacements et de la durée réelle d’intervention.
 - Géolocalisation/routage et agenda ne sont pas connectés. Prévoir une vérification manuelle tant que le calcul fiable des déplacements n’existe pas. Ne pas promettre une confirmation instantanée A.K.
@@ -86,8 +86,19 @@ Cette demande remplace la consigne antérieure de garder toutes les maquettes un
 
 Kévin demande la mise en place des réservations, de Google Agenda et la recherche de bugs. Choix explicite : sans licence payante. Ne pas redemander ce budget ni les horaires. Audit Amelia et tests du connecteur effectués en lecture seule ; aucun cours ou client ajouté dans Amelia.
 
-Module indépendant gratuit préparé dans `wordpress/plugins/kevcoachfit-reservations`, archive installable dans la médiathèque distante (pièce jointe 81), non encore installée. Instructions et statut exact dans `reservations-configuration.md`. L’étape indispensable est un téléversement/activation du ZIP dans Extensions par Kévin, puis autorisation OAuth Google dans son compte. Aucun abonnement engagé, aucune réservation publique activée, aucun e-mail/SMS réel envoyé pendant les tests.
+Module indépendant gratuit préparé dans `wordpress/plugins/kevcoachfit-reservations`, archive installable dans la médiathèque distante (pièce jointe 81), maintenant installée et activée. Instructions et statut exact dans `reservations-configuration.md`. L’étape indispensable est un téléversement/activation du ZIP dans Extensions par Kévin, puis autorisation OAuth Google dans son compte. Aucun abonnement engagé, aucune réservation publique activée, aucun e-mail/SMS réel envoyé pendant les tests.
 
 Après activation : vérifier `/wp-json/kcfr/v1/health` avec les accès existants, relire les maquettes distantes (préserver ses modifications), intégrer les formulaires fonctionnels et les liens de gestion. Les formulaires de la vitrine actuelle bloquent volontairement les envois : limiter ce blocage aux anciens formulaires de démonstration lors de l’intégration. Vérifier l’envoi d’e-mails sur le vrai hébergement, le passage régulier du traitement des attentes et la connexion Google avant de déclarer le système opérationnel.
 
 80 tests de logique locaux et scénario HTTP concurrent : 20 demandes, 15 réservées et 5 en attente. Google et e-mails simulés ; connexion Google réelle toujours manquante. Coaching et A.K restent à confirmer manuellement pour les trajets et durées non calculés. SMS reportés, sans compte de fournisseur.
+
+
+## Vérification complémentaire des pages — 17 octobre 2026
+
+Extension de réservation 1.0.0 active sur WordPress. Formulaires reliés aux brouillons Réserver 68 et Mon inscription 69 ; les pages publiques affichent encore l’ancienne démonstration. Réception de l’e-mail de test confirmée par Kévin et réglage `mail_verified` enregistré. Aucune ouverture publique. Un passage WP-Cron est observé, mais sa régularité côté hébergeur n’est pas encore confirmée.
+
+Google Cloud : Kévin a créé le projet `vitalivanreservations` avec son compte personnel, activé Calendar API, configuré l’écran OAuth et créé un client Web. La saisie des identifiants dans WordPress et l’autorisation du compte qui possède son agenda restent en attente ; ne pas demander de secret dans le chat. Kévin est occupé et demande de continuer sur les pages sans nouvelle question.
+
+Relecture des sept brouillons actuels avec sauvegarde préalable. Corrections sur Vitali’Van, A.K Nuisibles, Réserver et Mon inscription : règles d’attente de dernière minute, retrait d’attente, suivi privé et lien perdu, confirmation personnelle du coaching, distinction des aides historiques du flyer et conditions actuelles, texte de récupération d’essaims cohérent avec la préparation de l’activité. Nouveaux formulaires harmonisés avec le vert Vitali’Van et conseils pratiques de réservation ajoutés. Les flyers d’origine restent conservés.
+
+28 rendus locaux de copies des brouillons distants à 320, 390, 768 et 1440 px ; menus mobiles, affichage des vrais shortcodes, absence de débordement horizontal, pas d’erreur JavaScript. Treize médias distants vérifiés par téléchargement et empreinte ; mêmes fichiers servis au navigateur de test local. Liens internes et ancres vérifiés. Les blocs modifiés de Réserver restent valides dans Gutenberg. Aucune réservation ni notification client créée pendant cette relecture. Rapports `wordpress-review-21-*.json`.

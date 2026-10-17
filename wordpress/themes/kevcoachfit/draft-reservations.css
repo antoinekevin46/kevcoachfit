@@ -1,0 +1,18 @@
+
+/* KCF_REVIEW_20261017 — functional forms match the private sport drafts. */
+.kcf-preview-root{overflow-wrap:break-word}
+.kcf-preview-root :is(h1,h2,h3,[id]){scroll-margin-top:100px}
+.kcf-preview-root :is(a,button,input,select,textarea,summary):focus-visible{outline:3px solid #337e60;outline-offset:4px}
+.kcf-preview-root .kcfr-form{background:#fffef9;border:1px solid #bccab2;border-top:4px solid #174e3b;border-radius:16px;box-shadow:0 12px 32px #174e3b0a}
+.kcf-preview-root .kcfr-form :is(input:not([type=checkbox]),select,textarea){border-color:#a2b39a;border-radius:8px;min-height:48px;font-size:16px}
+.kcf-preview-root .kcfr-form :is(input,select,textarea):focus-visible{outline-color:#337e60}
+.kcf-preview-root :is(.kcfr-form button,.kcfr-management button){background:#174e3b;border-color:#174e3b;color:#fff}
+.kcf-preview-root :is(.kcfr-form button,.kcfr-management button):hover{background:#226449}
+.kcf-preview-root .kcfr-check input{accent-color:#174e3b}
+.kcf-preview-root .kcfr-demo{background:#e7efdf;border-color:#174e3b;color:#173d2e;border-radius:0 10px 10px 0}
+.kcf-preview-root .kcfr-form-result[data-state=error]{color:#9b2636;border-color:#9b2636}
+.kcf-preview-root .kcfr-form-result[data-state=success]{color:#174e3b;border-color:#174e3b}
+.kcf-preview-root .kcfr-management{padding:clamp(18px,4vw,32px);border:1px solid #bccab2;border-radius:16px;background:#fffef9}
+.kcf-preview-root .kcfr-management-link{overflow-wrap:anywhere;min-height:44px;display:flex;align-items:center}
+.kcf-preview-root .kcf-faq-item summary{min-height:48px;align-content:center;padding-block:12px;cursor:pointer}
+@media(max-width:650px){.kcf-preview-root .kcfr-form{margin-block:24px;padding:20px 16px}.kcf-preview-root .kcfr-demo{padding:14px 16px}.kcf-preview-root .kcfr-form-grid{gap:0}.kcf-preview-root .kcfr-form :is(input,select,textarea){font-size:16px}}
