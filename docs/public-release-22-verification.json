@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-17",
+  "authorization": "User asked to display latest versions publicly",
+  "pages": [
+    {
+      "id": 35,
+      "url": "https://kevcoachfit.com/",
+      "http": 200,
+      "public_content_verified": true,
+      "sha256": "f13cdcfe1043560adaa3d6ad1619ecab357a441d4fa47971ea331cd4c486a7cc"
+    },
+    {
+      "id": 36,
+      "url": "https://kevcoachfit.com/vitalivan/",
+      "http": 200,
+      "public_content_verified": true,
+      "sha256": "cf5692484e0cc14b21a0d54163a96d05d784ee8f39d67940eeb274d468145173"
+    },
+    {
+      "id": 41,
+      "url": "https://kevcoachfit.com/ak-anti-nuisible/",
+      "http": 200,
+      "public_content_verified": true,
+      "sha256": "a484865fc318549261f8fe05f2635df508352462dc1595ca6bba3197a9951d86"
+    },
+    {
+      "id": 37,
+      "url": "https://kevcoachfit.com/terroir-loupiac/",
+      "http": 200,
+      "public_content_verified": true,
+      "sha256": "f58c4327856ceef5b49225f049514d84f4370e4d3b63d5f7fdc1e16260a30d88"
+    },
+    {
+      "id": 38,
+      "url": "https://kevcoachfit.com/contac/",
+      "http": 200,
+      "public_content_verified": true,
+      "sha256": "c209201a3aab248922aec163382e670010a84d96d0e2cc4116e2935f5fa8373c"
+    },
+    {
+      "id": 39,
+      "url": "https://kevcoachfit.com/reserver/",
+      "http": 200,
+      "public_content_verified": true,
+      "sha256": "45ebd5163ee777fd7bcb4c48c54e90f7860b7900b166e83679baab8439fe5d69"
+    },
+    {
+      "id": 40,
+      "url": "https://kevcoachfit.com/mes-reservations/",
+      "http": 200,
+      "public_content_verified": true,
+      "sha256": "0617619c82f0c1f5d977f0c68482956326165f9c8bdadcc9a5fc2c7c407169dc"
+    }
+  ],
+  "drafts_retained": true,
+  "public_bookings_open": false,
+  "public_forms_replaced_with_phone_contact": true,
+  "private_test_form_pages": [
+    68,
+    69
+  ],
+  "instagram_links": {
+    "kevin": "https://www.instagram.com/kev_coach_fit/",
+    "yohan": "https://www.instagram.com/yoantoine46/"
+  },
+  "instagram_automatic_feed": false,
+  "installed_booking_plugin": "1.0.0",
+  "update_1_0_1_installed": false,
+  "google_connected": false,
+  "domains_unchanged": true
+}

@@ -61,3 +61,5 @@ Module indépendant dans `wordpress/plugins/kevcoachfit-reservations/` ; guide `
 Relecture des brouillons après installation des réservations : [validation 21](docs/verification-21.md), contrôles mobile, formulaires et textes. Google Agenda reste à autoriser ; aucune ouverture publique.
 
 Correctif de réservation 1.0.1 préparé : séparation essais/réel, migration et FIFO HTTP vérifiées ; [rapport](docs/reservations-1.0.1-verification.json). Version distante encore 1.0.0, mise à jour en attente de remplacement dans WordPress.
+
+Vitrine publique actualisée à la demande de Kévin : [publication 22](docs/publication-22.md). Réservations toujours fermées, profils Instagram liés sans flux automatique de publications.

@@ -1,0 +1,35 @@
+{
+  "pages": [
+    {
+      "url": "https://kevcoachfit.com/",
+      "mobile_width": 390,
+      "overflow": false,
+      "mobile_menu": "passed",
+      "public_display": "verified from actual anonymous response"
+    },
+    {
+      "url": "https://kevcoachfit.com/vitalivan/",
+      "mobile_width": 390,
+      "overflow": false,
+      "mobile_menu": "passed",
+      "public_display": "verified from actual anonymous response"
+    },
+    {
+      "url": "https://kevcoachfit.com/ak-anti-nuisible/",
+      "mobile_width": 390,
+      "overflow": false,
+      "mobile_menu": "passed",
+      "public_display": "verified from actual anonymous response"
+    },
+    {
+      "url": "https://kevcoachfit.com/terroir-loupiac/",
+      "mobile_width": 390,
+      "overflow": false,
+      "mobile_menu": "passed",
+      "public_display": "verified from actual anonymous response"
+    }
+  ],
+  "javascript_errors": [],
+  "transport": "actual anonymous responses fetched over verified HTTPS and passed unchanged to Chromium; GET requests only",
+  "instagram_feed": "profile links only; no account authorization or automatic feed"
+}

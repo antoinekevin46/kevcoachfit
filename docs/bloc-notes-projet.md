@@ -109,3 +109,16 @@ Relecture des sept brouillons actuels avec sauvegarde préalable. Corrections su
 Kévin demande de poursuivre les contrôles pendant qu’il est occupé. Correctif 1.0.1 préparé et testé : séparer les essais des réservations réelles, sans supprimer les essais existants ; préserver les liens privés après migration ; éviter les e-mails d’essai après ouverture ; ne pas indexer les pages de suivi. 80 assertions de base + 24 de migration et séparation, parcours HTTP de liste d’attente en 10 étapes et 20 demandes concurrentes (15 réservées, 5 en attente) réussis. Tous les envois sont interceptés dans les tests locaux.
 
 Le vrai WordPress utilise encore 1.0.0, reste privé, e-mail de test confirmé reçu et Google non connecté. Mise à jour 1.0.1 disponible dans la médiathèque, pièce jointe 91, URL et empreinte dans `reservations-update-1.0.1.json`. Son installation exige un remplacement via l’interface Extensions ; ne pas prétendre que le correctif est déjà actif à distance. Ne pas demander de connexion Google ou de nouvelle information pendant l’absence de Kévin. Google, tâche serveur régulière et ouverture restent à terminer plus tard.
+
+
+## Affichage public demandé par Kévin — 17 octobre 2026
+
+Après le bilan des quatre espaces, Kévin demande « affiche, si tu ne peux pas dis-moi que je le fasse » et demande si Instagram et les publications de son frère sont liés. Cette demande autorise l’affichage des dernières versions publiques, sans ouvrir les réservations ni les ventes réelles.
+
+Les contenus des sept pages publiques existantes ont été mis à jour depuis les maquettes : Accueil 35, Vitali’Van 36, A.K 41, Terroir 37, Contact 38, Réserver 39 et Mon inscription 40. Les URL et la page d’accueil sont conservées ; pas de nouveau domaine acheté ni de thème remplacé. Tous les liens entre ces pages utilisent les URL publiques, sans pointer vers des brouillons privés.
+
+Les formulaires opérationnels restent dans les brouillons privés 68 et 69. Le public voit des indications de contact téléphonique à leur place ; la réservation et le suivi réels ne sont pas ouverts. Au lancement, il faudra intégrer les shortcodes opérationnels sur les pages publiques 39 et 40, changer les deux identifiants de page dans les réglages du module, puis contrôler agenda/e-mails/cron et seulement ensuite ouvrir. Le correctif 1.0.1 reste à installer.
+
+Liens de profils Instagram confirmés : Kévin @kev_coach_fit et Yohan @yoantoine46. Accès rendus visibles dans les deux espaces et conservés dans les brouillons correspondants. Aucun flux automatique de publications ni publication croisée vers Instagram : aucune autorisation de compte Instagram n’a été effectuée. Aucun compte A.K ou miel inventé. Expliquer cette distinction simplement si Kévin demande ce qui est connecté.
+
+Sauvegardes avant/après dans `artifacts/public-release-22/`, rapport `public-release-22-verification.json`. Les quatre espaces ont été préparés et vérifiés à quatre largeurs en local avant transfert, puis chaque page publique a été contrôlée par requête anonyme. Les titres SEO et les URL canoniques existants sont conservés. A.K reste présenté en préparation et les tarifs provisoires miel/alcools restent signalés. Aucun e-mail client envoyé pendant l’opération.
