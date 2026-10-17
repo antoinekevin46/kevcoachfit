@@ -1,4 +1,4 @@
-# KevCoachFit — version de test 16
+# KevCoachFit — version de test 17
 
 Un WordPress, trois espaces distincts : Vitali’Van, A.K Nuisibles et Terroir Antoine. Aucun domaine supplémentaire nécessaire pour cet essai. Sources restaurées à partir du pack 15 fourni par Kévin, puis mises à jour avec les tarifs explicitement validés.
 
@@ -11,11 +11,12 @@ Depuis `/workspace/kevcoachfit` :
 ```sh
 ./scripts/bootstrap.sh
 python3 scripts/build-package.py
-docker compose run --rm cli wp eval-file /project/scripts/test-design-16.php
+docker compose run --rm cli wp eval-file /project/scripts/test-design-17.php
 docker compose run --rm cli wp eval-file /project/scripts/test-pack.php
 python3 scripts/test-seo.py
 python3 scripts/build-showcase.py
 python3 scripts/check-showcase.py
+python3 scripts/check-map.py
 ```
 
 Le bootstrap crée les mots de passe locaux aléatoires dans `.env` si nécessaire, démarre les deux services et prépare sept brouillons privés. Il est réexécutable. Ne pas afficher ni partager `.env`. Les images Docker sont épinglées par empreinte. La validation est locale ; aucun de ces scripts ne modifie kevcoachfit.com. Le port est limité à la boucle locale pour les contrôles internes ; les fichiers de vitrine constituent les livrables à consulter.
@@ -26,11 +27,15 @@ Les scripts de tests travaillent dans cet atelier local. Le contrôle HTTP SEO p
 
 - `wordpress/themes/kevcoachfit/` : thème de blocs, identités et navigation par activité, effets et métadonnées.
 - `wordpress/plugins/kevcoachfit-workflows/` : atelier de démonstration ; pages source dans `starter-pages/`.
-- `scripts/build-package.py` : produit le ZIP installable `artifacts/kevcoachfit-pack-16.zip` et son thème inclus. Les fichiers de démonstration générés sont ignorés par Git.
-- `scripts/build-showcase.py` : produit `artifacts/kevcoachfit-vitrine-16.html`, avec ressources intégrées et formulaires sans envoi.
-- `docs/installation-16.md` : revue et installation ultérieure ; les nouveaux brouillons conservent les précédents.
+- `scripts/build-package.py` : produit le ZIP installable `artifacts/kevcoachfit-pack-17.zip` et son thème inclus. Les fichiers de démonstration générés sont ignorés par Git.
+- `scripts/build-showcase.py` : produit `artifacts/kevcoachfit-vitrine-17.html`, avec ressources intégrées et formulaires sans envoi.
+- `docs/installation-17.md` : revue et installation ultérieure ; les nouveaux brouillons conservent les précédents.
 - `docs/tarifs-valides.md` : tarifs par période confirmés.
 - `docs/fiche-google-coaching.md` : description et observations sur les fiches suspendues, sans démarche Google effectuée.
+
+## Cartes
+
+`service-map.php`, `map.js` et `data/communes-lot.json` fournissent des cartes locales avec deux vues pour le sport et une pour A.K. Les points des salles sont des centres de communes ; les limites administratives ne sont pas des limites de temps de trajet. `docs/cartes-17.md` contient les sources et vérifications.
 
 ## Limites
 

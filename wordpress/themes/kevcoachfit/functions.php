@@ -12,3 +12,10 @@ add_action( 'after_setup_theme', function () {
 require_once __DIR__ . '/seo.php';
 
 require_once __DIR__ . '/sections.php';
+
+require_once __DIR__ . '/service-map.php';
+add_action('wp_enqueue_scripts',function(){
+    if(is_singular('page')&&in_array(kcf_section_key(),array('sport','protection'),true)){
+        wp_enqueue_script('kevcoachfit-map',get_stylesheet_directory_uri().'/map.js',array(),filemtime(__DIR__.'/map.js'),true);
+    }
+});

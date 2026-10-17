@@ -32,11 +32,12 @@ async def main():
     full=urllib.parse.urljoin(base,path)
     text=text.replace(match[0],'url("'+await asset(full)+'")')
    return text
-  theme_js=(ROOT/'wordpress/themes/kevcoachfit/theme.js').read_text()
+  theme_js=(ROOT/'wordpress/themes/kevcoachfit/theme.js').read_text()+'\n'+(ROOT/'wordpress/themes/kevcoachfit/map.js').read_text()
   for slug in LABELS:
    url=BASE+'/?page_id='+str(pages[slug])+'&preview=true&kcf_atelier=1&wp_theme_preview=kevcoachfit'
    response=await context.request.get(url);assert response.ok
    html=await response.text();assert '<h1' in html,slug
+   html=html.replace('<body','<body data-kcf-page="'+slug+'"',1)
    html=re.sub(r'<script\b[^>]*>.*?</script>','',html,flags=re.S|re.I)
    # WP admin bar and its generated inline mobile offsets do not belong in the demo.
    assert 'id="wpadminbar"' not in html, 'Disable the local user admin bar before capture.'
@@ -85,19 +86,20 @@ document.querySelectorAll('[data-order-total]').forEach(total=>{const form=total
   await browser.close()
  payload=json.dumps({'documents':documents,'assets':assets,'labels':LABELS},ensure_ascii=False).replace('<','\\u003c')
  options=''.join('<option value="'+k+'">'+v+'</option>' for k,v in LABELS.items())
- shell=r'''<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KevCoachFit — Vitrine 16</title><style>*{box-sizing:border-box}body{margin:0;background:#111;color:white;font:14px/1.4 system-ui,sans-serif}.toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid #555}label{font-weight:700}select{max-width:100%;background:#202020;color:white;border:1px solid #777;border-radius:24px;padding:9px 14px;font:inherit}small{color:#ccc}.viewer{width:100%;height:calc(100dvh - 78px);border:0;display:block;background:white}@media(max-width:600px){.toolbar{gap:6px;padding:8px 12px}small{width:100%;font-size:11px}.viewer{height:calc(100dvh - 94px)}} </style><div class="toolbar"><label for="page-picker">Vitrine 16</label><select id="page-picker">OPTIONS</select><small>Maquette privée · formulaires de démonstration · tarifs par période validés</small></div><iframe id="viewer" class="viewer" title="Aperçu du site" sandbox="allow-scripts allow-same-origin allow-popups"></iframe><script>
+ shell=r'''<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KevCoachFit — Vitrine 17</title><style>*{box-sizing:border-box}body{margin:0;background:#111;color:white;font:14px/1.4 system-ui,sans-serif}.toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid #555}label{font-weight:700}select{max-width:100%;background:#202020;color:white;border:1px solid #777;border-radius:24px;padding:9px 14px;font:inherit}small{color:#ccc}.viewer{width:100%;height:calc(100dvh - 78px);border:0;display:block;background:white}@media(max-width:600px){.toolbar{gap:6px;padding:8px 12px}small{width:100%;font-size:11px}.viewer{height:calc(100dvh - 94px)}} </style><div class="toolbar"><label for="page-picker">Vitrine 17</label><select id="page-picker">OPTIONS</select><small>Maquette privée · formulaires de démonstration · tarifs par période validés</small></div><iframe id="viewer" class="viewer" title="Aperçu du site" sandbox="allow-scripts allow-same-origin allow-popups"></iframe><script>
 const data=PAYLOAD;
 const picker=document.getElementById('page-picker'),viewer=document.getElementById('viewer');
 function show(slug,anchor=''){
  if(!data.documents[slug])return;
  picker.value=slug;document.title=data.labels[slug]+' — Vitrine KevCoachFit';
- viewer.onload=()=>{if(anchor){const el=viewer.contentDocument.getElementById(anchor.slice(1));el?.scrollIntoView();}};
+ viewer.dataset.loading='true';viewer.dataset.page='';viewer.setAttribute('aria-busy','true');
+ viewer.onload=()=>{if(viewer.contentDocument?.body?.dataset.kcfPage!==slug)return;viewer.dataset.loading='false';viewer.dataset.page=slug;viewer.setAttribute('aria-busy','false');if(anchor){const el=viewer.contentDocument.getElementById(anchor.slice(1));el?.scrollIntoView();}};
  viewer.srcdoc=data.documents[slug].replace(/kcf-asset:\/\/(asset\d+)/g,(_,key)=>data.assets[key]);
 }
 picker.addEventListener('change',()=>show(picker.value));
 window.addEventListener('message',event=>{if(event.source===viewer.contentWindow&&event.data?.kcfPage)show(event.data.kcfPage,event.data.anchor||'');});
 show('accueil');
 </script></html>'''.replace('OPTIONS',options).replace('PAYLOAD',payload)
- out=ROOT/'artifacts/kevcoachfit-vitrine-16.html';out.write_text(shell);out.chmod(0o644)
+ out=ROOT/'artifacts/kevcoachfit-vitrine-17.html';out.write_text(shell);out.chmod(0o644)
  print('Vitrine autonome créée :',len(documents),'pages,',len(assets),'ressources intégrées,',out.stat().st_size,'octets.')
 asyncio.run(main())

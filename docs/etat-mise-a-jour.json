@@ -1,6 +1,6 @@
 {
-  "version": "16",
-  "theme_plugin_version": "0.12.0",
+  "version": "17",
+  "theme_plugin_version": "0.13.0",
   "sources_restored": true,
   "pricing_validated_and_integrated": true,
   "three_distinct_sections": true,
@@ -8,5 +8,15 @@
   "wordpress_remote_updated": false,
   "production_bookings_enabled": false,
   "google_profile_actions_executed": false,
-  "google_profile_removal_confirmation": "user instructed how to remove; actual completion not confirmed"
+  "google_profile_removal_confirmation": "user instructed how to remove; actual completion not confirmed",
+  "interactive_maps": {
+    "sport": [
+      "courses",
+      "coaching"
+    ],
+    "protection": true,
+    "communes": 20,
+    "driving_time_boundary": false,
+    "external_map_service_required": false
+  }
 }

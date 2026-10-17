@@ -2,7 +2,7 @@
 
 ## Décision et état de la mise à jour
 
-Kévin valide trois espaces autonomes au sein d’un seul site. Il prévoit trois noms de domaine supplémentaires ou dédiés, dont les noms et l’affectation restent à préciser. Aucune modification WordPress, DNS ou redirection n’est encore effectuée : les sources précédentes manquent dans cet environnement et le contrôle de l’accès WordPress a reçu HTTP 401.
+Kévin valide trois espaces autonomes au sein d’un seul site. Il prévoit trois noms de domaine supplémentaires ou dédiés, dont les noms et l’affectation restent à préciser. Aucune modification WordPress, DNS ou redirection n’est encore effectuée : les sources précédentes, initialement absentes de cet environnement, ont été restaurées depuis le pack fourni par Kévin. Les versions de test 16 puis 17 sont préparées localement ; l’accès WordPress distant n’a pas été utilisé pour écrire.
 
 Un seul site ne garantit pas un classement ; trois sites ne le garantissent pas davantage. Organiser les pages pour répondre à des besoins précis, avec des informations réelles, utiles et vérifiables.
 

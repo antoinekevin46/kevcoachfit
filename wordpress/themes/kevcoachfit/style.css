@@ -1,7 +1,7 @@
 /*
 Theme Name: KevCoachFit
 Description: Thème de blocs Gutenberg pour les trois univers de KevCoachFit.
-Version: 0.12.0
+Version: 0.13.0
 Requires at least: 6.6
 Text Domain: kevcoachfit
 */
@@ -793,3 +793,54 @@ body.kcf-universe-terroir { background:#f7f1e6; }
 .kcf-section-footer :is(h2,p,li,summary) { min-width:0; max-width:100%; overflow-wrap:anywhere; }
 .kcf-section-header.kcf-section-protection,.kcf-section-footer.kcf-section-protection,.kcf-section-protection .kcf-dropdown-panel { background:#111; }
 .kcf-section-header.kcf-section-terroir,.kcf-section-footer.kcf-section-terroir,.kcf-section-terroir .kcf-dropdown-panel { background:#302519; }
+
+/* Geographic map: local commune contours, never an invented driving-time boundary. */
+.kcf-service-map { --map-accent:#b8e85c; --map-bg:#edf1e7; --map-ink:#1a2a20; margin-block:32px; border:1px solid #718363; color:var(--map-ink); background:var(--map-bg); }
+.kcf-map-protection { --map-accent:#ffe600; --map-bg:#efeee7; --map-ink:#202019; border-color:#ffe600; }
+.kcf-map-heading { padding:clamp(18px,3vw,28px); background:#17251c; color:#fff; }
+.kcf-map-protection .kcf-map-heading { background:#111; }
+.kcf-map-heading .kcf-eyebrow { color:var(--map-accent); margin:0 0 12px; }
+.kcf-service-map .kcf-map-heading h3 { font-family:'KCF Display',Impact,sans-serif; font-size:clamp(1.6rem,4vw,2.4rem); line-height:1.1; margin:0 0 14px; max-width:100%; }
+.kcf-map-heading p:last-child { margin:0; line-height:1.6; }
+.kcf-map-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(220px,290px); }
+.kcf-map-canvas { min-width:0; position:relative; background-color:var(--map-bg); background-image:linear-gradient(#354a3520 1px,transparent 1px),linear-gradient(90deg,#354a3520 1px,transparent 1px); background-size:40px 40px; }
+.kcf-map-svg { display:block; width:100%; height:520px; max-width:100%; cursor:grab; touch-action:pan-y; }
+.kcf-service-map.is-draggable .kcf-map-svg { touch-action:none; }
+.kcf-map-svg:active { cursor:grabbing; }
+.kcf-map-svg:focus-visible { outline:3px solid #17251c; outline-offset:-4px; }
+.kcf-map-boundaries path { fill:#fafbf4; stroke:#83927b; stroke-width:1; }
+.kcf-map-boundaries path.is-selected { fill:#d4dfbf; stroke:#354a35; stroke-width:2; }
+.kcf-map-protection .kcf-map-boundaries path.is-selected { fill:#f8ed9f; stroke:#565015; }
+.kcf-map-town { cursor:pointer; }
+.kcf-map-dot { fill:#6e7867; stroke:#fff; stroke-width:1.5; vector-effect:non-scaling-stroke; }
+.kcf-map-halo { fill:none; stroke:none; vector-effect:non-scaling-stroke; }
+.kcf-map-town.is-active .kcf-map-dot { fill:#17251c; stroke:var(--map-accent); stroke-width:3; }
+.kcf-map-town.is-future .kcf-map-dot { fill:#fff; stroke:#17251c; stroke-dasharray:3 2; stroke-width:2; }
+.kcf-map-town.is-selected .kcf-map-halo { fill:var(--map-accent); fill-opacity:.8; stroke:#354a35; stroke-width:1; }
+.kcf-map-town text { display:none; font-family:Inter,Arial,sans-serif; font-weight:700; fill:var(--map-ink); paint-order:stroke; stroke:#fafbf4; stroke-width:4px; stroke-linejoin:round; }
+.kcf-map-town.show-label text { display:block; }
+.kcf-map-tools { display:flex; flex-wrap:wrap; gap:6px; padding:12px; border-bottom:1px solid #83927b55; }
+.kcf-service-map button,.kcf-service-map select { font:inherit; max-width:100%; box-sizing:border-box; }
+.kcf-service-map button { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:8px 14px; border:1px solid #65725b; border-radius:30px; color:#18231a; background:#fff; cursor:pointer; line-height:1.4; white-space:normal; }
+.kcf-service-map button:disabled { opacity:.4; cursor:default; }
+.kcf-service-map button[aria-pressed="true"] { background:var(--map-accent); color:#111; border-color:#536044; }
+.kcf-map-tools button:first-child,.kcf-map-tools button:nth-child(2) { min-width:44px; font-size:1.35rem; }
+.kcf-map-north { position:absolute; right:14px; top:90px; color:#25351f; font-weight:800; padding:5px; background:#fafbf4; }
+.kcf-map-help { padding:14px 18px; margin:0; border-top:1px solid #83927b55; font-size:.8rem; line-height:1.7; }
+.kcf-map-info { padding:clamp(18px,3vw,26px); border-left:1px solid #83927b55; min-width:0; }
+.kcf-map-info label { display:block; font-weight:700; margin-bottom:10px; }
+.kcf-map-info select { width:100%; min-height:48px; border:1px solid #65725b; background:#fff; color:#18231a; padding:10px; border-radius:0; }
+.kcf-map-info h4 { font-size:1.2rem; line-height:1.4; margin:24px 0 10px; font-weight:800; }
+.kcf-map-info p { line-height:1.8; font-size:.9375rem; }
+.kcf-map-legend { display:flex; align-items:flex-start; gap:10px; padding-top:16px; border-top:1px solid #83927b55; }
+.kcf-map-legend-dot { width:14px; height:14px; border-radius:50%; background:#17251c; border:3px solid var(--map-accent); flex-shrink:0; margin-top:5px; }
+.kcf-map-call { display:inline-flex; justify-content:center; align-items:center; min-height:48px; max-width:100%; box-sizing:border-box; text-align:center; border-radius:30px; padding:12px 18px; color:#111; background:var(--map-accent); font-weight:700; line-height:1.5; text-decoration:none; }
+.kcf-map-modes { display:flex; flex-wrap:wrap; gap:10px; padding:16px 20px; border-bottom:1px solid #83927b55; }
+.kcf-map-source { padding:18px 20px; font-size:.75rem; line-height:1.8; border-top:1px solid #83927b55; margin:0; }
+.kcf-map-source a { color:inherit; text-underline-offset:3px; }
+@media(max-width:850px) {
+ .kcf-map-layout { grid-template-columns:minmax(0,1fr); }
+ .kcf-map-info { border-left:0; border-top:1px solid #83927b55; }
+ .kcf-map-svg { height:430px; }
+}
+@media(max-width:400px) { .kcf-map-tools { padding:10px 8px; gap:5px; }.kcf-map-tools button { padding:8px 10px; font-size:.8rem; }.kcf-map-svg { height:400px; } }
