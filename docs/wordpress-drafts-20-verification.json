@@ -1,0 +1,59 @@
+{
+  "pages": [
+    {
+      "page": "accueil",
+      "id": 63,
+      "status": "draft",
+      "source_matches": true,
+      "anonymous_preview_http": 404
+    },
+    {
+      "page": "vitalivan",
+      "id": 64,
+      "status": "draft",
+      "source_matches": true,
+      "anonymous_preview_http": 404
+    },
+    {
+      "page": "ak-anti-nuisible",
+      "id": 65,
+      "status": "draft",
+      "source_matches": true,
+      "anonymous_preview_http": 404
+    },
+    {
+      "page": "terroir-loupiac",
+      "id": 66,
+      "status": "draft",
+      "source_matches": true,
+      "anonymous_preview_http": 404
+    },
+    {
+      "page": "contact",
+      "id": 67,
+      "status": "draft",
+      "source_matches": true,
+      "anonymous_preview_http": 404
+    },
+    {
+      "page": "reserver",
+      "id": 68,
+      "status": "draft",
+      "source_matches": true,
+      "anonymous_preview_http": 404
+    },
+    {
+      "page": "mes-reservations",
+      "id": 69,
+      "status": "draft",
+      "source_matches": true,
+      "anonymous_preview_http": 404
+    }
+  ],
+  "existing_pages_preserved": 24,
+  "site_settings_preserved": true,
+  "theme_and_plugins_preserved": true,
+  "media_uploaded": 13,
+  "production_bookings_enabled": false,
+  "validation": "Authenticated REST render plus anonymous preview checks; no authenticated frontend browser session available."
+}

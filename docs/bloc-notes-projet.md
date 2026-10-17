@@ -4,7 +4,7 @@ Dernière mise à jour : 17 octobre 2026 (Europe/Paris).
 
 ## Consigne permanente de Kévin
 
-Terminer ce qui est possible en maquette, puis reprendre les éléments manquants plus tard. Ne pas installer ni publier sur WordPress distant. Ne pas redemander les horaires et les règles déjà validés ci-dessous. Conserver intégralement les prestations et les détails des flyers ; les nouveaux services s’ajoutent aux originaux. Utiliser les photos réelles lorsqu’elles seront fournies.
+Terminer ce qui est possible en maquette, puis reprendre les éléments manquants plus tard. Depuis le 17 octobre 2026, Kévin autorise le transfert des maquettes en nouveaux brouillons WordPress pour les voir et les modifier sur place. Ne pas publier ni modifier les pages publiques ou le thème actif sans demande correspondante. Ne pas redemander les horaires et les règles déjà validés ci-dessous. Conserver intégralement les prestations et les détails des flyers ; les nouveaux services s’ajoutent aux originaux. Utiliser les photos réelles lorsqu’elles seront fournies.
 
 ## Point hebdomadaire
 
@@ -75,3 +75,9 @@ Connexion distante vérifiée en lecture seule à la demande de Kévin : API Wor
 La variable KEVCOACHFIT_WP_URL contient le domaine sans schéma HTTPS. Normaliser en ajoutant https:// puis vérifier que l’hôte est kevcoachfit.com ou www.kevcoachfit.com avant d’envoyer l’authentification. Utiliser les variables existantes KEVCOACHFIT_WP_USERNAME et KEVCOACHFIT_WP_APPLICATION_PASSWORD pour HTTP Basic sans afficher, stocker ou journaliser leurs valeurs. Ne pas suivre une redirection authentifiée vers un autre hôte. Les secrets réseau sont utilisables via la route HTTPS autorisée.
 
 Cette reconnexion autorise les vérifications demandées, pas la publication de la maquette. Continuer à travailler ici tant que Kévin ne demande pas de transfert ou de mise en ligne. Google Agenda reste distinct et non connecté.
+
+## Transfert de la maquette en brouillons — 17 octobre 2026
+
+Kévin a explicitement demandé le transfert sur WordPress après le succès de la reconnexion. Sept nouveaux brouillons « Maquette 20 » créés (Accueil 63, Vitali’Van 64, A.K Nuisibles 65, Terroir 66, Contact 67, Réserver 68, Mon inscription 69) et treize médias transférés. Mise en forme et effets propres aux brouillons, sans mise à jour du thème public. Les anciens brouillons sont conservés. Voir `maquette-wordpress-20.md` pour les liens et la modification.
+
+Cette demande remplace la consigne antérieure de garder toutes les maquettes uniquement ici ; elle n’autorise pas une publication. Toujours relire les brouillons distants avant de les modifier à nouveau afin de conserver les changements faits par Kévin dans WordPress. Les formulaires de ces pages restent sans envoi réel ; Google Agenda et notifications ne sont pas connectés.

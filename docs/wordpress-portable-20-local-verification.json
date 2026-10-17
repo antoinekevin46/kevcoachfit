@@ -1,0 +1,208 @@
+{
+  "renders": [
+    {
+      "page": "accueil",
+      "width": 320,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "vitalivan",
+      "width": 320,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "ak-anti-nuisible",
+      "width": 320,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "terroir-loupiac",
+      "width": 320,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "contact",
+      "width": 320,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "reserver",
+      "width": 320,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "mes-reservations",
+      "width": 320,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "accueil",
+      "width": 390,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "vitalivan",
+      "width": 390,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "ak-anti-nuisible",
+      "width": 390,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "terroir-loupiac",
+      "width": 390,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "contact",
+      "width": 390,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "reserver",
+      "width": 390,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "mes-reservations",
+      "width": 390,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "accueil",
+      "width": 768,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "vitalivan",
+      "width": 768,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "ak-anti-nuisible",
+      "width": 768,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "terroir-loupiac",
+      "width": 768,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "contact",
+      "width": 768,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "reserver",
+      "width": 768,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "mes-reservations",
+      "width": 768,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "accueil",
+      "width": 1440,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "vitalivan",
+      "width": 1440,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "ak-anti-nuisible",
+      "width": 1440,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "terroir-loupiac",
+      "width": 1440,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "contact",
+      "width": 1440,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "reserver",
+      "width": 1440,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    },
+    {
+      "page": "mes-reservations",
+      "width": 1440,
+      "overflow": false,
+      "styles_and_effects": "present",
+      "menu": "one current menu"
+    }
+  ],
+  "editable_sport_blocks": {
+    "invalid": [],
+    "headings": 29,
+    "images": 8,
+    "tables": 2
+  },
+  "form_submission": "blocked",
+  "browser_errors": []
+}

@@ -5,7 +5,7 @@
   "pricing_validated_and_integrated": true,
   "three_distinct_sections": true,
   "additional_domains": "not purchased; no DNS changes",
-  "wordpress_remote_updated": false,
+  "wordpress_remote_updated": true,
   "production_bookings_enabled": false,
   "google_profile_actions_executed": false,
   "google_profile_removal_confirmation": "user instructed how to remove; actual completion not confirmed",
@@ -37,5 +37,15 @@
     "fourmis",
     "cafards/blattes"
   ],
-  "agreed_hours_preserved": true
+  "agreed_hours_preserved": true,
+  "wordpress_remote_change_scope": "7 new draft mockups and 13 media attachments; existing public pages, theme, plugins and settings preserved",
+  "wordpress_draft_ids": {
+    "accueil": 63,
+    "vitalivan": 64,
+    "ak-anti-nuisible": 65,
+    "terroir-loupiac": 66,
+    "contact": 67,
+    "reserver": 68,
+    "mes-reservations": 69
+  }
 }

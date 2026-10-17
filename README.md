@@ -49,3 +49,7 @@ Git conserve les sources et les visuels nécessaires à la reconstruction ; il n
 ## Bloc-notes et suivi
 
 `docs/bloc-notes-projet.md` conserve les horaires, règles de réservation et éléments à demander une fois par semaine. Prochain point proposé : 24 octobre 2026. Aucun envoi automatique depuis le chat n’est configuré. `docs/rappel-hebdomadaire-kevcoachfit.ics` peut être importé dans un agenda pour un rappel le samedi à 10 h (Europe/Paris).
+
+## Maquettes dans WordPress
+
+À la demande de Kévin du 17 octobre 2026, sept nouveaux brouillons de la version 20 ont été transférés sans remplacer les pages publiques ni le thème actif. Liens et fonctionnement dans `docs/maquette-wordpress-20.md`. Relire les changements distants avant toute mise à jour. Les réservations restent des démonstrations sans envoi.
