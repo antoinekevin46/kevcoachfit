@@ -1,0 +1,8 @@
+.env
+.env.*
+!.env.example
+runtime/
+__pycache__/
+*.pyc
+wordpress/plugins/kevcoachfit-workflows/bundled-theme/theme.zip
+artifacts/

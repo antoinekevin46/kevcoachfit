@@ -1,0 +1,50 @@
+services:
+  database:
+    image: mariadb@sha256:250e1609e93c0e6aecf64bfbab2d84d5e89d2481540fe77447ff6c855c3b1873
+    environment:
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wordpress
+      MARIADB_PASSWORD: ${KCF_DB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${KCF_DB_ROOT_PASSWORD}
+    volumes:
+      - db:/var/lib/mysql
+    healthcheck:
+      test: [CMD, healthcheck.sh, --connect, --innodb_initialized]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+  wordpress:
+    image: wordpress@sha256:30bff39330d1693b0ce13d32fc9b7bb67193064f040b7d60d3494e136fa599d4
+    ports:
+      - '127.0.0.1:8080:80'
+    environment:
+      WORDPRESS_DB_HOST: database
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: ${KCF_DB_PASSWORD}
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_CONFIG_EXTRA: "define('FS_METHOD','direct');"
+    depends_on:
+      database:
+        condition: service_healthy
+    volumes:
+      - wp:/var/www/html
+      - ./wordpress/themes/kevcoachfit:/var/www/html/wp-content/themes/kevcoachfit
+      - ./wordpress/plugins/kevcoachfit-workflows:/var/www/html/wp-content/plugins/kevcoachfit-workflows
+  cli:
+    image: wordpress@sha256:36243da432a0f0a3b56dc3240ecee9b159108d71305e7c064d987a20a465bfde
+    profiles: [tools]
+    user: '33:33'
+    environment:
+      WORDPRESS_DB_HOST: database
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: ${KCF_DB_PASSWORD}
+      WORDPRESS_DB_NAME: wordpress
+      KCF_LOCAL_PASSWORD: ${KCF_LOCAL_PASSWORD}
+    volumes:
+      - wp:/var/www/html
+      - ./wordpress/themes/kevcoachfit:/var/www/html/wp-content/themes/kevcoachfit
+      - ./wordpress/plugins/kevcoachfit-workflows:/var/www/html/wp-content/plugins/kevcoachfit-workflows
+      - .:/project
+volumes:
+  wp:
+  db:

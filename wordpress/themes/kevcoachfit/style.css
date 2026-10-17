@@ -1,0 +1,795 @@
+/*
+Theme Name: KevCoachFit
+Description: Thème de blocs Gutenberg pour les trois univers de KevCoachFit.
+Version: 0.12.0
+Requires at least: 6.6
+Text Domain: kevcoachfit
+*/
+
+:root {
+  --kcf-ink: #111111;
+  --kcf-paper: #ffffff;
+  --kcf-line: #e5e5e5;
+}
+@font-face {
+  font-family: 'KCF Display';
+  src: url('fonts/open-sans-condensed-bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700 900;
+  font-display: swap;
+}
+body { color: var(--kcf-ink); background: var(--kcf-paper); font-family: Inter, Arial, sans-serif; }
+.kcf-site-header { padding: 24px clamp(24px, 5vw, 80px); border-bottom: 1px solid var(--kcf-line); }
+.kcf-site-header .wp-block-site-title { font-size: 1.5rem; font-weight: 900; letter-spacing: -.05em; }
+.kcf-site-header .wp-block-site-title a { text-decoration: none; }
+.kcf-site-footer { padding: 32px clamp(24px, 5vw, 80px); color: var(--kcf-paper); background: var(--kcf-ink); }
+.kcf-site-footer p { margin: 0; }
+.kcf-page { max-width: 1360px; margin-inline: auto; padding: clamp(24px, 5vw, 80px); }
+.kcf-eyebrow { font-size: 0.8125rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.kcf-title { font-family: "Futura PT", Futura, Arial, sans-serif; font-size: clamp(3rem, 9vw, 9rem); font-weight: 900; letter-spacing: -.065em; line-height: .95; text-transform: uppercase; }
+.kcf-intro { max-width: 720px; font-size: clamp(1.125rem, 2vw, 1.5rem); line-height: 1.6; }
+.kcf-portals { gap: 24px; margin-block: 64px; }
+.kcf-portal { border-top: 1px solid var(--kcf-ink); padding-top: 24px; }
+.kcf-portal h2 { font-size: clamp(1.75rem, 3vw, 3rem); line-height: 1.05; }
+.kcf-product-visual { min-height: 240px; padding: 24px; background: var(--kcf-line); display: flex; flex-direction: column; justify-content: space-between; }
+.kcf-product-label { font-size: clamp(2rem, 3vw, 3rem); font-weight: 900; line-height: 1.05 !important; letter-spacing: -.04em; margin-bottom: 0; }
+.kcf-product-price { font-size: 2rem; font-weight: 700; }
+.kcf-product-note { font-size: .875rem; }
+.kcf-honey-logo { width: 320px; max-width: 100%; }
+.kcf-home-hero { align-items: center !important; gap: 48px; margin-block: 40px 60px; }
+.kcf-home-hero .kcf-title { font-size: clamp(3.1rem, 6.7vw, 6.8rem); }
+.kcf-hero-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 38% center; }
+.kcf-hero-photo figcaption { font-size: .7rem; line-height: 1.5; }
+.kcf-trust-strip { border-block: 1px solid var(--kcf-line); padding-block: 20px; margin-bottom: 64px; gap: 20px; }
+.kcf-trust-strip p { margin: 0; font-size: .7rem; font-weight: 700; letter-spacing: .07em; }
+.kcf-coming { display: inline-block; padding: 4px 12px; border: 1px solid var(--kcf-ink); font-size: .75rem; font-weight: 700; letter-spacing: .1em; }
+.kcf-story-band { background: var(--kcf-ink); color: var(--kcf-paper); padding: clamp(28px, 5vw, 64px); margin: 72px 0; }
+.kcf-story-band h2 { color: var(--kcf-paper); font-size: clamp(2.2rem, 5vw, 4.5rem); line-height: 1; letter-spacing: -.045em; }
+.kcf-story-band p { max-width: 780px; }
+.kcf-final-cta { padding-block: 12px 32px; }
+.kcf-final-cta h2 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -.045em; }
+.kcf-page .is-style-outline .wp-block-button__link { background: var(--kcf-paper); color: var(--kcf-ink); }
+.kcf-zoom-figure { position: relative; }
+.kcf-image-zoom { display: block; width: 100%; padding: 0; border: 0; background: none; line-height: 0; cursor: zoom-in; border-radius: 0; box-shadow: none; }
+.kcf-image-zoom img { display: block; width: 100%; height: auto; }
+.kcf-image-zoom:focus-visible { outline: 3px solid #111111; outline-offset: 5px; }
+.kcf-lens { position: absolute; display: none; pointer-events: none; border: 2px solid #111111; border-radius: 100%; background-color: #ffffff; background-repeat: no-repeat; z-index: 5; }
+.kcf-lens.is-visible { display: block; }
+.kcf-lightbox { padding: 64px 24px 24px; border: 1px solid #111111; background: #ffffff; color: #111111; max-width: 94vw; max-height: 94vh; box-shadow: none; }
+.kcf-lightbox::backdrop { background: #111111; opacity: .85; }
+.kcf-lightbox img { display: block; max-width: 85vw; max-height: 76vh; width: auto; height: auto; object-fit: contain; }
+.kcf-lightbox>button { position: absolute; top: 12px; right: 16px; border-radius: 30px; border: 1px solid #111111; padding: 10px 20px; background: #111111; color: #ffffff; min-height: 44px; font: inherit; cursor: pointer; }
+@media (prefers-reduced-motion: no-preference) {
+  .kcf-arrive { animation: kcf-arrive .55s ease-out both; }
+  @keyframes kcf-arrive { from { opacity: .45; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  .kcf-hero-photo { overflow: hidden; }
+  .kcf-hero-photo img { transition: transform .8s ease; }
+  .kcf-hero-photo:hover img { transform: scale(1.025); }
+  .kcf-page .wp-block-button__link { transition: transform .18s ease; }
+  .kcf-page .wp-block-button__link:hover { transform: translateY(-2px); }
+}
+.kcf-portal .wp-block-button__link, .kcf-page .wp-block-button__link {
+  border-radius: 30px; background: var(--kcf-ink); color: var(--kcf-paper);
+  border: 1px solid var(--kcf-ink); padding: 14px 24px; font-weight: 700; min-height: 48px;
+}
+.kcf-page a { text-underline-offset: .2em; }
+.kcf-page a:focus-visible, .kcf-page button:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
+.kcf-page img, .kcf-portal { border-radius: 0; box-shadow: none; }
+.kcf-page table { width: 100%; border-collapse: collapse; line-height: 1.6; }
+.kcf-page td, .kcf-page th { border: 1px solid var(--kcf-line); padding: 16px; text-align: left; }
+.kcf-page th { background: var(--kcf-ink); color: var(--kcf-paper); }
+.kcf-page td:first-child, .kcf-page th:first-child { min-width: 170px; }
+.kcf-page .wp-block-table { overflow-x: auto; }
+.kcf-page p, .kcf-page li { line-height: 1.7; }
+@media (max-width: 781px) {
+  .kcf-portals { flex-direction: column; }
+  .kcf-title { overflow-wrap: anywhere; }
+  .kcf-home-hero { gap: 28px; margin-top: 24px; }
+  .kcf-hero-photo img { aspect-ratio: 4 / 3; max-height: 480px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
+
+/* Direction 02: monochrome photo gallery, informed by the supplied Nike style reference. */
+.wp-site-blocks > main { margin-block-start: 0; }
+.kcf-site-header { background: var(--kcf-paper); color: var(--kcf-ink); padding-block: 22px; }
+.kcf-site-header a, .kcf-site-header button { color: inherit; }
+.kcf-site-header .wp-block-navigation__responsive-container.is-menu-open { background: var(--kcf-paper); color: var(--kcf-ink); }
+.kcf-site-header .wp-block-site-title { font-weight: 900; text-transform: uppercase; letter-spacing: -.06em; }
+.kcf-site-header .wp-block-navigation-item:last-child a { background: var(--kcf-ink); color: var(--kcf-paper); border-radius: 30px; padding: 10px 20px; }
+.kcf-home, .kcf-sport { --kcf-gutter: clamp(24px, 4vw, 64px); }
+.kcf-home { max-width: none; padding-top: 0; }
+.kcf-home-hero {
+  position: relative; isolation: isolate; overflow: hidden; background: var(--kcf-ink); color: var(--kcf-paper);
+  margin: 0 calc(-1 * var(--kcf-gutter)) 0; padding: clamp(44px, 6vw, 96px) var(--kcf-gutter) 60px;
+  min-height: min(820px, 90svh); box-sizing: border-box; align-items: flex-end !important; gap: 0;
+}
+.kcf-home-hero > .wp-block-column:first-child { z-index: 2; flex-basis: 72% !important; max-width: 760px; }
+.kcf-home-hero > .wp-block-column:last-child { position: absolute; inset: 0; z-index: -1; }
+.kcf-home-hero::after { content: ''; position: absolute; inset: 0; background: #11111199; z-index: -1; pointer-events: none; }
+.kcf-home-hero .kcf-hero-photo { margin: 0; height: 100%; }
+.kcf-home-hero .kcf-hero-photo img { height: 100%; width: 100%; aspect-ratio: auto; max-height: none; object-fit: cover; object-position: 44% center; }
+.kcf-home-hero .kcf-hero-photo figcaption { position: absolute; bottom: 12px; right: 20px; color: var(--kcf-paper); background: var(--kcf-ink); padding: 4px 8px; max-width: 230px; }
+.kcf-home-hero .kcf-title { font-family: 'KCF Display', Impact, sans-serif; font-size: clamp(3.5rem, 6vw, 4.75rem); font-weight: 700; letter-spacing: -.015em; line-height: 1; margin-block: 30px; }
+.kcf-outline-word { color: inherit; }
+@supports not (-webkit-text-stroke: 1px white) { .kcf-outline-word { color: var(--kcf-paper); } }
+.kcf-home-hero .kcf-intro { max-width: 600px; font-size: clamp(1.05rem, 1.4vw, 1.25rem); }
+.kcf-home-hero .wp-block-button__link, .kcf-sport-hero .wp-block-button__link, .kcf-pest-hero .wp-block-button__link { background: var(--kcf-paper); color: var(--kcf-ink); border-color: var(--kcf-paper); }
+.kcf-home-hero .is-style-outline .wp-block-button__link { background: transparent; color: var(--kcf-paper); }
+.kcf-trust-strip { margin: 0 0 48px; padding-block: 24px; }
+.kcf-section-title { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 500; line-height: 1.2; letter-spacing: -.02em; margin-block: 16px 36px; }
+.kcf-home .kcf-portals { gap: 24px; margin-block: 0 48px; }
+.kcf-home .kcf-portal { padding: 0; margin: 0; display: flex; flex-direction: column; border: 0; }
+.kcf-home .kcf-portal h2 { font-size: 1.5rem; font-weight: 500; line-height: 1.2; letter-spacing: -.02em; }
+.kcf-home .kcf-portal h2 span { float: right; font-family: Arial, sans-serif; font-size: .65em; padding-top: 8px; }
+.kcf-home .kcf-portal::before { content: ''; display: block; aspect-ratio: 4 / 3; order: -1; margin: 0 0 24px; background-size: cover; background-position: center; }
+.kcf-home .kcf-portal-sport::before { background-image: url('assets/vitali-renfort-interieur.webp'); background-position: center; }
+.kcf-home .kcf-portal-protection::before { content: 'A.K'; font-family: 'KCF Display', Impact, sans-serif; background: var(--kcf-ink); color: var(--kcf-paper); display: grid; place-items: center; font-size: clamp(5rem, 9vw, 9rem); letter-spacing: -.04em; }
+.kcf-home .kcf-portal-terroir::before { background-image: url('assets/kevmiel-pots.webp'); background-position: center; background-color: var(--kcf-line); }
+.kcf-home .kcf-portal p { font-size: 1rem; }
+.kcf-home .kcf-portal .wp-block-buttons { margin-top: auto; padding-top: 20px; }
+.kcf-home .kcf-portal .wp-block-button__link { padding-inline: 18px; font-size: .9375rem; }
+.kcf-story-band { margin: 0 calc(-1 * var(--kcf-gutter, 0px)) 80px; padding: clamp(40px, 7vw, 110px) var(--kcf-gutter, 40px); }
+.kcf-story-band h2, .kcf-final-cta h2 { font-family: 'KCF Display', Impact, sans-serif; font-size: clamp(3rem, 6vw, 4.75rem); line-height: 1; }
+.kcf-final-cta { padding-bottom: 70px; }
+.kcf-sport { padding-top: 0; max-width: none; }
+.kcf-sport-hero { position: relative; isolation: isolate; color: var(--kcf-paper); background: var(--kcf-ink); padding: clamp(44px, 6vw, 80px) var(--kcf-gutter); margin: 0 calc(-1 * var(--kcf-gutter)) 0; }
+.kcf-sport-hero .kcf-sport-photo { position: absolute; z-index: -1; inset: 0; height: 100%; margin: 0; overflow: hidden; }
+.kcf-sport-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: brightness(.35); }
+.kcf-sport-hero .kcf-title { font-family: 'KCF Display', Impact, sans-serif; font-size: clamp(3.25rem, 6vw, 4.75rem); letter-spacing: -.015em; line-height: 1; }
+.kcf-sport-hero p { max-width: 720px; }
+.kcf-sport-hero > p:last-of-type { display: inline-block; border-block: 1px solid var(--kcf-line); padding-block: 12px; font-weight: 700; }
+.kcf-sport-hero::after { content: 'Scène fictive créée pour la maquette.'; display: block; margin-top: 32px; font-size: .75rem; }
+.kcf-jump-links { padding-block: 20px; border-bottom: 1px solid var(--kcf-line); margin-bottom: 60px; }
+.kcf-jump-links p { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 0; }
+.kcf-jump-links a { font-weight: 700; padding-block: 10px; }
+.kcf-sport > h2 { font-size: 1.5rem; font-weight: 500; line-height: 1.2; margin-top: 48px; }
+.kcf-program-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 36px 0 48px; gap: 36px; }
+.kcf-program-card { padding: 24px 0; border-top: 1px solid var(--kcf-line); margin: 0; }
+.kcf-program-card .kcf-program-number { font-size: .875rem; font-weight: 500; line-height: 1.5; margin: 0; }
+.kcf-program-card h3 { font-size: 1.5rem; font-weight: 500; line-height: 1.2; margin-block: 16px; }
+.kcf-program-card p:not(.kcf-program-number) { font-size: 1.125rem; line-height: 1.7; }
+.kcf-program-card:first-child { background: var(--kcf-paper); color: var(--kcf-ink); }
+.kcf-program-card:first-child .kcf-program-number { color: var(--kcf-ink); }
+.kcf-program-card:not(:first-child) .kcf-program-number { color: var(--kcf-ink); }
+.kcf-sport [id] { scroll-margin-top: 24px; }
+.kcf-pest { max-width: 1200px; }
+.kcf-pest-hero { background: var(--kcf-ink); color: var(--kcf-paper); padding: clamp(28px, 4vw, 52px); }
+.kcf-pest-hero .kcf-title { font-family: 'KCF Display', Impact, sans-serif; font-size: clamp(3rem, 6vw, 5.5rem); letter-spacing: -.025em; line-height: 1; }
+.kcf-pest-hero .kcf-intro { font-size: 1.25rem; }
+.kcf-pest-services { margin-block: 48px; gap: 40px; }
+.kcf-pest-services .wp-block-column { border-top: 2px solid var(--kcf-ink); padding-top: 16px; }
+.kcf-pest h2 { font-family: 'KCF Display', Impact, sans-serif; font-size: clamp(2rem, 3vw, 2.8rem); line-height: 1.1; }
+.kcf-pest-services p { padding-left: 18px; position: relative; }
+.kcf-pest-services p::before { content: '•'; position: absolute; left: 0; }
+.kcf-pest-bees { background: var(--kcf-line); padding: clamp(24px, 4vw, 40px); }
+@media (min-width: 1441px) { .kcf-home .kcf-portals { max-width: 1500px; } }
+@media (max-width: 781px) {
+  .kcf-site-header { padding-block: 18px; }
+  .kcf-home-hero { padding-top: 38px; padding-bottom: 52px; min-height: 740px; }
+  .kcf-home-hero > .wp-block-column:first-child { flex-basis: 100% !important; width: 100%; }
+  .kcf-home-hero > .wp-block-column:last-child { inset: 0; }
+  .kcf-home-hero::after { background: #111111bb; }
+  .kcf-home-hero .kcf-title { font-size: clamp(3.25rem, 13vw, 4.75rem); margin-block: 24px; }
+  .kcf-home-hero .kcf-eyebrow { max-width: 260px; font-size: .6875rem; }
+  .kcf-home-hero .kcf-intro { max-width: 540px; }
+  .kcf-home-hero .kcf-hero-photo figcaption { right: 16px; bottom: 8px; }
+  .kcf-home-hero .wp-block-buttons { gap: 12px; }
+  .kcf-home .kcf-portals { gap: 24px; }
+  .kcf-home .kcf-portal h2 { font-size: 1.5rem; }
+  .kcf-home .kcf-portal-protection::before { font-size: 6rem; }
+  .kcf-trust-strip { margin-bottom: 50px; }
+  .kcf-program-grid { grid-template-columns: 1fr; }
+  .kcf-sport-hero .kcf-title { font-size: clamp(3rem, 12vw, 4.75rem); }
+  .kcf-jump-links { margin-bottom: 40px; }
+  .kcf-jump-links p { gap: 0 22px; }
+  .kcf-sport > h2 { margin-top: 48px; }
+  .kcf-pest-services { gap: 28px; }
+}
+@media (forced-colors: active) { .kcf-outline-word, .kcf-program-card .kcf-program-number { color: CanvasText; -webkit-text-stroke: 0; } }
+
+/* Quiet white footer: useful links only, without decorative chrome. */
+.kcf-site-footer { background: var(--kcf-paper); color: var(--kcf-ink); border-top: 1px solid var(--kcf-line); padding-block: 48px; }
+.kcf-site-footer a { color: inherit; text-decoration: none; text-underline-offset: .2em; }
+.kcf-site-footer a:hover { text-decoration: underline; }
+.kcf-site-footer a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+.kcf-footer-grid { width: 100%; max-width: 1440px; margin-inline: auto; gap: 48px; }
+.kcf-footer-grid h2 { font-size: 1rem; font-weight: 500; margin: 0 0 20px; }
+.kcf-footer-grid p { font-size: 1rem; margin-block: 12px; }
+.kcf-footer-signature { font-family: 'KCF Display', Impact, sans-serif; font-size: 2rem; line-height: 1.1; }
+.kcf-page .wp-block-button__link { font-weight: 500; }
+/* Keep the hero photograph selectable and replaceable in the block editor. */
+.editor-styles-wrapper .kcf-sport-hero .kcf-sport-photo { position: relative; z-index: auto; height: auto; }
+.editor-styles-wrapper .kcf-sport-photo img { filter: none; max-height: 360px; }
+.kcf-program-photo { margin: 0 0 24px; }
+.kcf-program-photo img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.kcf-program-photo figcaption { font-size: .75rem; }
+
+.kcf-video-section { margin-block: 48px; }
+.kcf-video-section h2 { font-size: 1.5rem; font-weight: 500; }
+.kcf-video-section video { display: block; width: 100%; max-height: 720px; background: var(--kcf-ink); }
+.kcf-video-section figcaption { font-size: .875rem; }
+
+/* Direction 03: client brand colours, after the five reference-site studies. */
+:root { --kcf-vitali: #b8e85c; --kcf-forest: #174e3b; --kcf-orange: #f5a45b; --kcf-pink: #efa9c3; --kcf-yellow: #ffe000; --kcf-cream: #f5efdf; --kcf-amber: #d19a3c; --kcf-wine: #542a35; }
+body { background: #141716; }
+a { text-underline-offset: .22em; }
+.kcf-page { background: #fff; }
+.kcf-site-header { background: #141716; color: #fff; padding-block: 20px; border-color: #ffffff24; }
+.kcf-site-header a { color: inherit; }
+.kcf-site-header .wp-block-site-title { font-family: 'KCF Display',Impact,sans-serif; font-size: 2rem; text-transform: uppercase; letter-spacing: -.025em; }
+.kcf-site-header .wp-block-site-title::after { content: '.'; color: var(--kcf-vitali); }
+.kcf-site-header .wp-block-navigation-item:last-child .wp-block-navigation-item__content { background: var(--kcf-vitali); color: #141716; padding: 10px 22px; border-radius: 30px; font-weight: 700; }
+.kcf-site-header .wp-block-navigation__responsive-container.is-menu-open { color: #fff; background: #141716; }
+.kcf-site-header .wp-block-navigation__responsive-container-close { color: #fff; }
+.kcf-page .wp-block-button__link { font-weight: 700; transition: background .18s,color .18s; }
+.kcf-page .wp-block-button__link:hover { background: #303932; color: #fff; }
+.kcf-page a:focus-visible, .kcf-site-header a:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
+.kcf-home,.kcf-sport { --kcf-gutter: clamp(24px,5vw,80px); background: #141716; color: #fff; padding-inline: var(--kcf-gutter); }
+.kcf-home a,.kcf-sport a { color: inherit; }
+.kcf-home-hero { min-height: 740px; padding-top: 80px; padding-bottom: 68px; }
+.kcf-home-hero > .wp-block-column:first-child { flex-basis: 65% !important; max-width: 820px; }
+.kcf-home-hero::after { background: linear-gradient(90deg,#101513f0 0%,#101513cf 35%,#10151326 100%); }
+.kcf-home-hero .kcf-hero-photo img { object-position: 65% center; }
+.kcf-home-hero .kcf-title { font-size: clamp(4.5rem,8.4vw,8.8rem); letter-spacing: -.035em; line-height: .94; }
+.kcf-home-hero .kcf-eyebrow { color: var(--kcf-vitali); }
+.kcf-hero-highlight { color: var(--kcf-vitali); }
+.kcf-home-hero .kcf-intro { max-width: 560px; color: #e2e6e0; line-height: 1.6; }
+.kcf-home-hero .wp-block-button:first-child .wp-block-button__link,.kcf-sport-hero .wp-block-button:first-child .wp-block-button__link { background: var(--kcf-vitali); color: #141716; border-color: var(--kcf-vitali); }
+.kcf-home-hero .wp-block-button:first-child .wp-block-button__link:hover,.kcf-sport-hero .wp-block-button:first-child .wp-block-button__link:hover { background: #d2f595; }
+.kcf-home-hero .is-style-outline .wp-block-button__link { color: #fff; background: #14171655; }
+.kcf-trust-strip { border-top: 0; border-bottom-color: #ffffff24; padding-block: 28px; margin-bottom: 76px; }
+.kcf-trust-strip p { color: #d7dfd5; letter-spacing: .1em; }
+.kcf-trust-strip p::before { content: '↗'; margin-right: 12px; color: var(--kcf-vitali); }
+.kcf-section-title { font-family: 'KCF Display',Impact,sans-serif; font-size: clamp(3.5rem,5.5vw,6rem); line-height: .98; font-weight: 700; letter-spacing: -.02em; }
+.kcf-home > .kcf-eyebrow { color: var(--kcf-vitali); }
+.kcf-home .kcf-portals { gap: 24px; margin-bottom: 90px; }
+.kcf-home .kcf-portal { padding: 0 24px 28px; background: #242b26; border-top: 3px solid var(--kcf-vitali); }
+.kcf-home .kcf-portal::before { margin: 0 -24px 28px; aspect-ratio: 1.2; }
+.kcf-home .kcf-portal h2 { font-family: 'KCF Display',Impact,sans-serif; font-weight: 700; font-size: clamp(2.1rem,3vw,3.3rem); line-height: 1; }
+.kcf-home .kcf-portal p { line-height: 1.65; }
+.kcf-home .kcf-portal .kcf-eyebrow { font-size: .7rem; letter-spacing: .1em; }
+.kcf-home .kcf-portal-sport .kcf-eyebrow { color: var(--kcf-vitali); }
+.kcf-home .kcf-portal .wp-block-button__link { background: var(--kcf-vitali); color: #141716; border-color: transparent; }
+.kcf-home .kcf-portal-protection { background: var(--kcf-yellow); color: #171710; border-color: var(--kcf-yellow); }
+.kcf-home .kcf-portal-protection::before { background: #171710; color: var(--kcf-yellow); content: 'A.K\a ANTI-NUISIBLE'; white-space: pre; text-align: center; line-height: .92; font-size: clamp(2.8rem,5vw,5.6rem); border-bottom: 10px solid var(--kcf-yellow); background-image: repeating-linear-gradient(135deg,transparent 0,transparent 35px,#ffffff05 35px,#ffffff05 70px); }
+.kcf-home .kcf-portal-protection .kcf-coming { border-color: #171710; }
+.kcf-home .kcf-portal-terroir { background: var(--kcf-cream); color: #33291b; border-color: var(--kcf-amber); }
+.kcf-home .kcf-portal-terroir .wp-block-button__link { background: #33291b; color: var(--kcf-cream); }
+.kcf-story-band { color: #14271c; background: var(--kcf-vitali); padding-block: 80px; }
+.kcf-story-band h2 { color: #14271c; font-size: clamp(3.5rem,6.8vw,7.2rem); }
+.kcf-story-band .kcf-eyebrow { letter-spacing: .14em; }
+.kcf-story-band p { max-width: 800px; }
+.kcf-home .kcf-final-cta { padding-bottom: 70px; }
+.kcf-home .kcf-final-cta .wp-block-button__link { background: var(--kcf-vitali); color: #141716; border-color: var(--kcf-vitali); }
+.kcf-home .kcf-final-cta .is-style-outline .wp-block-button__link { background: transparent; color: #fff; border-color: #fff; }
+.kcf-sport-hero { min-height: 690px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-block: 70px; }
+.kcf-sport-photo img { object-position: 65% center; filter: brightness(.68); }
+.kcf-sport-hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg,#141716ed 0%,#141716a8 48%,#14171622 100%); }
+.kcf-sport-hero .kcf-eyebrow { color: var(--kcf-vitali); }
+.kcf-sport-hero .kcf-title { font-size: clamp(4rem,7.7vw,8.2rem); line-height: .94; max-width: 900px; margin-block: 24px; }
+.kcf-sport-hero p { max-width: 640px; margin-block: 10px; }
+.kcf-sport-hero .kcf-intro { font-size: 1.25rem; }
+.kcf-sport-hero > p:last-of-type { color: var(--kcf-vitali); border-color: #ffffff44; margin-block: 16px; }
+.kcf-sport-hero .wp-block-button:nth-child(2) .wp-block-button__link { background: transparent; color: #fff; }
+.kcf-sport-hero::after { color: #d4d9d3; font-size: .7rem; margin-top: 24px; }
+.kcf-sport .kcf-video-section { padding: 32px; background: #202822; margin-block: 40px; }
+.kcf-sport .kcf-video-section h2 { font-family:'KCF Display',Impact,sans-serif; text-transform: uppercase; font-size: 2.3rem; margin-top: 0; }
+.kcf-sport .kcf-video-section video { max-height: 500px; }
+.kcf-sport .kcf-video-section figcaption { color: #ced9cc; }
+.kcf-jump-links { border-color: #ffffff33; padding: 16px 0; }
+.kcf-jump-links a { text-decoration: none; color: var(--kcf-vitali); }
+.kcf-jump-links a:hover { text-decoration: underline; }
+.kcf-sport > h2 { font-family:'KCF Display',Impact,sans-serif; font-size: clamp(2.5rem,4vw,4.5rem); text-transform: uppercase; }
+.kcf-program-grid { gap: 28px; }
+.kcf-program-card,.kcf-program-card:first-child { background: #222b25; color: #fff; padding: 0 30px 32px; border: 0; border-bottom: 4px solid var(--program-color); --program-color: var(--kcf-vitali); }
+.kcf-program-seniors { --program-color: #b8e85c; }
+.kcf-program-renfort,.kcf-program-training { --program-color: var(--kcf-orange); }
+.kcf-program-coach { --program-color: var(--kcf-pink); }
+.kcf-program-photo { margin: 0 -30px 24px; }
+.kcf-program-photo img { aspect-ratio: 16/10; }
+.kcf-program-photo figcaption { padding: 8px 30px; color: #ced9cc; font-size: .7rem; }
+.kcf-program-card h3 { color: var(--program-color); font-family:'KCF Display',Impact,sans-serif; font-size: 2.6rem; font-weight: 700; margin-block: 12px 20px; }
+.kcf-program-card .kcf-program-number,.kcf-program-card:first-child .kcf-program-number,.kcf-program-card:not(:first-child) .kcf-program-number { color: var(--program-color); font-size: .9rem; font-weight: 700; }
+.kcf-program-card p:not(.kcf-program-number) { font-size: 1.0625rem; line-height: 1.7; }
+.kcf-sport .wp-block-table { background: #222b25; color: #fff; }
+.kcf-sport .wp-block-table thead { background: var(--kcf-forest); }
+.kcf-sport .wp-block-table td,.kcf-sport .wp-block-table th { border-color: #ffffff33; }
+.kcf-sport .wp-block-button__link { background: var(--kcf-vitali); color: #141716; border-color: var(--kcf-vitali); }
+.kcf-sport .wp-block-details { border-bottom: 1px solid #ffffff33; padding-block: 16px; }
+.kcf-pest { max-width: none; background: #f4f3ec; padding: 0 clamp(24px,5vw,80px) 70px; }
+.kcf-pest-hero { margin: 0 calc(-1 * clamp(24px,5vw,80px)); padding: 65px clamp(24px,5vw,80px); color: var(--kcf-yellow); background: #171710; border-top: 12px solid var(--kcf-yellow); }
+.kcf-pest-hero .kcf-eyebrow { color: #fff; font-size: .75rem; }
+.kcf-pest-hero .kcf-title { font-size: clamp(4rem,9vw,9.5rem); text-transform: uppercase; max-width: 1100px; }
+.kcf-pest-hero .kcf-intro { color: #fff; }
+.kcf-pest-hero .wp-block-button__link { background: var(--kcf-yellow); color: #171710; border-color: var(--kcf-yellow); }
+.kcf-pest-hero .wp-block-button:last-child .wp-block-button__link { background: transparent; color: #fff; border-color: #fff; }
+.kcf-pest-services { gap: 24px; margin-block: 56px; }
+.kcf-pest-services .wp-block-column { background: #fff; border-top: 8px solid var(--kcf-yellow); padding: 32px; }
+.kcf-pest-services h2 { font-size: clamp(2.2rem,3.2vw,3.5rem); margin-top: 0; text-transform: uppercase; }
+.kcf-pest-services p::before { color: #746800; }
+.kcf-pest-bees { background: var(--kcf-yellow); color: #171710; padding: clamp(28px,5vw,64px); }
+.kcf-pest-bees h2 { margin-top: 0; }
+.kcf-terroir { --kcf-gutter: clamp(24px,5vw,80px); max-width: none; padding: 0 var(--kcf-gutter) 70px; background: var(--kcf-cream); color: #33291b; }
+.kcf-terroir-hero { margin: 0 calc(-1 * var(--kcf-gutter)); padding: 85px var(--kcf-gutter); background: #2d3023; color: var(--kcf-cream); background-image: linear-gradient(90deg,#25291df5 15%,#25291da8 100%),url('assets/kevmiel-pots.webp'); background-position: center; background-size: cover; }
+.kcf-terroir-hero .kcf-title { font-family: 'KCF Display',Impact,sans-serif; font-size: clamp(4rem,8vw,8.5rem); line-height: .95; margin-block: 24px; }
+.kcf-terroir-hero .kcf-eyebrow { color: #e9c578; }
+.kcf-terroir-hero .kcf-intro { max-width: 680px; }
+.kcf-terroir-hero .wp-block-button__link { background: #e9c578; border-color: #e9c578; color: #33291b; }
+.kcf-terroir-hero .wp-block-button:last-child .wp-block-button__link { background: transparent; border-color: var(--kcf-cream); color: var(--kcf-cream); }
+.kcf-honey-section { padding-block: 65px; }
+.kcf-honey-section > h2 { font-family: 'KCF Display',Impact,sans-serif; font-size: clamp(3rem,5vw,5.5rem); line-height: 1; margin-top: 0; }
+.kcf-honey-section .kcf-honey-logo { width: 220px; float: right; margin: 0 0 24px 36px; }
+.kcf-honey-section > .wp-block-image:not(.kcf-honey-logo) { clear: both; max-width: 1000px; margin: 40px auto; }
+.kcf-honey-section > .wp-block-image:not(.kcf-honey-logo) img { width: 100%; max-height: 600px; object-fit: contain; }
+.kcf-honey-section .kcf-portals { margin-block: 40px; }
+.kcf-terroir .kcf-portal { border: 0; }
+.kcf-honey-section .kcf-product-visual { background: #e8c97e; color: #493413; padding: 28px; min-height: 200px; }
+.kcf-honey-section .kcf-portal:nth-child(2) .kcf-product-visual { background: #443b28; color: var(--kcf-cream); }
+.kcf-terroir .kcf-product-label { font-family:'KCF Display',Impact,sans-serif; font-size: 3rem; font-weight: 700; }
+.kcf-terroir .wp-block-table td,.kcf-terroir .wp-block-table th { border-color: #b1a48a; }
+.kcf-wine-section { position: relative; margin: 0 calc(-1 * var(--kcf-gutter)) 64px; padding: 65px var(--kcf-gutter); color: #f5efdf; background: #321d25; }
+.kcf-wine-section a { color: inherit; }
+.kcf-wine-section > h2 { font-family: Georgia,serif; font-weight: 400; font-size: clamp(2.5rem,4vw,4.5rem); line-height: 1.15; }
+.kcf-wine-section .kcf-wine-atmosphere { margin: 0 0 40px; }
+.kcf-wine-atmosphere img { width: 100%; max-height: 460px; object-fit: cover; }
+.kcf-wine-section .kcf-product-visual { background: #542a35; color: #f5efdf; border-top: 1px solid #b4896a; }
+.kcf-wine-section .kcf-product-price { color: #e9c578; }
+.kcf-wine-section .kcf-product-label { font-family: Georgia,serif; font-size: 2.6rem; line-height: 1.2 !important; font-weight: 400; }
+.kcf-terroir form { color: #33291b; background: #fffaf0; padding: clamp(20px,3vw,40px); }
+.kcf-terroir form a { color: #33291b; }
+.kcf-terroir input,.kcf-terroir select,.kcf-terroir textarea { background: #fff; color: #33291b; }
+.kcf-terroir .kcf-product-note { font-size: .875rem; }
+.kcf-site-footer { background: #0e110f; color: #e0e5dd; border-color: #ffffff22; padding-block: 60px; }
+.kcf-footer-signature { color: var(--kcf-vitali); }
+.kcf-site-footer h2 { color: #fff; font-weight: 700; }
+.kcf-site-footer a { color: inherit; }
+@media(max-width:781px) {
+ .kcf-site-header { padding-inline: 24px; }
+ .kcf-site-header .wp-block-site-title { font-size: 1.65rem; }
+ .kcf-home-hero { min-height: 710px; padding-top: 46px; }
+ .kcf-home-hero > .wp-block-column:first-child { flex-basis: 100% !important; }
+ .kcf-home-hero::after { background: linear-gradient(90deg,#101513e8,#10151385); }
+ .kcf-home-hero .kcf-title { font-size: clamp(4rem,16vw,6rem); }
+ .kcf-home-hero .kcf-intro { font-size: 1.0625rem; }
+ .kcf-trust-strip { gap: 14px; margin-bottom: 48px; }
+ .kcf-home .kcf-portals { gap: 28px; margin-bottom: 52px; }
+ .kcf-home .kcf-portal h2 { font-size: 2.8rem; }
+ .kcf-home .kcf-portal-protection::before { font-size: 4.5rem; }
+ .kcf-story-band { padding-block: 50px; margin-bottom: 48px; }
+ .kcf-sport-hero { min-height: 720px; padding-block: 48px; }
+ .kcf-sport-hero .kcf-title { font-size: clamp(3.7rem,14vw,6rem); }
+ .kcf-sport-photo img { object-position: 60%; }
+ .kcf-sport .kcf-video-section { padding: 20px; }
+ .kcf-program-card { padding-inline: 22px; }
+ .kcf-program-photo { margin-inline: -22px; }
+ .kcf-program-photo figcaption { padding-inline: 22px; }
+ .kcf-pest-hero .kcf-title { font-size: clamp(3.6rem,15vw,6rem); overflow-wrap: anywhere; }
+ .kcf-pest-services .wp-block-column { padding: 24px; }
+ .kcf-terroir-hero { padding-block: 56px; }
+ .kcf-terroir-hero .kcf-title { font-size: 4.4rem; }
+ .kcf-honey-section .kcf-honey-logo { float: none; margin: 24px 0; width: 180px; }
+ .kcf-honey-section { padding-block: 48px; }
+ .kcf-wine-section { padding-block: 40px; }
+}
+@media(prefers-reduced-motion:reduce) { .kcf-page .wp-block-button__link { transition: none; } }
+@media(forced-colors:active) { .kcf-home-hero::after,.kcf-sport-hero::before { background: Canvas; opacity: .85; } }
+/* Padding must stay inside full-width WordPress columns on small screens. */
+.kcf-portal,.kcf-program-card,.kcf-pest-services .wp-block-column { box-sizing: border-box; min-width: 0; }
+.kcf-booking-page { background: #eef2e7; }
+.kcf-contact-page { background: #f5efdf; }
+.kcf-booking-page .kcf-title,.kcf-contact-page .kcf-title { font-family:'KCF Display',Impact,sans-serif; font-size:clamp(3.5rem,7vw,7rem); letter-spacing:-.025em; }
+.kcf-booking-page .kcf-eyebrow { color:#174e3b; }
+@media(max-width:781px) {
+ .kcf-home .kcf-portal { width: 100%; max-width: 100%; }
+ .kcf-home .kcf-portal-protection::before { font-size: clamp(2.8rem,12vw,4.5rem); }
+}
+.kcf-home .kcf-portal-protection .wp-block-button__link { background: #171710; color: var(--kcf-yellow); }
+.kcf-wine-atmosphere figcaption { color: #e5d8c5; font-size: .8rem; }
+
+/* Review 04: original Vitali’Van flyers and A.K poster hierarchy. */
+.kcf-flyer-section { padding: clamp(24px,4vw,48px); margin-block: 44px; background: #203a2c; border-top: 5px solid #7dbb44; }
+.kcf-flyer-section .kcf-eyebrow { color: #b8e85c; }
+.kcf-flyer-section h2 { font-family: 'KCF Display',Impact,sans-serif; font-size: clamp(2rem,4vw,3.5rem); line-height: 1.1; margin-block: 16px; }
+.kcf-flyer-section > p { max-width: 780px; }
+.kcf-flyer-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: start; gap: 24px; max-width: 880px; margin: 28px auto; }
+.kcf-flyer-page { margin: 0; }
+.kcf-flyer-page img { display: block; width: 100%; height: auto; }
+.kcf-flyer-note { font-size: .9375rem; color: #e2eadf; }
+.kcf-home .kcf-portal-sport::before { display: none; }
+.kcf-home .kcf-portal-flyer { margin: 0 -24px 28px; order: -1; }
+.kcf-portal-flyer img { width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: top; }
+.kcf-pest { background: #171710; color: #fff; }
+.kcf-pest a { color: inherit; }
+.kcf-pest-hero { position: relative; isolation: isolate; overflow: hidden; background: #141410; border-top: 0; padding-top: 48px; padding-bottom: 65px; }
+.kcf-pest-hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg,#141410fa 0%,#141410f0 35%,#14141065 75%,#14141030 100%); }
+.kcf-pest-hero::after { content: ''; position: absolute; inset: auto 0 0; height: 18px; background: repeating-linear-gradient(135deg,#ffe000 0px,#ffe000 20px,#171710 20px,#171710 40px); }
+.kcf-pest-photo { position: absolute; inset: 0; z-index: -2; height: 100%; margin: 0; }
+.kcf-pest-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 72% center; }
+.kcf-pest-photo .kcf-image-zoom { height: 100%; pointer-events: none; }
+.kcf-pest-hero .kcf-title { font-size: clamp(5.5rem,11vw,11rem); line-height: .83; margin-block: 28px 30px; letter-spacing: -.035em; }
+.kcf-pest-hero .kcf-title span { color: #fff; }
+.kcf-pest-hero .kcf-intro { font-size: clamp(1rem,2vw,1.25rem); max-width: 620px; }
+.kcf-pest-hero .kcf-pest-promise { display: inline-block; padding: 12px 20px; background: #ffe000; color: #171710; font-family:'KCF Display',Impact,sans-serif; font-size: clamp(1.6rem,3vw,3rem); font-weight: 700; line-height: 1.05; margin-block: 20px 0; }
+.kcf-pest-hero .kcf-pest-name { font-family:'KCF Display',Impact,sans-serif; font-size: clamp(2rem,3.5vw,3.5rem); color: #fff; line-height: 1.1; margin-block: 24px 0; }
+.kcf-pest-hero .kcf-pest-tagline { font-size: 1.1rem; font-weight: 700; margin-top: 8px; color: #ffe000; }
+.kcf-pest-hero .kcf-eyebrow { display: inline-block; padding: 6px 12px; border: 1px solid #ffe000; font-size: .75rem; background: #171710; }
+.kcf-pest-hero .wp-block-buttons { margin-top: 28px; }
+.kcf-pest > .kcf-eyebrow { margin-top: 50px; color: #ffe000; }
+.kcf-pest-section-title { max-width: 950px; }
+.kcf-pest-services { margin-block: 32px 50px; }
+.kcf-pest-services .wp-block-column { color: #fff; background: #24241a; border: 1px solid #ffe000; padding: clamp(24px,3vw,40px); }
+.kcf-pest-services h2 { background: #ffe000; color: #171710; padding: 16px 20px; margin: 12px 0 26px; font-size: clamp(2rem,3.2vw,3.6rem); overflow-wrap: anywhere; }
+.kcf-pest-services .kcf-service-number { color: #ffe000; padding-left: 0; font-size: .8rem; letter-spacing: .12em; font-weight: 700; }
+.kcf-pest-services .kcf-service-number::before { display: none; }
+.kcf-pest-services p::before { color: #ffe000; }
+.kcf-pest-services p { font-size: 1.125rem; }
+.kcf-pest-bees { border: 2px solid #ffe000; position: relative; }
+.kcf-pest-bees::before { content: '03 / PRÉSERVATION DES ABEILLES'; display: block; font-size: .8rem; font-weight: 700; letter-spacing: .1em; margin-bottom: 20px; }
+.kcf-pest-bees h2 { font-size: clamp(2.2rem,4vw,4rem); }
+.kcf-pest > .wp-block-buttons .wp-block-button__link { background: #ffe000; color: #171710; border-color: #ffe000; }
+.kcf-contact-producers { border-top: 1px solid #c9bd9c; margin-top: 45px; padding-top: 24px; }
+.kcf-page .wp-block-button__link { min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; text-align: center; }
+.kcf-site-header .wp-block-navigation__responsive-container-open,.kcf-site-header .wp-block-navigation__responsive-container-close { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+@media(min-width:600px) { .kcf-site-header .wp-block-navigation__responsive-container-open:not(.always-shown) { display: none; } }
+@media(max-width:600px) {
+ .kcf-flyer-grid { grid-template-columns: 1fr; max-width: 400px; gap: 24px; }
+ .kcf-flyer-section { padding: 24px 18px; }
+ .kcf-pest-hero { padding-top: 28px; }
+ .kcf-pest-hero::before { background: linear-gradient(90deg,#141410eb 0%,#141410c9 65%,#14141077 100%); }
+ .kcf-pest-hero .kcf-title { font-size: clamp(4.7rem,20vw,7rem); }
+ .kcf-pest-hero .kcf-eyebrow { font-size: .65rem; }
+ .kcf-pest-hero .wp-block-buttons { align-items: stretch; }
+ .kcf-pest-hero .wp-block-button { width: 100%; }
+ .kcf-pest-services h2 { font-size: 2.2rem; padding: 14px; }
+ .kcf-pest > h2 { overflow-wrap: anywhere; }
+ .kcf-jump-links a { display: inline-flex; align-items: center; min-height: 44px; }
+ /* Keep all five scheduling facts visible without a horizontal swipe. */
+ .kcf-schedule-table[data-kcf-cards] table,.kcf-schedule-table[data-kcf-cards] tbody { display: block; width: 100%; }
+ .kcf-schedule-table[data-kcf-cards] thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+ .kcf-schedule-table[data-kcf-cards] tbody tr { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); border: 1px solid #ffffff33; margin-bottom: 16px; padding: 10px; }
+ .kcf-schedule-table[data-kcf-cards] td,.kcf-schedule-table[data-kcf-cards] td:first-child { display: block; min-width: 0; border: 0; padding: 10px; font-size: 1rem; }
+ .kcf-schedule-table[data-kcf-cards] td:first-child { grid-column: 1/-1; color: #b8e85c; font-weight: 700; border-bottom: 1px solid #ffffff24; margin-bottom: 8px; }
+ .kcf-schedule-table[data-kcf-cards] td::before { content: attr(data-label); display: block; font-size: .75rem; font-weight: 700; color: #ced9cc; margin-bottom: 2px; }
+ .kcf-page .wp-block-table:not(.kcf-schedule-table) td:first-child,.kcf-page .wp-block-table:not(.kcf-schedule-table) th:first-child { min-width: 0; }
+ .kcf-page .wp-block-table:not(.kcf-schedule-table) td,.kcf-page .wp-block-table:not(.kcf-schedule-table) th { padding: 12px 10px; font-size: .9375rem; }
+}
+@media(max-width:600px) { .kcf-pest-hero .kcf-title { font-size: clamp(3.6rem,18vw,7rem); } }
+.kcf-home .kcf-portal-terroir { position: relative; }
+.kcf-home .kcf-portal-honey-mark { position: absolute; top: 16px; right: 12px; width: clamp(85px,9vw,120px); margin: 0; z-index: 1; }
+.kcf-portal-honey-mark img { width: 100%; height: auto; }
+.kcf-program-seniors { background: #174e3b !important; }
+@media(max-width:360px) { .kcf-program-card h3 { font-size: 2.15rem; } }
+.kcf-pest-photo figcaption { position: absolute; bottom: 26px; right: 16px; color: #fff; background: #171710; padding: 4px 8px; font-size: .65rem; }
+/* Mobile follow-up: direct contact and shortcuts, keeping every offer intact. */
+.kcf-home .kcf-portal-protection::before { background-image: linear-gradient(90deg,#171710ee,#17171066),url('assets/ak-frelon-ambiance.webp'); background-position: center; background-size: cover; }
+.kcf-pest-mobile-contact { display: none; }
+.kcf-program-shortcuts { display: flex; flex-wrap: wrap; gap: 8px; margin-block: 20px 28px; }
+.kcf-program-shortcuts a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid #b8e85c; border-radius: 30px; color: #b8e85c; font-weight: 700; font-size: .9375rem; text-decoration: none; }
+.kcf-program-shortcuts a:hover { background: #b8e85c; color: #141716; }
+.kcf-program-shortcuts a:nth-child(2),.kcf-program-shortcuts a:nth-child(3) { border-color: #f5a45b; color: #f5a45b; }
+.kcf-program-shortcuts a:nth-child(4) { border-color: #efa9c3; color: #efa9c3; }
+.kcf-program-shortcuts a:nth-child(2):hover,.kcf-program-shortcuts a:nth-child(3):hover { background:#f5a45b; color:#141716; }
+.kcf-program-shortcuts a:nth-child(4):hover { background:#efa9c3; color:#141716; }
+@media(max-width:600px) {
+ .kcf-jump-links { position: sticky; top: 0; z-index: 12; background: #141716; margin-block: 0 32px; padding-block: 10px; border-bottom: 1px solid #ffffff44; }
+ .kcf-jump-links p { gap: 0 18px; }
+ .kcf-jump-links a { font-size: .9375rem; }
+ .kcf-sport [id] { scroll-margin-top: 126px; }
+ .kcf-pest .kcf-pest-mobile-contact { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 30; box-sizing: border-box; flex-wrap: nowrap; gap: 10px; margin: 0; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: #171710; border-top: 2px solid #ffe000; }
+ .kcf-pest-mobile-contact .wp-block-button { flex: 1; min-width: 0; }
+ .kcf-pest .kcf-pest-mobile-contact .wp-block-button__link { display: flex; width: 100%; min-height: 48px; padding: 10px 8px; font-size: .875rem; background: #ffe000; color: #171710; border-color: #ffe000; }
+ .kcf-pest .kcf-pest-mobile-contact .wp-block-button:last-child .wp-block-button__link { color: #ffe000; background: transparent; }
+ .showcase-page:has(.kcf-pest) .kcf-site-footer,body:not(:has(.showcase-page)):has(.kcf-pest) .kcf-site-footer { padding-bottom: calc(150px + env(safe-area-inset-bottom)); }
+ .wp-site-blocks:has(.is-menu-open) .kcf-pest-mobile-contact,body:has(dialog[open]) .kcf-pest-mobile-contact { display: none; }
+}
+@media(max-width:600px) { .kcf-jump-links a { box-sizing: border-box; } }
+@media(min-width:601px) { .kcf-pest .wp-block-buttons.kcf-pest-mobile-contact { display: none; } }
+
+/* Art direction 06: coherent portal gallery and warmer producer catalogue. */
+.kcf-brand { flex-shrink: 0; }
+.kcf-brand .wp-block-site-title { margin: 0; line-height: 1.05; }
+.kcf-site-header .kcf-brand-location { margin: 6px 0 0; color: #b8c5b8; font: 700 .625rem/1.4 Arial,sans-serif; letter-spacing: .16em; }
+.kcf-site-header .wp-block-navigation-item__content[aria-current=page] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 8px; }
+.kcf-site-header .wp-block-navigation-item:last-child .wp-block-navigation-item__content[aria-current=page] { text-decoration: none; border: 2px solid #fff; }
+.kcf-home .kcf-portal::before { aspect-ratio: 4/3; flex-shrink: 0; }
+.kcf-home .kcf-portal-flyer { flex-shrink: 0; }
+.kcf-home .kcf-portal h2 { min-height: 1.2em; margin-block: 10px 20px; }
+.kcf-home .kcf-portal > .kcf-eyebrow { margin-top: 0; }
+.kcf-home-hero .kcf-title { font-size: clamp(4.8rem,9vw,9rem); line-height: .92; }
+.kcf-home-hero .kcf-intro { margin-block: 26px; }
+@supports(-webkit-text-stroke:1px white) {
+ .kcf-hero-outline { -webkit-text-stroke: 1.5px #fff; color: transparent; }
+}
+.kcf-home .kcf-portals { gap: clamp(20px,2.4vw,36px); }
+.kcf-home .kcf-portal { transition: border-color .2s ease; }
+.kcf-home .kcf-portal:focus-within { outline: 2px solid currentColor; outline-offset: 4px; }
+.kcf-terroir-hero { position: relative; isolation: isolate; background: #ede3cd; color: #33291b; padding-block: 90px; overflow: hidden; min-height: 560px; box-sizing: border-box; }
+.kcf-terroir-hero > .kcf-eyebrow { color: #6c4b18; }
+.kcf-terroir-hero > p,.kcf-terroir-hero > h1,.kcf-terroir-hero > .wp-block-buttons { position: relative; max-width: 48%; z-index: 1; }
+.kcf-terroir-hero .kcf-title { font-family: Georgia,'Times New Roman',serif; font-size: clamp(3.7rem,6.8vw,7rem); font-weight: 400; line-height: 1.03; text-transform: none; letter-spacing: -.06em; }
+.kcf-terroir-hero .kcf-intro { font-size: 1.125rem; line-height: 1.8; }
+.kcf-terroir-hero .wp-block-button__link { background: #33291b; color: #fff8e8; border-color: #33291b; }
+.kcf-terroir-hero .wp-block-button:last-child .wp-block-button__link { background: transparent; color: #33291b; border-color: #6c5733; }
+.kcf-terroir-cover { position: absolute; top: 0; right: 0; bottom: 0; width: 46%; margin: 0; background: #fffcf4; }
+.kcf-terroir-cover img,.kcf-terroir-cover .kcf-image-zoom { width: 100%; height: 100%; }
+.kcf-terroir-cover img { object-fit: contain; box-sizing: border-box; padding: 36px; }
+.kcf-terroir-cover figcaption { position: absolute; bottom: 18px; left: 20px; right: 20px; color: #65583c; font-size: .75rem; line-height: 1.5; text-align: center; }
+.kcf-honey-section > h2 { font-family: Georgia,'Times New Roman',serif; font-weight: 400; letter-spacing: -.04em; font-size: clamp(2.8rem,4.5vw,4.7rem); line-height: 1.1; }
+.kcf-honey-section .kcf-product-visual { padding: 36px; border-top: 2px solid #9b712b; }
+.kcf-honey-section .kcf-product-label { font-family: Georgia,serif; font-size: clamp(2.4rem,3.5vw,3.5rem); font-weight: 400; letter-spacing: -.045em; line-height: 1.1 !important; }
+.kcf-honey-section .kcf-portal h3 { font-size: 1.3rem; line-height: 1.4; }
+.kcf-honey-section .kcf-product-visual .kcf-eyebrow { font-size: .65rem; }
+.kcf-wine-intro { position: relative; isolation: isolate; overflow: hidden; min-height: 470px; padding: 60px 44px; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; margin-bottom: 52px; background: #26191b; }
+.kcf-wine-intro > .kcf-wine-atmosphere { position: absolute; inset: 0; z-index: -2; height: 100%; margin: 0; }
+.kcf-wine-intro::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg,#26191bf2 0%,#26191bdf 35%,#26191b26 100%); }
+.kcf-wine-intro .kcf-wine-atmosphere img,.kcf-wine-intro .kcf-image-zoom { width: 100%; height: 100%; max-height: none; object-fit: cover; }
+.kcf-wine-intro .kcf-wine-atmosphere .kcf-image-zoom { pointer-events: none; }
+.kcf-wine-intro .kcf-wine-atmosphere figcaption { position: absolute; bottom: 14px; right: 18px; max-width: 400px; padding: 4px 8px; background: #26191b; font-size: .65rem; }
+.kcf-wine-intro > h2 { font-family: Georgia,serif; font-size: clamp(2.5rem,4.4vw,4.6rem); font-weight: 400; letter-spacing: -.04em; line-height: 1.1; max-width: 620px; margin-block: 0 26px; }
+.kcf-wine-intro > p { max-width: 580px; font-size: 1.125rem; }
+.kcf-wine-section .kcf-portals { gap: 24px; }
+.kcf-wine-section .kcf-product-visual { min-height: 250px; padding: 30px; background: #45242e; }
+.kcf-wine-section .kcf-product-price { font-family: Georgia,serif; font-size: 2.6rem; line-height: 1.2; }
+.kcf-terroir form { border-color: #d0c2a5; }
+@media(max-width:781px) {
+ .kcf-home-hero .kcf-title { font-size: clamp(4rem,16vw,6rem); }
+ .kcf-terroir-hero { padding-block: 48px 0; min-height: 0; }
+ .kcf-terroir-hero > p,.kcf-terroir-hero > h1,.kcf-terroir-hero > .wp-block-buttons { max-width: 100%; }
+ .kcf-terroir-hero .kcf-title { font-size: clamp(3.6rem,12vw,5.8rem); letter-spacing: -.05em; }
+ .kcf-terroir-cover { position: relative; inset: auto; width: auto; height: auto; margin: 34px calc(-1 * var(--kcf-gutter)) 0; }
+ .kcf-terroir-cover img,.kcf-terroir-cover .kcf-image-zoom { height: auto; }
+ .kcf-terroir-cover img { aspect-ratio: 4/3; object-fit: contain; padding: 24px 24px 40px; }
+ .kcf-terroir-cover figcaption { bottom: 10px; font-size: .6875rem; }
+ .kcf-terroir-hero { display: flex; flex-direction: column; }
+ .kcf-terroir-cover { order: 2; }
+ .kcf-honey-section .kcf-product-visual { padding: 28px; }
+ .kcf-wine-intro { min-height: 500px; padding: 36px 24px 76px; margin-inline: -8px; }
+ .kcf-wine-intro::before { background: linear-gradient(90deg,#26191bea,#26191b99); }
+ .kcf-wine-intro > h2 { font-size: clamp(2.3rem,10vw,3.7rem); }
+ .kcf-wine-intro .kcf-wine-atmosphere figcaption { left: 14px; right: 14px; }
+ .kcf-wine-section .kcf-product-visual { min-height: 200px; }
+}
+@media(prefers-reduced-motion:reduce) { .kcf-home .kcf-portal { transition: none; } }
+@media(forced-colors:active) { .kcf-hero-outline { color: CanvasText; -webkit-text-stroke: 0; } }
+
+/* Direction 07: the customer's original A.K flyer and business card, unchanged. */
+.kcf-home .kcf-portal-protection::before { display: none; }
+.kcf-portal-ak-original { margin: 0 -24px 28px; order: -1; flex-shrink: 0; }
+.kcf-portal-ak-original img { width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: top; }
+.kcf-pest-hero { display: grid; grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); column-gap: 40px; align-items: start; }
+.kcf-pest-hero::before { display: none; }
+.kcf-pest-hero > :not(.kcf-ak-business-card) { grid-column: 1; }
+.kcf-pest-hero > .kcf-ak-business-card { grid-column: 2; grid-row: 1 / span 9; align-self: center; margin: 0; min-width: 0; width: 100%; }
+.kcf-ak-business-card img { display: block; width: 100%; height: auto; }
+.kcf-pest-hero .kcf-title { font-size: clamp(4rem,7.5vw,8rem); margin-block: 24px; }
+.kcf-pest-hero .kcf-pest-promise { font-size: clamp(1.6rem,2.5vw,2.6rem); }
+.kcf-pest-hero .kcf-pest-name { font-size: clamp(2rem,3vw,3rem); }
+.kcf-ak-originals { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; gap: clamp(32px,5vw,70px); margin-block: 64px; padding-block: 24px; }
+.kcf-ak-flyer-copy .kcf-eyebrow { color: #ffe000; font-size: .75rem; }
+.kcf-ak-flyer-copy h2 { font-size: clamp(3rem,5vw,5rem); line-height: 1; margin-block: 24px; }
+.kcf-ak-flyer-copy p { font-size: 1.125rem; max-width: 540px; }
+.kcf-ak-flyer-original { margin: 0; width: 100%; max-width: 560px; justify-self: center; }
+.kcf-ak-flyer-original img { display: block; width: 100%; height: auto; }
+.kcf-ak-section-links { display: flex; flex-direction: column; gap: 8px; }
+.kcf-ak-section-links a { display: inline-flex; align-items: center; min-height: 44px; padding-block: 6px; box-sizing: border-box; text-decoration-color: #ffe000; }
+.kcf-pest [id] { scroll-margin-top: 24px; }
+@media(max-width:900px) {
+ .kcf-pest-hero { display: flex; flex-direction: column; }
+ .kcf-pest-hero > .kcf-eyebrow { order: -2; }
+ .kcf-pest-hero > .kcf-title { order: -1; }
+ .kcf-pest-hero > .kcf-ak-business-card { align-self: stretch; max-width: 760px; margin: 8px 0 24px; }
+ .kcf-pest-hero .kcf-title { font-size: clamp(3.6rem,15vw,6rem); }
+ .kcf-ak-originals { grid-template-columns: 1fr; gap: 24px; margin-block: 40px; }
+ .kcf-ak-flyer-original { max-width: 560px; }
+}
+@media(max-width:600px) { .kcf-ak-flyer-copy h2 { font-size: clamp(2.6rem,12vw,3.5rem); } }
+.kcf-lightbox { padding: 12px; box-sizing: border-box; overflow: auto; }
+.kcf-lightbox-toolbar { position: sticky; top: 0; left: 0; z-index: 5; display: flex; justify-content: flex-end; gap: 8px; background: #fff; padding-bottom: 12px; width: 100%; max-width: calc(94vw - 24px); box-sizing: border-box; }
+.kcf-lightbox-toolbar button { position: static; background: #111; color: #fff; border: 1px solid #111; border-radius: 30px; min-height: 44px; padding: 10px 18px; cursor: pointer; font: 700 .875rem/1.3 Arial,sans-serif; }
+.kcf-lightbox-toolbar button:focus-visible { outline: 3px solid #111; outline-offset: 3px; }
+.kcf-lightbox img { max-width: calc(94vw - 24px); max-height: calc(94vh - 90px); margin-inline: auto; }
+.kcf-lightbox.is-zoomed img { max-width: none; max-height: none; height: auto; margin: 0; }
+
+/* Direction 08: compose web sections from the print identity. */
+.kcf-print-reference { margin-block: 44px; border-block: 1px solid #ffffff33; padding: 12px 0; }
+.kcf-print-reference > summary { cursor: pointer; padding: 12px 4px; font-size: 1rem; font-weight: 700; min-height: 44px; box-sizing: border-box; }
+.kcf-print-reference > summary:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.kcf-print-reference .kcf-ak-originals { margin-block: 32px; }
+.kcf-print-reference .kcf-ak-business-card { max-width: 900px; margin: 24px auto; }
+.kcf-print-reference .kcf-flyer-section { margin-block: 20px; }
+.kcf-source-fragment { position: relative; overflow: hidden; margin: 0; aspect-ratio: var(--crop-w)/var(--crop-h); }
+.kcf-source-fragment img { display: block; position: absolute; max-width: none; width: calc(100% * var(--source-w)/var(--crop-w)); height: auto; left: calc(-100% * var(--crop-x)/var(--crop-w)); top: calc(-100% * var(--crop-y)/var(--crop-h)); }
+.kcf-ak-action-fragment { --source-w:1280; --crop-x:734; --crop-y:116; --crop-w:490; --crop-h:350; }
+.kcf-pest-hero > .kcf-ak-web-hero { grid-column: 2; grid-row: 1 / span 9; align-self: center; width: 100%; margin: 0; border: 1px solid #ffffff22; }
+.kcf-ak-asian-fragment { --source-w:853; --crop-x:25; --crop-y:730; --crop-w:139; --crop-h:99; }
+.kcf-ak-european-fragment { --source-w:853; --crop-x:171; --crop-y:731; --crop-w:141; --crop-h:97; }
+.kcf-ak-caterpillar-fragment { --source-w:853; --crop-x:320; --crop-y:731; --crop-w:104; --crop-h:98; }
+.kcf-ak-rat-fragment { --source-w:853; --crop-x:453; --crop-y:700; --crop-w:165; --crop-h:132; }
+.kcf-ak-mole-fragment { --source-w:853; --crop-x:641; --crop-y:700; --crop-w:185; --crop-h:132; }
+.kcf-ak-species { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; margin: 24px 0; }
+.kcf-ak-species-two { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.kcf-ak-species .kcf-source-fragment { margin-bottom: 36px; overflow: visible; background: #171710; }
+.kcf-ak-species .kcf-source-fragment img { clip-path: inset(calc(100% * var(--crop-y)/1280) calc(100% * (853 - var(--crop-x) - var(--crop-w))/853) calc(100% * (1280 - var(--crop-y) - var(--crop-h))/1280) calc(100% * var(--crop-x)/853)); }
+.kcf-ak-species figcaption { position: absolute; top: 100%; bottom: auto; left: 0; right: 0; font: 700 .65rem/1.4 Arial,sans-serif; color: #fff; background: #171710; padding: 8px 3px; text-align: center; min-height: 20px; }
+.kcf-home .kcf-portal-sport-photo { order: -1; margin: 0 -24px 28px; flex-shrink: 0; }
+.kcf-portal-sport-photo img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.kcf-home .kcf-portal-ak-web { order: -1; margin: 0 -24px 28px; width: calc(100% + 48px); aspect-ratio: 4/3; flex-shrink: 0; }
+.kcf-home .kcf-portal-ak-web { --crop-w:490; --crop-h:367.5; }
+.kcf-sport .kcf-video-section { margin-top: 24px; }
+@media(max-width:900px) {
+ .kcf-pest-hero > .kcf-ak-web-hero { align-self: stretch; width: 100%; max-width: 760px; margin: 8px 0 24px; }
+}
+@media(max-width:600px) {
+ .kcf-ak-species { gap: 6px; }
+ .kcf-ak-species figcaption { font-size: .6rem; }
+}
+.kcf-ak-species .kcf-source-fragment { margin: 0; overflow: hidden; --crop-h: calc(var(--crop-w) * .75); }
+.kcf-ak-species .kcf-source-fragment img { clip-path: none; }
+.kcf-species-card { min-width: 0; margin: 0; }
+.kcf-pest-services .kcf-species-label { padding: 8px 3px; margin: 0; background: #171710; color: #fff; font-size: .65rem; line-height: 1.5; text-align: center; }
+.kcf-pest-services .kcf-species-label::before { display: none; }
+/* Clearer booking cards, while keeping the full offers and demonstration notice. */
+.kcf-booking-page > h2{font-family:'KCF Display',Impact,sans-serif;font-size:clamp(2rem,4vw,3.5rem);line-height:1.1;border-top:1px solid #b6c4a9;padding-top:32px;margin-top:48px}
+.kcf-booking-page .kcf-form{border-color:#c5d3b8;border-top:4px solid #174e3b}
+.kcf-booking-page .kcf-form button{background:#174e3b;border-color:#174e3b}
+.kcf-terroir .kcf-form{border-top:3px solid #c18f34}
+.kcf-form .kcf-field-note{padding:14px 0;border-block:1px solid #dfe4db}
+
+/* Direction 10: editorial rhythm, useful course actions and clear contact cards. */
+.kcf-home .kcf-story-band { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); column-gap:clamp(32px,6vw,96px); align-items:center; }
+.kcf-story-band > .kcf-eyebrow { grid-column:1/-1; margin:0 0 28px; }
+.kcf-story-band > h2 { margin:0; max-width:700px; }
+.kcf-story-copy { min-width:0; padding-left:28px; border-left:1px solid #14271c55; }
+.kcf-story-copy p { font-size:1.125rem; line-height:1.8; }
+.kcf-story-copy p:first-child { margin-top:0; }
+.kcf-story-copy p:last-child { margin-bottom:0; }
+.kcf-home .kcf-final-cta { position:relative; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); column-gap:40px; border-top:1px solid #ffffff30; padding-top:44px; }
+.kcf-final-cta > h2 { grid-row:1/3; margin:0; }
+.kcf-final-cta > p { margin-top:0; max-width:560px; }
+.kcf-final-cta > .wp-block-buttons { margin-top:16px; }
+.kcf-home .kcf-portal { position:relative; }
+.kcf-home .kcf-portal > .kcf-eyebrow { padding-bottom:14px; border-bottom:1px solid currentColor; }
+.kcf-home .kcf-portal h2 { margin-top:6px; }
+.kcf-portal .wp-block-button__link::after { content:''; display:inline-block; width:8px; height:8px; margin-left:10px; border-top:1.5px solid currentColor; border-right:1.5px solid currentColor; background:linear-gradient(135deg,transparent 43%,currentColor 43%,currentColor 57%,transparent 57%); }
+.kcf-program-card { position:relative; display:flex; flex-direction:column; }
+.kcf-program-card .kcf-program-number { font-family:'KCF Display',Impact,sans-serif; font-size:2.75rem; line-height:1; letter-spacing:-.04em; }
+.kcf-program-card > .wp-block-buttons { margin-top:auto; padding-top:24px; }
+.kcf-program-card .wp-block-button__link { background:transparent; color:var(--program-color); border:1px solid var(--program-color); font-size:1rem; padding:13px 20px; }
+.kcf-program-card .wp-block-button__link:hover { background:var(--program-color); color:#141716; }
+.kcf-lexicon-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-block:32px 48px; }
+.kcf-lexicon-card { min-width:0; border-top:2px solid var(--kcf-vitali); padding:22px 24px; background:#222b25; }
+.kcf-lexicon-card h3 { font-family:'KCF Display',Impact,sans-serif; font-size:1.65rem; margin:0 0 16px; color:var(--kcf-vitali); }
+.kcf-lexicon-card p { line-height:1.8; margin-bottom:0; }
+.kcf-contact-page > .kcf-title { margin-bottom:24px; }
+.kcf-contact-page > .kcf-eyebrow { color:#174e3b; }
+.kcf-contact-page > .kcf-intro { max-width:760px; margin-bottom:48px; }
+.kcf-contact-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; }
+.kcf-contact-grid > div { box-sizing:border-box; min-width:0; padding:clamp(24px,3vw,44px); margin:0; display:flex; flex-direction:column; }
+.kcf-contact-grid h2 { font-family:'KCF Display',Impact,sans-serif; font-size:clamp(2.2rem,3.2vw,3.6rem); line-height:1.1; margin-block:16px 24px; }
+.kcf-contact-grid p { line-height:1.8; overflow-wrap:anywhere; }
+.kcf-contact-grid .kcf-eyebrow { font-size:.75rem; margin:0; }
+.kcf-contact-grid .wp-block-buttons { margin-top:auto; padding-top:24px; gap:12px; }
+.kcf-contact-sport { color:#fff; background:#174e3b; border-top:4px solid #b8e85c; }
+.kcf-contact-sport a { color:#fff; text-underline-offset:.25em; }
+.kcf-contact-sport .kcf-eyebrow { color:#b8e85c; }
+.kcf-contact-sport .wp-block-button__link { background:#b8e85c; border-color:#b8e85c; color:#14271c; }
+.kcf-contact-producers { color:#33291b; background:#eadebf; border-top:4px solid #a77927; }
+.kcf-contact-producers a { color:inherit; text-underline-offset:.25em; }
+.kcf-contact-producers .wp-block-button__link { background:#33291b; color:#fff; border-color:#33291b; }
+.kcf-contact-page .wp-block-button__link { max-width:100%; white-space:normal; box-sizing:border-box; }
+.kcf-site-footer .kcf-footer-signature { font-family:'KCF Display',Impact,sans-serif; font-size:clamp(2.8rem,4vw,4.5rem); line-height:1; letter-spacing:-.035em; margin-bottom:24px; }
+.kcf-site-footer .kcf-footer-grid { gap:40px; }
+.kcf-site-footer .kcf-footer-grid p { margin-block:12px; }
+@media(max-width:900px) {
+ .kcf-lexicon-grid { grid-template-columns:1fr; gap:16px; }
+ .kcf-contact-grid { grid-template-columns:1fr; }
+ .kcf-home .kcf-story-band { grid-template-columns:1fr; row-gap:28px; }
+ .kcf-story-band > .kcf-eyebrow { margin:0; }
+ .kcf-story-copy { border-left:0; border-top:1px solid #14271c55; padding:24px 0 0; }
+}
+@media(max-width:600px) {
+ .kcf-home .kcf-final-cta { grid-template-columns:1fr; gap:24px; }
+ .kcf-final-cta > h2 { grid-row:auto; }
+ .kcf-final-cta > p,.kcf-final-cta > .wp-block-buttons { margin:0; }
+ .kcf-story-copy p { font-size:1.0625rem; }
+ .kcf-contact-grid .wp-block-buttons { flex-direction:column; align-items:stretch; }
+ .kcf-contact-grid .wp-block-button__link { display:block; text-align:center; }
+ .kcf-site-footer .kcf-footer-grid { gap:28px; }
+}
+@media(prefers-reduced-motion:no-preference) {
+ .kcf-portal .wp-block-button__link::after { transition:transform .2s ease; }
+ .kcf-portal .wp-block-button__link:hover::after { transform:translate(2px,-2px); }
+}
+
+/* Draw directional marks in CSS so missing font glyphs cannot become squares. */
+.kcf-trust-strip p::before { content:''; display:inline-block; width:8px; height:8px; border-top:1.5px solid currentColor; border-right:1.5px solid currentColor; background:linear-gradient(135deg,transparent 43%,currentColor 43%,currentColor 57%,transparent 57%); }
+
+.kcf-keep-together { white-space:nowrap; }
+.kcf-contact-page > .kcf-title { text-wrap:balance; }
+
+/* Compact mobile navigation, shared by WordPress and the offline showcase. */
+.kcf-site-header { position:relative; z-index:30; }
+.kcf-site-header .kcf-dropdown-nav .kcf-dropdown-panel { display:block; position:static; width:auto; height:auto; min-height:0; padding:0; margin:0; color:inherit; background:transparent; }
+.kcf-site-header .kcf-menu-toggle { display:none; }
+.kcf-menu-lines { position:relative; display:block; width:22px; height:14px; }
+.kcf-menu-lines::before,.kcf-menu-lines::after { content:''; position:absolute; left:0; width:22px; height:2px; background:currentColor; }
+.kcf-menu-lines::before { top:3px; }
+.kcf-menu-lines::after { bottom:3px; }
+.kcf-menu-toggle[aria-expanded=true] .kcf-menu-lines::before { top:6px; transform:rotate(45deg); }
+.kcf-menu-toggle[aria-expanded=true] .kcf-menu-lines::after { bottom:6px; transform:rotate(-45deg); }
+@media(max-width:599px) {
+ .kcf-site-header .kcf-dropdown-nav { position:static; }
+ .kcf-site-header .kcf-menu-toggle { display:inline-flex; padding:10px; border:1px solid #ffffff30; border-radius:0; background:transparent; color:#fff; align-items:center; justify-content:center; cursor:pointer; }
+ .kcf-menu-toggle:focus-visible { outline:2px solid #b8e85c; outline-offset:3px; }
+ .kcf-site-header .kcf-dropdown-nav .kcf-dropdown-panel { display:none; }
+ .kcf-site-header .kcf-dropdown-nav .kcf-dropdown-panel.is-menu-open { display:block; position:absolute; inset:100% 0 auto; z-index:40; width:100%; height:auto; min-height:0; max-height:calc(100svh - 150px); box-sizing:border-box; overflow:auto; padding:12px 24px 20px; background:#1d2921; color:#fff; border-block:1px solid #ffffff30; }
+ .kcf-site-header .kcf-dropdown-panel .wp-block-navigation__container { display:flex; flex-direction:column; align-items:stretch; justify-content:flex-start; gap:0; width:100%; margin:0; padding:0; }
+ .kcf-site-header .kcf-dropdown-panel .wp-block-navigation-item { width:100%; margin:0; border-bottom:1px solid #ffffff20; }
+ .kcf-site-header .kcf-dropdown-panel .wp-block-navigation-item__content { display:flex; align-items:center; min-height:48px; box-sizing:border-box; padding:12px 0; font-size:1.0625rem; line-height:1.5; color:#fff; }
+ .kcf-site-header .kcf-dropdown-panel .wp-block-navigation-item:last-child { border-bottom:0; padding-top:12px; }
+ .kcf-site-header .kcf-dropdown-panel .wp-block-navigation-item:last-child a { display:inline-flex; width:auto; padding:12px 22px; color:#141716; background:#b8e85c; }
+}
+@media(prefers-reduced-motion:no-preference) { .kcf-menu-lines::before,.kcf-menu-lines::after { transition:transform .18s ease; } }
+
+/* Practical first-visit guidance and lightweight social links. */
+.kcf-practical { padding:clamp(20px,3vw,36px); margin-block:32px; border:1px solid #719b44; background:#7dbb4410; }
+.kcf-practical h2 { font-family:'KCF Display',Impact,sans-serif; font-size:clamp(2rem,4vw,3rem); line-height:1.1; margin:0 0 24px; }
+.kcf-practical p { max-width:80ch; line-height:1.8; }
+.kcf-social-links { display:flex; flex-wrap:wrap; gap:8px 20px; margin-block:24px; }
+.kcf-social-links a { display:inline-flex; align-items:center; min-height:44px; max-width:100%; box-sizing:border-box; overflow-wrap:anywhere; text-decoration:underline; text-underline-offset:5px; line-height:1.6; }
+.kcf-site-footer .kcf-social-links { flex-direction:column; align-items:flex-start; gap:0; }
+
+/* Text must reflow within its block, including enlarged phone text. */
+.kcf-page :is(h1,h2,h3,h4,p,li,figcaption,label,legend,summary,td,th) { min-width:0; overflow-wrap:anywhere; }
+.kcf-page :is(h1,h2,h3,h4) { max-width:100%; box-sizing:border-box; text-wrap:balance; }
+.kcf-page .wp-block-buttons,.kcf-page .wp-block-button { min-width:0; max-width:100%; }
+.kcf-page .wp-block-button__link { box-sizing:border-box; max-width:100%; white-space:normal; overflow-wrap:anywhere; }
+.kcf-site-header .kcf-brand { min-width:0; }
+.kcf-site-header .wp-block-site-title { overflow-wrap:anywhere; }
+.kcf-site-footer a { overflow-wrap:anywhere; }
+@media(max-width:600px) {
+ .kcf-program-card h3 { font-size:clamp(1.8rem,8vw,2.6rem); }
+ .kcf-contact-page > .kcf-title { font-size:clamp(2.5rem,12vw,4rem); }
+ .kcf-site-header .kcf-brand { max-width:calc(100% - 60px); }
+}
+@media(max-width:600px) {
+ .kcf-sport > h2,.kcf-sport .kcf-video-section h2,.kcf-booking-page > h2,.kcf-pest-bees h2 { font-size:clamp(1.6rem,7.5vw,2.5rem); line-height:1.15; }
+}
+
+/* Visuel 16: each activity owns its navigation, contacts and visual identity. */
+.kcf-section-header { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; }
+.kcf-section-header .wp-block-navigation__container { display:flex; flex-wrap:wrap; gap:12px 22px; list-style:none; padding:0; margin:0; }
+.kcf-section-header .wp-block-navigation-item__content { text-decoration:none; line-height:1.5; }
+.kcf-section-header .kcf-brand-location { max-width:42ch; }
+.kcf-section-protection { --kcf-section-accent:#ffe600; }
+.kcf-section-sport { --kcf-section-accent:#b8e85c; }
+.kcf-section-terroir { --kcf-section-accent:#e1b96d; }
+.kcf-section-portail { --kcf-section-accent:#ffffff; }
+.kcf-section-header .wp-block-site-title a { color:var(--kcf-section-accent); }
+.kcf-section-header .kcf-dropdown-panel .wp-block-navigation-item:last-child a { background:var(--kcf-section-accent); color:#111; }
+.kcf-section-footer-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:32px; }
+.kcf-section-footer-grid > div { min-width:0; }
+.kcf-section-footer h2 { font-family:'KCF Display',Impact,sans-serif; font-size:1.6rem; line-height:1.2; margin:0 0 16px; }
+.kcf-section-footer ul { list-style:none; padding:0; }
+.kcf-section-footer li { margin-block:10px; }
+.kcf-section-footer a { display:inline-block; max-width:100%; padding-block:8px; line-height:1.5; }
+.kcf-other-spaces { margin-top:32px; border-top:1px solid #666; padding-top:20px; font-size:.9rem; }
+.kcf-other-spaces summary { cursor:pointer; padding-block:10px; }
+.kcf-local-signature { font-weight:700; letter-spacing:.035em; line-height:1.8; max-width:75ch; }
+.kcf-period-prices table { table-layout:fixed; width:100%; }
+.kcf-period-prices :is(td,th) { overflow-wrap:anywhere; padding:clamp(8px,2vw,20px); }
+.kcf-period-prices thead { background:#b8e85c; color:#111; }
+.kcf-period-prices tbody td:not(:first-child) { font-weight:800; }
+body.kcf-universe-protection { background:#0d0d0c; }
+body.kcf-universe-terroir { background:#f7f1e6; }
+@media(max-width:780px) { .kcf-section-footer-grid { grid-template-columns:1fr; } }
+@media(max-width:599px) {
+ .kcf-section-header { flex-wrap:nowrap; gap:12px; }
+ .kcf-section-header .kcf-brand-location { font-size:.65rem; line-height:1.6; }
+ .kcf-section-header .wp-block-site-title { font-size:1.5rem; }
+ .kcf-section-header .kcf-dropdown-panel .wp-block-navigation__container { display:flex; flex-direction:column; align-items:stretch; gap:0; }
+ .kcf-period-prices { font-size:.875rem; }
+}
+.kcf-section-footer :is(h2,p,li,summary) { min-width:0; max-width:100%; overflow-wrap:anywhere; }
+.kcf-section-header.kcf-section-protection,.kcf-section-footer.kcf-section-protection,.kcf-section-protection .kcf-dropdown-panel { background:#111; }
+.kcf-section-header.kcf-section-terroir,.kcf-section-footer.kcf-section-terroir,.kcf-section-terroir .kcf-dropdown-panel { background:#302519; }

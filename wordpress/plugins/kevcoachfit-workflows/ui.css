@@ -1,0 +1,37 @@
+.kcf-form{border:1px solid #e5e5e5;padding:clamp(20px,4vw,40px);margin:32px 0;background:#ffffff;color:#111111}
+.kcf-form label{display:block;font-weight:700;margin:18px 0 8px;font-size:1rem}
+.kcf-form input:not([type=checkbox]),.kcf-form select,.kcf-form textarea{display:block;width:100%;min-width:0;max-width:100%;border:1px solid #111111;border-radius:0;padding:13px 12px;color:#111111;background:#ffffff;font:inherit;font-size:1rem;min-height:48px;box-shadow:none}
+.kcf-form input:focus-visible,.kcf-form select:focus-visible,.kcf-form textarea:focus-visible{outline:3px solid #111111;outline-offset:3px}
+.kcf-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.kcf-form-grid>div{min-width:0}
+.kcf-form .kcf-check{display:flex;gap:12px;align-items:flex-start;font-weight:400;line-height:1.6;margin:24px 0}.kcf-check input{width:20px;height:20px;flex-shrink:0;margin-top:4px;accent-color:#111111}
+.kcf-form button,.kcf-management button{background:#111111;color:#ffffff;border:1px solid #111111;border-radius:30px;padding:14px 24px;min-height:48px;font:inherit;font-size:1rem;font-weight:700;cursor:pointer;margin:12px 12px 0 0;box-shadow:none}
+.kcf-form button:disabled{cursor:wait;background:#e5e5e5;color:#111111}
+.kcf-form-result:not(:empty){border-top:1px solid #111111;margin-top:24px;padding-top:20px;line-height:1.7}.kcf-form-result[data-state=error]{font-weight:700}
+.kcf-management-link{display:block;font-weight:700;text-decoration:underline;margin-top:16px}
+.kcf-field-note,.kcf-demo{font-size:.9375rem;line-height:1.7}.kcf-demo{border-left:3px solid #111111;padding:12px 20px;background:#e5e5e5;margin-block:24px}
+.kcf-honeypot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.kcf-form fieldset{border:0;padding:0;margin:0;min-width:0}.kcf-form legend{font-weight:700;font-size:1.25rem;margin-bottom:16px}
+.kcf-order-line{display:grid;grid-template-columns:minmax(0,1fr) 80px;gap:16px;align-items:center;border-bottom:1px solid #e5e5e5;padding:12px 0}.kcf-order-line label{margin:0}.kcf-order-line small{display:block;font-weight:400;margin-top:6px}.kcf-order-total{font-size:1.25rem}
+@media(max-width:650px){.kcf-form-grid{grid-template-columns:1fr;gap:0}.kcf-form{padding:20px 16px}.kcf-form select{font-size:.9375rem}.kcf-order-line{grid-template-columns:minmax(0,1fr) 64px}}
+
+/* Keep each control inside its own card, including padding and borders. */
+.kcf-form,.kcf-form *,.kcf-management,.kcf-management *{box-sizing:border-box}
+.kcf-form,.kcf-management{width:100%;max-width:100%;min-width:0}
+.kcf-form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.kcf-form-grid>div,.kcf-order-line>*{min-width:0}
+.kcf-form fieldset,.kcf-form legend{max-width:100%;min-width:0}
+.kcf-form input:not([type=checkbox]),.kcf-form select,.kcf-form textarea{width:100%;max-width:100%;min-width:0}
+.kcf-form textarea{resize:vertical}
+.kcf-form label,.kcf-form legend,.kcf-form p,.kcf-form-result,.kcf-management,.kcf-management-link{overflow-wrap:anywhere}
+.kcf-form button,.kcf-management button{max-width:100%;white-space:normal;overflow-wrap:anywhere;margin-right:0}
+.kcf-session-preview:not(:empty){padding:14px 16px;margin:12px 0 24px;background:#edf3e7;border-left:3px solid #174e3b;color:#174e3b;font-size:1rem;line-height:1.7}
+.kcf-session-preview:empty{display:none}
+.kcf-form input[type=date],.kcf-form input[type=time]{min-width:0;max-width:100%;text-align:left}
+.kcf-form input::-webkit-datetime-edit{min-width:0;padding:0}
+.kcf-form input::-webkit-date-and-time-value{text-align:left}
+@media(max-width:650px){
+ .kcf-form-grid{grid-template-columns:minmax(0,1fr)}
+ .kcf-form input:not([type=checkbox]),.kcf-form select,.kcf-form textarea{font-size:16px}
+ .kcf-form button,.kcf-management button{display:block;width:100%;margin:16px 0 0;padding:14px 16px}
+ .kcf-form .kcf-check{font-size:1rem}
+}

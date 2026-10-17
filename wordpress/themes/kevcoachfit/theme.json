@@ -1,0 +1,150 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "760px",
+      "wideSize": "1360px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "defaultDuotone": false,
+      "custom": false,
+      "customGradient": false,
+      "palette": [
+        {
+          "slug": "ink",
+          "name": "Noir",
+          "color": "#111111"
+        },
+        {
+          "slug": "paper",
+          "name": "Blanc",
+          "color": "#ffffff"
+        },
+        {
+          "slug": "line",
+          "name": "Gris",
+          "color": "#e5e5e5"
+        },
+        {
+          "slug": "vitalivan",
+          "name": "Vitali’Van · Vert",
+          "color": "#b8e85c"
+        },
+        {
+          "slug": "seniors",
+          "name": "Seniors · Vert profond",
+          "color": "#174e3b"
+        },
+        {
+          "slug": "training",
+          "name": "Renfort et Training · Orange",
+          "color": "#f5a45b"
+        },
+        {
+          "slug": "coach",
+          "name": "Coach · Rose",
+          "color": "#efa9c3"
+        },
+        {
+          "slug": "ak-yellow",
+          "name": "A.K · Jaune",
+          "color": "#ffe000"
+        },
+        {
+          "slug": "honey",
+          "name": "Miel · Ambre",
+          "color": "#d19a3c"
+        },
+        {
+          "slug": "cream",
+          "name": "Terroir · Crème",
+          "color": "#f5efdf"
+        },
+        {
+          "slug": "wine",
+          "name": "Vin · Bordeaux",
+          "color": "#542a35"
+        }
+      ]
+    },
+    "shadow": {
+      "defaultPresets": false,
+      "presets": []
+    },
+    "spacing": {
+      "blockGap": true,
+      "units": [
+        "px",
+        "rem",
+        "%",
+        "vw"
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "slug": "sans",
+          "name": "Sans lisible",
+          "fontFamily": "Inter, Arial, sans-serif"
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "small",
+          "name": "Petit",
+          "size": "0.875rem"
+        },
+        {
+          "slug": "medium",
+          "name": "Texte",
+          "size": "1.125rem"
+        },
+        {
+          "slug": "large",
+          "name": "Grand",
+          "size": "2rem"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|paper",
+      "text": "var:preset|color|ink"
+    },
+    "spacing": {
+      "blockGap": "24px"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|sans",
+      "fontSize": "1.125rem",
+      "lineHeight": "1.7"
+    },
+    "elements": {
+      "link": {
+        "color": {
+          "text": "var:preset|color|ink"
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var:preset|color|ink",
+          "text": "var:preset|color|paper"
+        },
+        "border": {
+          "radius": "30px",
+          "width": "1px",
+          "color": "var:preset|color|ink"
+        },
+        "typography": {
+          "fontWeight": "700"
+        }
+      }
+    }
+  }
+}
