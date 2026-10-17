@@ -23,7 +23,7 @@ function kcfr_notice($id,$status){
  global $wpdb;if(!kcfr_live()){return;}
  $b=$wpdb->get_row($wpdb->prepare("SELECT * FROM {$wpdb->prefix}kcfr_bookings WHERE id=%d",$id));
  $s=$b?$wpdb->get_row($wpdb->prepare("SELECT * FROM {$wpdb->prefix}kcfr_sessions WHERE id=%d",$b->session_id)):null;
- if(!$b||!$s){return;}
+ if(!$b||!$s||(int)$b->is_test===1){return;}
  $token=kcfr_decrypt($b->key_ciphertext);if($token===false){return;}
  $url=kcfr_manage_url().'#'.$id.'.'.$token;
  $labels=array('reserved'=>'Votre place est réservée','waiting'=>'Votre inscription sur liste d’attente','offered'=>'Une place vous est proposée','cancelled'=>'Votre inscription est annulée');
@@ -35,7 +35,7 @@ function kcfr_notice($id,$status){
  kcfr_enqueue($key,array('type'=>'booking','booking_id'=>$id,'expected_status'=>$status,'to'=>$b->email,'subject'=>'Vitali’Van — '.$labels[$status],'body'=>$body));
 }
 function kcfr_request_notice($id){
- global $wpdb;$r=$wpdb->get_row($wpdb->prepare("SELECT * FROM {$wpdb->prefix}kcfr_requests WHERE id=%d",$id));if(!$r){return;}
+ global $wpdb;$r=$wpdb->get_row($wpdb->prepare("SELECT * FROM {$wpdb->prefix}kcfr_requests WHERE id=%d",$id));if(!$r||(int)$r->is_test===1){return;}
  kcfr_enqueue('request-'.$id,array('type'=>'request','to'=>get_option('admin_email'),'subject'=>'KevCoachFit — nouvelle demande de coaching','body'=>"Une demande de coaching est à vérifier dans WordPress :\n".admin_url('admin.php?page=kcfr')."\nAucun créneau n’est confirmé automatiquement."));
 }
 function kcfr_send_outbox(){
@@ -53,8 +53,8 @@ function kcfr_send_outbox(){
   $raw=kcfr_decrypt($row->payload);$data=$raw===false?null:json_decode($raw,true);
   if(!is_array($data)){$wpdb->update($wpdb->prefix.'kcfr_outbox',array('status'=>'failed','locked_until'=>null),array('id'=>$row->id));continue;}
   if(($data['type']??'')==='booking'){
-   $b=$wpdb->get_row($wpdb->prepare("SELECT status,offered_until FROM {$wpdb->prefix}kcfr_bookings WHERE id=%d",$data['booking_id']));
-   if(!$b||$b->status!==$data['expected_status']||($b->status==='offered'&&kcfr_timestamp($b->offered_until)<=time())){$wpdb->update($wpdb->prefix.'kcfr_outbox',array('status'=>'discarded','locked_until'=>null),array('id'=>$row->id));continue;}
+   $b=$wpdb->get_row($wpdb->prepare("SELECT status,offered_until,is_test FROM {$wpdb->prefix}kcfr_bookings WHERE id=%d",$data['booking_id']));
+   if(!$b||(int)$b->is_test===1||$b->status!==$data['expected_status']||($b->status==='offered'&&kcfr_timestamp($b->offered_until)<=time())){$wpdb->update($wpdb->prefix.'kcfr_outbox',array('status'=>'discarded','locked_until'=>null),array('id'=>$row->id));continue;}
   }
   $ok=($data['type']??'')==='google'?!is_wp_error(kcfr_google_upsert_session((int)$data['session_id'])):wp_mail($data['to'],$data['subject'],$data['body'],array('Content-Type: text/plain; charset=UTF-8'));
   $wpdb->update($wpdb->prefix.'kcfr_outbox',array('status'=>$ok?'sent':($row->attempts+1>=5?'failed':'pending'),'locked_until'=>null,'available_at'=>kcfr_utc(time()+min(3600,60*2**$row->attempts))),array('id'=>$row->id));

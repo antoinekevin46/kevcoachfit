@@ -1,14 +1,17 @@
 {
   "date": "2026-10-17",
-  "scope": "local WordPress plus read-only remote audit; installable ZIP staged in remote media library",
+  "scope": "version 1.0.1 tested locally; 1.0.0 installed remotely, update staged",
   "core_assertions": 80,
   "original_workflow_regressions": 3,
   "ui_verification": "docs/reservations-ui-verification.json",
   "google_requests": "mocked; no real Google authorization",
   "email_delivery": "intercepted; no real client messages",
-  "remote_extension_installed": false,
+  "remote_extension_installed": true,
   "public_bookings_enabled": false,
   "native_rest_zip_install": "not exposed; owner must upload/activate the prepared extension in WordPress",
-  "draft_binding": "prepared and tested offline; not applied before installation",
-  "package": "docs/reservations-package.json"
+  "draft_binding": "applied and verified on draft pages 68 and 69",
+  "package": "docs/reservations-package.json",
+  "remote_installed_version": "1.0.0",
+  "latest_checks": "docs/reservations-1.0.1-verification.json",
+  "real_test_mail_received": true
 }

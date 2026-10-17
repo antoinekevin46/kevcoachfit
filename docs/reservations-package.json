@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
-  "bytes": 23385,
-  "sha256": "8e045b4390a8f29eceb694947cfb1b22a8bf6561912c43bf3e271e7855c15003",
+  "version": "1.0.1",
+  "bytes": 23858,
+  "sha256": "431e055d99776f360aa99e56b5dee3ac59eddc2f9bbf7bab71e8cda64954b9c3",
   "files": 8,
   "contains_theme": false,
   "contains_credentials": false

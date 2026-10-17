@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-17",
+  "version_tested": "1.0.1",
+  "target": "local WordPress and MariaDB; HTTP and Chromium",
+  "core_assertions_passed": 80,
+  "trial_live_isolation_assertions_passed": 24,
+  "http_fifo_steps_passed": 10,
+  "concurrent_http": {
+    "requests": 20,
+    "reserved": 15,
+    "waiting": 5,
+    "parallelism": 4
+  },
+  "ui_widths": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "migration": "schema 1 to 2, previous private trials marked and retained; private links preserved",
+  "functional_management_page_noindex": "verified on temporarily published local fixture, then removed",
+  "email_google_external_effects": "intercepted in tests; no real notifications or Google changes",
+  "remote_installed_version": "1.0.0",
+  "remote_update_staged": true,
+  "public_bookings_open": false,
+  "remote_activation_required": true
+}

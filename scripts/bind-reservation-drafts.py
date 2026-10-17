@@ -8,7 +8,7 @@ ROOT=Path(__file__).resolve().parent.parent
 module=runpy.run_path(str(ROOT/'scripts/wordpress-draft-transfer.py'));api=module['api']
 def bind():
  health=api('/wp-json/kcfr/v1/health')
- assert health['version']=='1.0.0' and not health['live'],'Install extension in private mode first.'
+ assert health['version'] in ('1.0.0','1.0.1') and not health['live'],'Install extension in private mode first.'
  backup=ROOT/'artifacts/reservations-binding';backup.mkdir(exist_ok=True)
  for id,expected in [(68,{'book','request'}),(69,{'manage'})]:
   post=api('/wp-json/wp/v2/pages/'+str(id)+'?context=edit');assert post['status']=='draft'

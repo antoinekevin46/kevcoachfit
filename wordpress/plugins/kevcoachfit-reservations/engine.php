@@ -22,16 +22,18 @@ function kcfr_install_workflows() {
         name varchar(160) NOT NULL,
         email varchar(254) NOT NULL,
         status varchar(24) NOT NULL,
+        is_test tinyint unsigned NOT NULL DEFAULT 0,
         key_hash varchar(64) NOT NULL,
         key_ciphertext longtext NULL,
         offered_until datetime NULL,
         created_at datetime NOT NULL,
         PRIMARY KEY  (id),
-        KEY queue (session_id,status,id)
+        KEY queue_scope (session_id,is_test,status,id)
     ) ENGINE=InnoDB $charset;" );
     dbDelta( "CREATE TABLE {$wpdb->prefix}kcfr_requests (
         id bigint unsigned NOT NULL AUTO_INCREMENT,
         kind varchar(20) NOT NULL,
+        is_test tinyint unsigned NOT NULL DEFAULT 0,
         seller varchar(20) NOT NULL,
         name varchar(160) NOT NULL,
         email varchar(254) NOT NULL,
@@ -41,7 +43,12 @@ function kcfr_install_workflows() {
         PRIMARY KEY  (id)
     ) ENGINE=InnoDB $charset;" );
 
-    update_option( 'kcfr_schema_version', '1' );
+    // Version 1 stored private trials without a marker. Preserve and mark them once.
+    if(get_option('kcfr_schema_version')!=='2'&&!kcfr_live()){
+        $wpdb->query("UPDATE {$wpdb->prefix}kcfr_bookings SET is_test=1");
+        $wpdb->query("UPDATE {$wpdb->prefix}kcfr_requests SET is_test=1");
+    }
+    update_option( 'kcfr_schema_version', '2' );
 
 }
 function kcfr_error( $code, $message, $status = 400 ) {
@@ -68,21 +75,22 @@ function kcfr_session_lock( $id ) {
     $wpdb->query( 'START TRANSACTION' );
     return $wpdb->get_row( $wpdb->prepare( "SELECT * FROM {$wpdb->prefix}kcfr_sessions WHERE id=%d FOR UPDATE", $id ) );
 }
+function kcfr_test_scope() { return kcfr_live() ? 0 : 1; }
 function kcfr_occupancy( $session_id ) {
     global $wpdb;
-    return (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$wpdb->prefix}kcfr_bookings WHERE session_id=%d AND status IN ('reserved','offered')", $session_id ) );
+    return (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$wpdb->prefix}kcfr_bookings WHERE session_id=%d AND is_test=%d AND status IN ('reserved','offered')", $session_id, kcfr_test_scope() ) );
 }
 // Must run while holding the session row lock. A waitlist offer occupies a seat.
 function kcfr_refresh_locked( $session, $now ) {
     global $wpdb;
     $table = $wpdb->prefix . 'kcfr_bookings';
-    $wpdb->query( $wpdb->prepare( "UPDATE $table SET status='expired' WHERE session_id=%d AND status='offered' AND offered_until<=%s", $session->id, kcfr_utc( $now ) ) );
+    $wpdb->query( $wpdb->prepare( "UPDATE $table SET status='expired' WHERE session_id=%d AND is_test=%d AND status='offered' AND offered_until<=%s", $session->id, kcfr_test_scope(), kcfr_utc( $now ) ) );
     if(kcfr_collective_closed($session->starts_at)){return;}
     // Offer for at most two hours, always ending by the start of the class.
     if ( kcfr_timestamp( $session->starts_at ) <= $now ) { return; }
     $free = max( 0, $session->capacity - kcfr_occupancy( $session->id ) );
     if ( ! $free ) { return; }
-    $waiting = $wpdb->get_col( $wpdb->prepare( "SELECT id FROM $table WHERE session_id=%d AND status='waiting' ORDER BY id ASC LIMIT %d", $session->id, $free ) );
+    $waiting = $wpdb->get_col( $wpdb->prepare( "SELECT id FROM $table WHERE session_id=%d AND is_test=%d AND status='waiting' ORDER BY id ASC LIMIT %d", $session->id, kcfr_test_scope(), $free ) );
     foreach ( $waiting as $id ) {
         $wpdb->update( $table, array( 'status' => 'offered', 'offered_until' => kcfr_utc( min($now + 2 * HOUR_IN_SECONDS, kcfr_timestamp($session->starts_at)) ) ), array( 'id' => $id ) );
         kcfr_notice($id,'offered');
@@ -97,18 +105,18 @@ function kcfr_book_session( $session_id, $input, $now = null ) {
     if ( ! $session || kcfr_timestamp( $session->starts_at ) <= $now ) {
         $wpdb->query( 'ROLLBACK' ); return kcfr_error( 'session', 'Ce cours n’est plus disponible.' );
     }
-    if(kcfr_collective_closed($session->starts_at)){$wpdb->query('ROLLBACK');return kcfr_error('closure','Les cours collectifs sont fermés en juillet et en août.',409);}
+    if(kcfr_collective_closed($session->starts_at)){$wpdb->query('ROLLBACK');return kcfr_error('closure','Ce cours n’est pas ouvert à la réservation à cette date.',409);}
     kcfr_refresh_locked( $session, $now );
-    $existing = $wpdb->get_var( $wpdb->prepare( "SELECT id FROM {$wpdb->prefix}kcfr_bookings WHERE session_id=%d AND email=%s AND status IN ('reserved','waiting','offered')", $session_id, $customer['email'] ) );
+    $existing = $wpdb->get_var( $wpdb->prepare( "SELECT id FROM {$wpdb->prefix}kcfr_bookings WHERE session_id=%d AND is_test=%d AND email=%s AND status IN ('reserved','waiting','offered')", $session_id, kcfr_test_scope(), $customer['email'] ) );
     if ( $existing ) {
         $wpdb->query( 'COMMIT' ); return kcfr_error( 'duplicate', 'Vous avez déjà une inscription ou une demande pour ce cours.', 409 );
     }
-    $waiting = (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$wpdb->prefix}kcfr_bookings WHERE session_id=%d AND status='waiting'", $session_id ) );
+    $waiting = (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$wpdb->prefix}kcfr_bookings WHERE session_id=%d AND is_test=%d AND status='waiting'", $session_id, kcfr_test_scope() ) );
     $status = kcfr_occupancy( $session_id ) < $session->capacity && ! $waiting ? 'reserved' : 'waiting';
     $token = bin2hex( random_bytes( 32 ) );
     $ok = $wpdb->insert( $wpdb->prefix . 'kcfr_bookings', array(
         'session_id' => $session_id, 'name' => $customer['name'], 'email' => $customer['email'],
-        'status' => $status, 'key_hash' => hash( 'sha256', $token ), 'key_ciphertext'=>kcfr_encrypt($token), 'created_at' => kcfr_utc( $now ),
+        'status' => $status, 'is_test'=>kcfr_test_scope(), 'key_hash' => hash( 'sha256', $token ), 'key_ciphertext'=>kcfr_encrypt($token), 'created_at' => kcfr_utc( $now ),
     ) );
     if ( ! $ok ) { $wpdb->query( 'ROLLBACK' ); return kcfr_error( 'storage', 'L’inscription n’a pas été enregistrée. Réessayez.', 500 ); }
     $id = (int) $wpdb->insert_id;
@@ -126,7 +134,7 @@ function kcfr_manage_booking( $id, $token, $operation = 'status', $now = null ) 
     $now = $now ?? time();
     if ( ! preg_match( '/^[a-f0-9]{64}$/', $token ) ) { return kcfr_error( 'access', 'Lien de réservation invalide.', 403 ); }
     $booking = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM {$wpdb->prefix}kcfr_bookings WHERE id=%d", $id ) );
-    if ( ! $booking || ! hash_equals( $booking->key_hash, hash( 'sha256', $token ) ) ) {
+    if ( ! $booking || (int)$booking->is_test !== kcfr_test_scope() || ! hash_equals( $booking->key_hash, hash( 'sha256', $token ) ) ) {
         return kcfr_error( 'access', 'Lien de réservation invalide.', 403 );
     }
     $session = kcfr_session_lock( $booking->session_id );
@@ -141,7 +149,7 @@ function kcfr_manage_booking( $id, $token, $operation = 'status', $now = null ) 
         kcfr_notice($id,'cancelled');
         kcfr_refresh_locked( $session, $now );
     } elseif ( 'confirm' === $operation ) {
-        if(kcfr_collective_closed($session->starts_at)){$wpdb->query('COMMIT');return kcfr_error('closure','Les cours collectifs sont fermés en juillet et en août.',409);}
+        if(kcfr_collective_closed($session->starts_at)){$wpdb->query('COMMIT');return kcfr_error('closure','Ce cours n’est pas ouvert à la réservation à cette date.',409);}
         if ( 'offered' !== $booking->status || kcfr_timestamp( $booking->offered_until ) <= $now ) {
             $wpdb->query( 'COMMIT' ); return kcfr_error( 'offer', 'Aucune proposition de place valide à confirmer.', 409 );
         }
@@ -188,7 +196,7 @@ function kcfr_save_request( $input ) {
     $note = sanitize_textarea_field( $input['note'] ?? '' );
     if ( strlen($note)>2000 ) { return kcfr_error( 'note', 'Votre message est trop long (2 000 caractères maximum).' ); }
     $details['note'] = $note;
-    $ok = $wpdb->insert( $wpdb->prefix . 'kcfr_requests', array( 'kind'=>$kind, 'seller'=>$seller, 'name'=>$customer['name'], 'email'=>$customer['email'], 'phone'=>$phone, 'details'=>wp_json_encode($details), 'created_at'=>kcfr_utc(time()) ) );
+    $ok = $wpdb->insert( $wpdb->prefix . 'kcfr_requests', array( 'kind'=>$kind, 'is_test'=>kcfr_test_scope(), 'seller'=>$seller, 'name'=>$customer['name'], 'email'=>$customer['email'], 'phone'=>$phone, 'details'=>wp_json_encode($details), 'created_at'=>kcfr_utc(time()) ) );
     if ( ! $ok ) { return kcfr_error('storage','Demande non enregistrée. Réessayez.',500); }
     if(kcfr_live()){kcfr_request_notice((int)$wpdb->insert_id);}
     return array('reference'=>'DEMANDE-'.(int)$wpdb->insert_id, 'demo'=>!kcfr_live(), 'message'=>kcfr_live()?'Votre demande est enregistrée. Kévin doit confirmer le créneau, son agenda et le trajet.':'Test : demande enregistrée sans envoi ni confirmation réelle.');

@@ -1,0 +1,18 @@
+{
+  "version": "1.0.1",
+  "target": "local WordPress real HTTP and browser",
+  "steps": [
+    "one place and two waiting",
+    "duplicate refused",
+    "invalid private link refused",
+    "first waiting participant alone receives offer",
+    "expired offer passes to next participant",
+    "expired offer cannot be accepted",
+    "valid offer confirmed",
+    "private management link renders actual booking",
+    "browser cancellation succeeds",
+    "no client notification queued"
+  ],
+  "public_site_modified": false,
+  "email_or_sms_sent": false
+}

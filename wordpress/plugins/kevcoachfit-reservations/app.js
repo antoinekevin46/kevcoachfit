@@ -52,7 +52,7 @@
           const expiry=document.createElement('p');expiry.textContent='Confirmez avant le '+new Intl.DateTimeFormat('fr-FR',{dateStyle:'short',timeStyle:'short',timeZone:'Europe/Paris'}).format(new Date(value.offered_until));manager.append(expiry);
           addButton('Accepter la place',()=>refresh('confirm'));
         }
-        if(['offered','waiting'].includes(value.status)||(value.status==='reserved'&&Date.now()<=new Date(value.starts_at).getTime()-7200000)){addButton('Annuler mon inscription',()=>{if(window.confirm('Annuler cette inscription de démonstration ?'))refresh('cancel');});}
+        if(['offered','waiting'].includes(value.status)||(value.status==='reserved'&&Date.now()<=new Date(value.starts_at).getTime()-7200000)){addButton('Annuler mon inscription',()=>{if(window.confirm(kcfrApp.live?'Annuler votre inscription à ce cours ?':'Annuler cette inscription de démonstration ?'))refresh('cancel');});}
         addButton('Actualiser le suivi',()=>refresh('status'));
         const note=document.createElement('p');note.className='kcfr-field-note';note.textContent=kcfrApp.live?'Conservez ce lien privé. Les SMS ne sont pas activés.':'Test : aucun e-mail ni SMS n’est envoyé.';manager.append(note);
       }catch(error){manager.textContent=error.message;}

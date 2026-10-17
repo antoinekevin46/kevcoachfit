@@ -2,7 +2,7 @@
 /**
  * Plugin Name: KevCoachFit — réservations et agenda
  * Description: Cours à 15 places, attente individuelle, demandes de coaching et connexion Google Agenda. Paiement sur place.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires PHP: 8.0
  * Requires at least: 6.6
  */
@@ -40,14 +40,15 @@ register_activation_hook(__FILE__,function(){
  if(!wp_next_scheduled('kcfr_tick')){wp_schedule_event(time()+60,'kcfr_minute','kcfr_tick');}
 });
 register_deactivation_hook(__FILE__,function(){wp_clear_scheduled_hook('kcfr_tick');});
+add_action('plugins_loaded',function(){if(get_option('kcfr_schema_version')!=='2'){kcfr_install_workflows();}});
 add_filter('cron_schedules',function($s){$s['kcfr_minute']=array('interval'=>60,'display'=>'KevCoachFit : chaque minute');return $s;});
 add_action('kcfr_tick','kcfr_tick');
 function kcfr_tick(){
  global $wpdb;update_option('kcfr_last_worker_run',time(),false);
  $today=wp_date('Y-m-d',time(),kcfr_timezone());
  if(get_option('kcfr_last_seed_day')!==$today){kcfr_seed_sessions();update_option('kcfr_last_seed_day',$today,false);}
- $wpdb->query($wpdb->prepare("UPDATE {$wpdb->prefix}kcfr_bookings b JOIN {$wpdb->prefix}kcfr_sessions s ON s.id=b.session_id SET b.status='expired' WHERE s.starts_at<=%s AND b.status IN ('waiting','offered')",kcfr_utc(time())));
- $ids=$wpdb->get_col($wpdb->prepare("SELECT DISTINCT s.id FROM {$wpdb->prefix}kcfr_sessions s JOIN {$wpdb->prefix}kcfr_bookings b ON b.session_id=s.id WHERE s.starts_at>%s AND b.status IN ('waiting','offered') ORDER BY s.starts_at LIMIT 100",kcfr_utc(time())));
+ $wpdb->query($wpdb->prepare("UPDATE {$wpdb->prefix}kcfr_bookings b JOIN {$wpdb->prefix}kcfr_sessions s ON s.id=b.session_id SET b.status='expired' WHERE s.starts_at<=%s AND b.is_test=%d AND b.status IN ('waiting','offered')",kcfr_utc(time()),kcfr_test_scope()));
+ $ids=$wpdb->get_col($wpdb->prepare("SELECT DISTINCT s.id FROM {$wpdb->prefix}kcfr_sessions s JOIN {$wpdb->prefix}kcfr_bookings b ON b.session_id=s.id WHERE s.starts_at>%s AND b.is_test=%d AND b.status IN ('waiting','offered') ORDER BY s.starts_at LIMIT 100",kcfr_utc(time()),kcfr_test_scope()));
  foreach($ids as $id){$s=kcfr_session_lock($id);if($s){kcfr_refresh_locked($s,time());}$wpdb->query('COMMIT');}
  kcfr_send_outbox();
 }
@@ -95,3 +96,11 @@ function kcfr_change_capacity($id,$capacity){
  if($ok===false){$wpdb->query('ROLLBACK');return kcfr_error('storage','Modification non enregistrée.',500);}
  $s->capacity=$capacity;kcfr_refresh_locked($s,time());$wpdb->query('COMMIT');return array('id'=>$id,'capacity'=>$capacity);
 }
+
+// Functional pages must not appear as search results after publication either.
+add_filter('wp_robots',function($robots){
+ if(is_singular()&&preg_match('/\[kcfr_(booking|manage|coaching)\b/',get_post_field('post_content',get_queried_object_id()))){
+  unset($robots['index']);$robots['noindex']=true;
+ }
+ return $robots;
+});

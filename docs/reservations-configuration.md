@@ -69,3 +69,16 @@ Contrôles navigateur à 320, 390, 768 et 1440 px, vraie réservation et annulat
 Les trois corrections du moteur atelier existant sont aussi conservées dans les sources, sans mise à jour automatique de l’extension distante : promotion à moins de deux heures du cours, retrait de la liste d’attente et comparaison d’heure qui acceptait à tort une séance de 23 h 30 franchissant minuit.
 
 Scripts : `test-reservations.php`, `check-reservations-ui.py`, `test-workflow-regressions.php`, `build-reservations-package.py`. Sources officielles consultées : https://wordpress.org/plugins/ameliabooking/ ; https://developers.google.com/identity/protocols/oauth2/web-server ; https://developers.google.com/calendar/api/v3/reference/freebusy/query .
+
+
+## Correctif 1.0.1 prêt — vérifications complémentaires du 17 octobre
+
+La version 1.0.0 reste installée sur le vrai site. La version 1.0.1 est testée et déposée dans la médiathèque, mais doit encore être téléversée dans Extensions puis remplacée via l’interface WordPress. La connexion REST disponible n’installe pas automatiquement un ZIP personnalisé.
+
+Correctif essentiel avant ouverture : distinguer les réservations et demandes d’essai des vraies inscriptions. Une migration conserve les essais privés de la version précédente et leurs liens ; ils ne consomment aucune place réelle après ouverture, ne bloquent plus l’inscription réelle avec la même adresse e-mail et ne produisent aucune notification client ensuite. Les modes sont séparés également pour la liste d’attente, les confirmations et l’expiration des offres. Aucune suppression des essais de Kévin n’a été effectuée sur le vrai site. La migration suppose que l’installation 1.0.0 privée n’a pas encore été ouverte au public, ce qui est le cas vérifié ici.
+
+Autres corrections : message d’annulation adapté au mode réel, message de fermeture adapté aux dates particulières et exclusion des pages fonctionnelles des résultats de recherche même après publication. Les règles de capacité, de réservation et de délai ne changent pas.
+
+Validation : 80 assertions existantes, 24 assertions supplémentaires de migration et séparation des modes, 10 étapes de liste d’attente via de vraies requêtes HTTP locales et un navigateur. Le scénario de 20 demandes avec 4 en parallèle donne 15 réservées et 5 en attente. Affichage des formulaires et administration revérifiés à 320, 390, 768 et 1440 px. Aucun envoi réel pendant ces tests.
+
+ZIP : https://kevcoachfit.com/wp-content/uploads/2026/10/kevcoachfit-reservations-1.0.1-431e055d9977.zip . Téléchargement et SHA256 vérifiés. Voir `reservations-update-1.0.1.json` et `reservations-1.0.1-verification.json`. Lors de l’installation ultérieure, utiliser l’option de remplacement de l’extension, sans la supprimer ni effacer ses réglages. Recontrôler le diagnostic avant toute ouverture.
