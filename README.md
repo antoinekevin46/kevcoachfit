@@ -67,3 +67,5 @@ Vitrine publique actualisée à la demande de Kévin : [publication 22](docs/pub
 Correction mobile 23 : [menu des quatre pages et photo continue](docs/mobile-23.md), déployée sur les sept pages publiques et leurs brouillons.
 
 Trois futurs sites à domaines propres préparés sans achat ni DNS : [organisation et migration 26](docs/independent-sites-26.md). Trois aperçus privés WordPress ; la vitrine publique actuelle reste en place pour les essais.
+
+Mise en place progressive 27 : [sport en accueil et parcours séparés](docs/specialisation-27.md). Le site existant ouvre Vitali’Van ; A.K et miel/vin gardent leurs adresses provisoires et attendent leurs domaines propres.

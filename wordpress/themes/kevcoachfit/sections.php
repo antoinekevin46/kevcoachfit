@@ -7,7 +7,8 @@ function kcf_section_key($id = 0) {
     if (in_array($page, array('vitalivan', 'reserver', 'mes-reservations'), true)) { return 'sport'; }
     if ($page === 'ak-anti-nuisible') { return 'protection'; }
     if ($page === 'terroir-loupiac') { return 'terroir'; }
-    return in_array($page, array('accueil', 'contact'), true) ? 'portail' : '';
+    if(in_array($page,array('accueil','contact'),true)){return kcf_search_key((int)get_option('page_on_front'))==='vitalivan'?'sport':'portail';}
+    return '';
 }
 function kcf_section_url($slug, $anchor = '') {
     // An explicit preview URL, including an installation in a subdirectory.
@@ -15,12 +16,13 @@ function kcf_section_url($slug, $anchor = '') {
         $preview = kcf_workshop_url($slug);
         if ($preview) { return $preview . ($anchor ? '#' . $anchor : ''); }
     }
-    $url = home_url($slug === 'accueil' ? '/' : '/' . $slug . '/');
+    $front_key=kcf_search_key((int)get_option('page_on_front'));
+    $url = home_url($slug === 'accueil' || $slug===$front_key ? '/' : '/' . $slug . '/');
     return $url . ($anchor ? '#' . $anchor : '');
 }
 function kcf_section_info($section) {
     $sections = array(
-        'sport' => array('brand'=>'Vitali’Van', 'tag'=>'SPORT & BIEN-ÊTRE · LOUPIAC, LOT', 'home'=>'vitalivan', 'phone'=>'+33674806707', 'display_phone'=>'06 74 80 67 07', 'email'=>'kevcoachfit@gmail.com', 'links'=>array(array('Programmes','vitalivan','programmes'), array('Planning','vitalivan','planning'), array('Tarifs','vitalivan','tarifs'), array('Réserver · démo','reserver','cours'))),
+        'sport' => array('brand'=>'Vitali’Van', 'tag'=>'SPORT & BIEN-ÊTRE · LOUPIAC, LOT', 'home'=>'vitalivan', 'phone'=>'+33674806707', 'display_phone'=>'06 74 80 67 07', 'email'=>'kevcoachfit@gmail.com', 'links'=>array(array('Programmes','vitalivan','programmes'), array('Planning','vitalivan','planning'), array('Tarifs','vitalivan','tarifs'), array('Réserver','reserver','cours'))),
         'protection' => array('brand'=>'A.K Nuisibles', 'tag'=>'PAYRAC & ALENTOURS · ACTIVITÉ EN PRÉPARATION', 'home'=>'ak-anti-nuisible', 'phone'=>'+33674806707', 'display_phone'=>'06 74 80 67 07', 'email'=>'aknuisible@gmail.com', 'links'=>array(array('Prestations','ak-anti-nuisible','prestations-ak'), array('Essaims d’abeilles','ak-anti-nuisible','essaims-ak'), array('Secteur & contact','ak-anti-nuisible','contact-ak'), array('Appeler Kévin','tel:+33674806707',''))),
         'terroir' => array('brand'=>'Terroir Antoine', 'tag'=>'KEV’MIEL & MAISON LOU’PIAC · LOUPIAC, LOT', 'home'=>'terroir-loupiac', 'phone'=>'+33674806707', 'display_phone'=>'06 74 80 67 07', 'email'=>'', 'links'=>array(array('Les miels','terroir-loupiac','miels-de-kevin'), array('Vins & spiritueux','terroir-loupiac','maison-loupiac'), array('Retrait sur rendez-vous','terroir-loupiac','retrait-terroir'))),
         'portail' => array('brand'=>'KevCoachFit', 'tag'=>'KÉVIN ANTOINE · LOUPIAC 46350', 'home'=>'accueil', 'phone'=>'+33674806707', 'display_phone'=>'06 74 80 67 07', 'email'=>'kevcoachfit@gmail.com', 'links'=>array(array('Vitali’Van','vitalivan',''), array('A.K Nuisibles','ak-anti-nuisible',''), array('Terroir','terroir-loupiac',''), array('Contact','contact',''))),
@@ -37,7 +39,7 @@ function kcf_section_header($section) {
     $rdv=$has_rdv?'<a class="kcf-header-rdv" href="'.esc_url(kcf_section_url('reserver')).'" aria-label="Rendez-vous et réservation des cours"><span class="kcf-rdv-desktop">Réserver</span><span class="kcf-rdv-mobile">RDV</span></a>':'';
     $header_class=$has_rdv?' kcf-header-has-rdv':'';
     $html='<div class="wp-block-group kcf-site-header kcf-section-header'.$header_class.' kcf-section-'.$section.'"><div class="wp-block-group kcf-brand"><p class="wp-block-site-title"><a href="'.esc_url(kcf_section_url($info['home'])).'">'.esc_html($info['brand']).'</a></p><p class="kcf-brand-location">'.esc_html($info['tag']).'</p></div>'.$rdv.'<nav class="wp-block-navigation" aria-label="'.esc_attr('Navigation '.$info['brand']).'"><ul class="wp-block-navigation__container">';
-    $page_links=array(array('Accueil','accueil',''),array('Vitali’Van','vitalivan',''),array('A.K Nuisibles','ak-anti-nuisible',''),array('Miel & vin','terroir-loupiac',''));
+    $page_links=$info['links'];
     foreach($page_links as $item) { $html.='<li class="wp-block-navigation-item">'.kcf_section_link($item).'</li>'; }
     return '<header class="wp-block-template-part">'.$html.'</ul></nav></div></header>';
 }
@@ -50,7 +52,9 @@ function kcf_section_footer($section) {
     if ($section==='terroir') { $html.='<p><a href="tel:+33633176328">Yohan · 06 33 17 63 28</a></p><p>Deux vendeurs, confirmation séparée et paiement au retrait sur rendez-vous.</p>'; }
     if ($section==='sport') { $html.='<p class="kcf-social-links"><a href="https://www.instagram.com/kev_coach_fit/">Instagram Vitali’Van</a><a href="https://www.facebook.com/share/14sJ6TNTfyN/">Facebook de Kévin</a></p>'; }
     if ($section==='protection') { $html.='<p>Devis gratuit · prestations et ouverture à confirmer avec Kévin.</p>'; }
-    $html.='</div></div><details class="kcf-other-spaces"><summary>Les autres univers de Kévin</summary><p><a href="'.esc_url(kcf_section_url('accueil')).'">Le portail KevCoachFit</a> · <a href="'.esc_url(kcf_section_url('vitalivan')).'">Vitali’Van</a> · <a href="'.esc_url(kcf_section_url('ak-anti-nuisible')).'">A.K Nuisibles</a> · <a href="'.esc_url(kcf_section_url('terroir-loupiac')).'">Terroir Antoine</a></p></details></div>';
+    $html.='</div></div>';
+    if($section==='portail'){$html.='<details class="kcf-other-spaces"><summary>Les autres univers de Kévin</summary><p><a href="'.esc_url(kcf_section_url('accueil')).'">Le portail KevCoachFit</a> · <a href="'.esc_url(kcf_section_url('vitalivan')).'">Vitali’Van</a> · <a href="'.esc_url(kcf_section_url('ak-anti-nuisible')).'">A.K Nuisibles</a> · <a href="'.esc_url(kcf_section_url('terroir-loupiac')).'">Terroir Antoine</a></p></details>';}
+    $html.='</div>';
     return '<footer class="wp-block-template-part">'.$html.'</footer>';
 }
 add_filter('render_block_core/template-part',function($html,$block){

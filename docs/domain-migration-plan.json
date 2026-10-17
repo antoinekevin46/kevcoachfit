@@ -1,7 +1,7 @@
 {
   "decision_date": "2026-10-17",
-  "phase": "private_previews_and_migration_preparation",
-  "public_changes_authorized_for_this_step": false,
+  "phase": "sport homepage live; two additional domains still pending",
+  "public_changes_authorized_for_this_step": true,
   "domains_purchased_by_assistant": false,
   "dns_modified": false,
   "hosting": {
@@ -19,7 +19,7 @@
       "key": "sport",
       "brand": "Vitali’Van / KevCoachFit",
       "current_page_id": 36,
-      "current_url": "https://kevcoachfit.com/vitalivan/",
+      "current_url": "https://kevcoachfit.com/",
       "future_origin": "https://kevcoachfit.com",
       "domain_status": "existing",
       "homepage_scope": "sport only; courses, coaching, planning, prices and sport contact",
@@ -35,7 +35,8 @@
         "/reserver/",
         "/mes-reservations/"
       ],
-      "google_callback_origin_unchanged": true
+      "google_callback_origin_unchanged": true,
+      "homepage_live": true
     },
     {
       "key": "ak",
@@ -84,7 +85,8 @@
       "destination_site": "sport",
       "destination_path": "/",
       "http_status": 301,
-      "active": false
+      "active": true,
+      "validated_http_status": 301
     },
     {
       "source_origin": "https://kevcoachfit.com",
@@ -120,5 +122,5 @@
     "Current hosting provider and offer capabilities",
     "Owner readiness for each activity launch"
   ],
-  "current_public_site": "unchanged; shared four-page navigation retained for present-day testing"
+  "current_public_site": "Sport at kevcoachfit.com root; A.K and terroir keep temporary existing URLs and activity-only navigation."
 }

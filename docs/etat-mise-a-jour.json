@@ -38,7 +38,7 @@
     "cafards/blattes"
   ],
   "agreed_hours_preserved": true,
-  "wordpress_remote_change_scope": "Public display updates through RDV25; domain separation26 adds private draft previews only",
+  "wordpress_remote_change_scope": "Specialisation27: sport homepage36, 7 specialised public pages, current drafts synced; no DNS changes",
   "wordpress_draft_ids": {
     "accueil": 63,
     "vitalivan": 64,
@@ -46,7 +46,8 @@
     "terroir-loupiac": 66,
     "contact": 67,
     "reserver": 68,
-    "mes-reservations": 69
+    "mes-reservations": 69,
+    "accueil_is_archived": true
   },
   "reservations_setup": {
     "plugin": "kevcoachfit-reservations",
@@ -69,7 +70,10 @@
     "plan": "docs/domain-migration-plan.json",
     "previews": "docs/independent-sites-26-previews.json",
     "target_sites": 3,
-    "current_public_site_unchanged": true,
-    "independent_domains_active": false
+    "current_public_site_unchanged": false,
+    "independent_domains_active": false,
+    "current_homepage_id": 36,
+    "current_homepage_profile": "sport",
+    "old_vitalivan_redirect_http": 301
   }
 }

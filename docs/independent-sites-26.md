@@ -1,5 +1,7 @@
 # Préparation des trois sites par domaine
 
+Mise à jour après cette préparation : la phase27 consacre désormais l’accueil public au sport et sépare les menus des activités. Les domaines supplémentaires attendent toujours leur choix et leur configuration ; voir `specialisation-27.md`.
+
 Décision de Kévin du 17 octobre 2026 : appliquer à toutes les activités l’organisation par domaines dédiés, en conservant pour l’instant les essais et sans acheter de domaines.
 
 | Futur site | Domaine | Contenu |

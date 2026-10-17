@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-17",
+  "homepage_id": 36,
+  "homepage_url": "https://kevcoachfit.com/",
+  "homepage_scope": "Vitali’Van, courses and coaching only",
+  "former_vitalivan_http": 301,
+  "former_vitalivan_location": "https://kevcoachfit.com/",
+  "old_atelier_page_preserved": true,
+  "old_portal_draft_archived": 63,
+  "pages": [
+    {
+      "id": 36,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 41,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 37,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 38,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 39,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 40,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 35,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 64,
+      "status": "draft",
+      "verified": true
+    },
+    {
+      "id": 65,
+      "status": "draft",
+      "verified": true
+    },
+    {
+      "id": 66,
+      "status": "draft",
+      "verified": true
+    },
+    {
+      "id": 67,
+      "status": "draft",
+      "verified": true
+    },
+    {
+      "id": 68,
+      "status": "draft",
+      "verified": true
+    },
+    {
+      "id": 69,
+      "status": "draft",
+      "verified": true
+    }
+  ],
+  "bookings_open": false,
+  "google_connected": false,
+  "new_domains_purchased": false,
+  "new_domains_configured": false,
+  "ak_current_url": "https://kevcoachfit.com/ak-anti-nuisible/",
+  "terroir_current_url": "https://kevcoachfit.com/terroir-loupiac/",
+  "independent_domain_status": "pending domain choices, ownership and hosting access"
+}

@@ -4,13 +4,13 @@
 
 Kévin confirme que l’organisation par domaines propres doit s’appliquer aux trois espaces. Vitali’Van conserve kevcoachfit.com ; A.K Nuisibles aura un domaine dédié (`aknuisible.com` est une idée non vérifiée et non achetée), et les miels avec les vins de Yohan auront un troisième domaine dont le nom reste à choisir. Le miel et le vin restent deux catalogues et deux vendeurs dans ce troisième espace.
 
-Les domaines supplémentaires ne sont pas achetés. La vitrine publique actuelle et son menu commun restent en place pour les essais. Trois nouveaux aperçus privés préparent la future séparation avec un menu, des liens et un contact propres à chaque activité. Les anciens paragraphes qui proposaient seulement de rediriger les nouveaux noms vers des pages de kevcoachfit.com sont remplacés par cette décision.
+Les domaines supplémentaires ne sont pas achetés. Après les trois aperçus privés, la mise en place progressive27 a consacré la page d’accueil de kevcoachfit.com au sport et séparé la navigation des trois activités, en conservant provisoirement les URL A.K et terroir sur le même domaine. Voir `specialisation-27.md`. Les trois aperçus privés sont conservés pour préparer les vrais domaines. Les anciens paragraphes qui proposaient seulement de rediriger les nouveaux noms vers des pages de kevcoachfit.com sont remplacés par cette décision.
 
 ## Architecture cible
 
 Préférence de préparation : trois installations WordPress séparées sur un même hébergement, si l’offre actuelle accepte les domaines, répertoires, bases de données et certificats nécessaires. Le prestataire et l’offre restent à confirmer. Il n’est pas nécessaire d’acheter trois abonnements d’hébergement par principe, et aucune compatibilité de l’offre actuelle n’est garantie sans vérification.
 
-Chaque domaine affichera réellement son propre site et ses propres URL. Les menus d’A.K ne mèneront pas aux cours ou au miel ; les menus du terroir ne mèneront pas aux nuisibles. Le site sport conservera les programmes, les tarifs, le planning et ses pages de réservation et de suivi. Le menu commun actuel est maintenu uniquement pendant cette phase d’essai.
+Chaque domaine affichera réellement son propre site et ses propres URL. Les menus d’A.K ne mèneront pas aux cours ou au miel ; les menus du terroir ne mèneront pas aux nuisibles. Le site sport conservera les programmes, les tarifs, le planning et ses pages de réservation et de suivi. Le menu commun a été remplacé par des menus propres à chaque activité pendant la mise en place progressive27.
 
 ## Migration du référencement
 

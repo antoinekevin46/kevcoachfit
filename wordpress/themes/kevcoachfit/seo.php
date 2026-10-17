@@ -3,11 +3,11 @@
 defined('ABSPATH') || exit;
 function kcf_search_pages() {
     return array(
-        'accueil'=>array('title'=>'KevCoachFit à Loupiac : sport, nature et terroir','description'=>'Découvrez Kévin Antoine à Loupiac, dans le Lot : Vitali’Van, A.K Nuisibles en préparation, Kev’Miel et les vins Maison Lou’piac de Yohan.'),
+        'accueil'=>array('title'=>'KevCoachFit à Loupiac : cours et coaching Vitali’Van','description'=>'Vitali’Van : cours de fitness à Calès et Payrac, activités seniors et coaching à domicile autour de Loupiac, dans le Lot. Retrouvez Kévin Antoine.'),
         'vitalivan'=>array('title'=>'Fitness à Payrac et Calès, coaching à Loupiac | Vitali’Van','description'=>'Cours seniors, renforcement musculaire et cross-training à Calès et Payrac. Coaching privé autour de Loupiac, dans le Lot. Horaires, formules janvier–juin et septembre–Noël, et contact.'),
         'ak-anti-nuisible'=>array('title'=>'Frelons, guêpes et dératisation à Payrac | A.K Nuisibles','description'=>'Activité en préparation : frelons, guêpes, fourmis, cafards, dératisation et piégeage autour de Payrac, Loupiac, Souillac et Gourdon, dans le Lot.'),
         'terroir-loupiac'=>array('title'=>'Kev’Miel et vins Maison Lou’piac à Loupiac, Lot','description'=>'Kev’Miel : miel toutes fleurs et miel de forêt de Kévin. Vins et alcools Maison Lou’Piac de Yohan Antoine. Deux catalogues, retrait à Loupiac dans le Lot.'),
-        'contact'=>array('title'=>'Contacter Kévin Antoine à Loupiac | KevCoachFit','description'=>'Contactez Kévin Antoine pour les cours Vitali’Van, le coaching et le miel à Loupiac. Retrouvez aussi le contact de Yohan pour les vins Maison Lou’Piac.'),
+        'contact'=>array('title'=>'Contacter Kévin Antoine à Loupiac | KevCoachFit','description'=>'Contactez Kévin Antoine pour les cours de fitness à Calès et Payrac et le coaching à domicile autour de Loupiac : programme, disponibilités et première séance.'),
         'reserver'=>array('title'=>'Réserver un cours à Calès ou Payrac | Vitali’Van','description'=>'Choisissez votre séance Vitali’Van à Calès ou Payrac : 15 places par cours, liste d’attente et paiement sur place. Demande de coaching privé à domicile.'),
         'mes-reservations'=>array('title'=>'Mon inscription | Vitali’Van','description'=>'Consultez ou gérez votre inscription avec votre lien privé.'),
     );

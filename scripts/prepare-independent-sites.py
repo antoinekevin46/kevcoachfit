@@ -12,7 +12,7 @@ def isolate(content,slug):
  cfg=SITES[slug]
  # Keep local and social contacts; remove the cross-business directory in the footer.
  content,n=re.subn(r'<details class="kcf20-other-spaces">.*?</details>','',content,count=1,flags=re.S)
- assert n==1,'Cross-activity directory changed; review source first.'
+ assert n==1 or 'KCF_SPECIALISED_27' in content or 'KCF_INDEPENDENT_PREVIEW_26' in content,'Cross-activity directory changed; review source first.'
  links=''.join('<li class="wp-block-navigation-item"><a class="wp-block-navigation-item__content" href="#'+anchor+'">'+label+'</a></li>' for label,anchor in cfg['links'])
  content,n=re.subn(r'(<nav\b[^>]*><ul class="wp-block-navigation__container">).*?(</ul></nav>)',lambda m:m[1]+links+m[2],content,count=1,flags=re.S)
  assert n==1,'Navigation changed; review source first.'
