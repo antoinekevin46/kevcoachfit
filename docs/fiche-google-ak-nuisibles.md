@@ -30,3 +30,22 @@ Le flyer et la carte de visite peuvent compléter la présentation. Prévoir aus
 Sources officielles consultées le 17 octobre 2026 :
 - https://support.google.com/business/answer/3038177?hl=fr
 - https://support.google.com/business/answer/9174409?hl=fr
+
+## Suivi confirmé le 17 octobre 2026
+
+Kévin indique avoir terminé cette étape de saisie de la fiche Google manuellement. Cela ne prouve ni validation ni publication par Google ; statut à vérifier ultérieurement. Aucun accès ou changement Google réalisé par Codex.
+
+- Services retenus pour le lancement : offre complète du flyer, plus fourmis et cafards/blattes. Reporter ces deux ajouts dans le contenu du site à la prochaine révision ; ils ne figurent pas encore dans les prestations détaillées de la vitrine 19.
+- Exclus : punaises de lit et mites. Puces non retenues pour le lancement ; bouton Google « puces et mites » décoché. Araignées non retenues comme prestation affichée.
+- Horaires ignorés pour le moment : à préciser selon les interventions et les cours de sport, sans promesse de disponibilité continue.
+- Champ site web laissé de côté : ajouter l’URL propre à A.K une fois la page publique et prête.
+- Description de préparation fournie : « A.K Nuisibles, avec Kévin Antoine, prépare son ouverture dans le Lot pour des interventions autour de Payrac, notamment à Loupiac, Souillac et Gourdon. Prestations prévues pour particuliers, professionnels et collectivités : destruction de nids de frelons asiatiques et européens et de guêpes européennes ; traitement des chenilles processionnaires, fourmis et cafards ; dératisation contre les rats, souris, mulots et lérots ; piégeage traditionnel des taupes. Passionné d’apiculture, Kévin proposera également la récupération d’essaims d’abeilles pour contribuer à leur préservation. Devis gratuit. Date d’ouverture et disponibilités à confirmer. »
+- RS6442 correspond au référentiel du Certibiocide nuisibles, pas à un numéro personnel de certificat. Formation du 2 au 4 novembre 2026 inclus ; mention de titulaire seulement après obtention effective.
+
+### À reprendre après la formation et avant lancement
+
+Confirmer l’ouverture réelle, le certificat obtenu et son intitulé, les plages d’intervention, les modalités et tarifs/devis ; actualiser la description et les services Google ; vérifier les communes réellement desservies et le statut de validation Google ; ajouter le lien du site et les photos réelles. Remplacer les textes de préparation du site et intégrer fourmis/cafards sans retirer les détails du flyer. Aucune date du 5 novembre supposée et aucune qualification ou assurance inventée.
+
+La vitrine est une maquette locale : identité jaune/noire, prestations, essaims, carte indicative, téléphone, e-mail prérempli et FAQ sont présents. Restent la revue finale après mise à jour, les photos réelles et l’installation/publication par Kévin. Aucun système public de réservation d’intervention, agenda connecté, calcul de trajet ou envoi automatique n’est en service.
+
+Source certification consultée : https://www.francecompetences.fr/recherche/rs/6442/
