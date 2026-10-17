@@ -4,7 +4,7 @@
   "sources_restored": true,
   "pricing_validated_and_integrated": true,
   "three_distinct_sections": true,
-  "additional_domains": "not purchased; no DNS changes",
+  "additional_domains": "not purchased; no DNS changes; three separate sites prepared in private previews",
   "wordpress_remote_updated": true,
   "production_bookings_enabled": false,
   "google_profile_actions_executed": false,
@@ -38,7 +38,7 @@
     "cafards/blattes"
   ],
   "agreed_hours_preserved": true,
-  "wordpress_remote_change_scope": "7 new draft mockups and 13 media attachments; existing public pages, theme, plugins and settings preserved",
+  "wordpress_remote_change_scope": "Public display updates through RDV25; domain separation26 adds private draft previews only",
   "wordpress_draft_ids": {
     "accueil": 63,
     "vitalivan": 64,
@@ -52,7 +52,7 @@
     "plugin": "kevcoachfit-reservations",
     "version": "1.0.0",
     "paid_license": false,
-    "installed_remote": false,
+    "installed_remote": true,
     "package_media_id": 81,
     "core_assertions": 80,
     "concurrent_http_requests": 20,
@@ -60,6 +60,16 @@
     "waiting": 5,
     "google_real_authorization": false,
     "sms_connected": false,
-    "automatic_travel": false
+    "automatic_travel": false,
+    "update_prepared": "1.0.1",
+    "google_connected": false,
+    "mail_test_received": true
+  },
+  "domain_separation": {
+    "plan": "docs/domain-migration-plan.json",
+    "previews": "docs/independent-sites-26-previews.json",
+    "target_sites": 3,
+    "current_public_site_unchanged": true,
+    "independent_domains_active": false
   }
 }

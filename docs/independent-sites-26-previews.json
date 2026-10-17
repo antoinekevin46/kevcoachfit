@@ -1,0 +1,35 @@
+{
+  "previews": {
+    "sport": {
+      "id": 126,
+      "preview_url": "https://kevcoachfit.com/?page_id=126&preview=true",
+      "editor_url": "https://kevcoachfit.com/wp-admin/post.php?post=126&action=edit",
+      "status": "draft",
+      "source_id": 36
+    },
+    "ak": {
+      "id": 127,
+      "preview_url": "https://kevcoachfit.com/?page_id=127&preview=true",
+      "editor_url": "https://kevcoachfit.com/wp-admin/post.php?post=127&action=edit",
+      "status": "draft",
+      "source_id": 41
+    },
+    "terroir": {
+      "id": 128,
+      "preview_url": "https://kevcoachfit.com/?page_id=128&preview=true",
+      "editor_url": "https://kevcoachfit.com/wp-admin/post.php?post=128&action=edit",
+      "status": "draft",
+      "source_id": 37
+    }
+  },
+  "public_source_pages_preserved": true,
+  "homepage_preserved": true,
+  "dns_changed": false,
+  "domains_purchased": false,
+  "independent_domains_active": false,
+  "anonymous_preview_http": {
+    "sport": 404,
+    "ak": 404,
+    "terroir": 404
+  }
+}

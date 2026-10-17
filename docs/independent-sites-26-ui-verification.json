@@ -1,0 +1,69 @@
+{
+  "renders": [
+    {
+      "page": "sport",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "ak",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "terroir",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "sport",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "page": "ak",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "page": "terroir",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "page": "sport",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "page": "ak",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "page": "terroir",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "page": "sport",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "page": "ak",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "page": "terroir",
+      "width": 1440,
+      "overflow": false
+    }
+  ],
+  "broken_anchors": [],
+  "broken_images": [],
+  "javascript_errors": [],
+  "gutenberg_invalid_blocks": [],
+  "mode": "12 local renders of isolated activity previews; unrelated business directories removed; activity-only menus; no public changes or client messages"
+}

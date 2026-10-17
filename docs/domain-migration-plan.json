@@ -1,0 +1,124 @@
+{
+  "decision_date": "2026-10-17",
+  "phase": "private_previews_and_migration_preparation",
+  "public_changes_authorized_for_this_step": false,
+  "domains_purchased_by_assistant": false,
+  "dns_modified": false,
+  "hosting": {
+    "preferred": "one hosting account, three separate WordPress installations",
+    "offer_verified": false,
+    "requirements_to_verify": [
+      "multiple domains/sites",
+      "separate document roots and databases",
+      "HTTPS certificates",
+      "backup and restore"
+    ]
+  },
+  "sites": [
+    {
+      "key": "sport",
+      "brand": "Vitali’Van / KevCoachFit",
+      "current_page_id": 36,
+      "current_url": "https://kevcoachfit.com/vitalivan/",
+      "future_origin": "https://kevcoachfit.com",
+      "domain_status": "existing",
+      "homepage_scope": "sport only; courses, coaching, planning, prices and sport contact",
+      "navigation": [
+        "Programmes",
+        "Planning",
+        "Tarifs",
+        "Contact et RDV"
+      ],
+      "seo_title": "Fitness à Payrac et Calès, coaching à Loupiac | Vitali’Van",
+      "seo_description": "Cours seniors, renforcement musculaire et training à Calès et Payrac. Coaching à domicile autour de Loupiac, Lot. Planning, tarifs et contact Vitali’Van.",
+      "booking_pages": [
+        "/reserver/",
+        "/mes-reservations/"
+      ],
+      "google_callback_origin_unchanged": true
+    },
+    {
+      "key": "ak",
+      "brand": "A.K Nuisibles",
+      "current_page_id": 41,
+      "current_url": "https://kevcoachfit.com/ak-anti-nuisible/",
+      "future_origin": null,
+      "domain_candidate": "aknuisible.com",
+      "domain_availability_checked": false,
+      "domain_ownership_confirmed": false,
+      "homepage_scope": "pest services only, swarm recovery, intervention area, contact and free quote",
+      "navigation": [
+        "Prestations",
+        "Essaims d’abeilles",
+        "Secteur et contact",
+        "Devis gratuit"
+      ],
+      "seo_title": "Anti-nuisibles à Payrac : frelons et dératisation | A.K Nuisibles",
+      "seo_description": "A.K Nuisibles, activité en préparation autour de Payrac, Loupiac, Souillac et Gourdon : frelons, guêpes, fourmis, cafards, rongeurs, taupes et essaims.",
+      "launch_date_confirmed": false
+    },
+    {
+      "key": "terroir",
+      "brand": "Kev’Miel et Maison Lou’Piac",
+      "current_page_id": 37,
+      "current_url": "https://kevcoachfit.com/terroir-loupiac/",
+      "future_origin": null,
+      "domain_candidate": null,
+      "domain_ownership_confirmed": false,
+      "homepage_scope": "honey and wine catalogues; two distinct sellers and pickup appointments",
+      "navigation": [
+        "Les miels",
+        "Vins et spiritueux",
+        "Retrait et contacts"
+      ],
+      "seo_title": "Miel et vins à Loupiac, Lot | Kev’Miel et Maison Lou’Piac",
+      "seo_description": "Miel toutes fleurs et miel de forêt de Kévin, vins et spiritueux Maison Lou’Piac de Yohan. Deux vendeurs, retrait à Loupiac sur rendez-vous.",
+      "vendors_kept_separate": true,
+      "online_sales_open": false
+    }
+  ],
+  "redirects_after_target_sites_are_ready": [
+    {
+      "source_origin": "https://kevcoachfit.com",
+      "source_path": "/vitalivan/",
+      "destination_site": "sport",
+      "destination_path": "/",
+      "http_status": 301,
+      "active": false
+    },
+    {
+      "source_origin": "https://kevcoachfit.com",
+      "source_path": "/ak-anti-nuisible/",
+      "destination_site": "ak",
+      "destination_path": "/",
+      "http_status": 301,
+      "active": false
+    },
+    {
+      "source_origin": "https://kevcoachfit.com",
+      "source_path": "/terroir-loupiac/",
+      "destination_site": "terroir",
+      "destination_path": "/",
+      "http_status": 301,
+      "active": false
+    }
+  ],
+  "seo_migration": [
+    "Import the correct activity content and media into each installation",
+    "Set home/site URLs and HTTPS on the real owned origin",
+    "Set each canonical URL to its own new origin",
+    "Keep staging private/noindex until the corresponding site is approved for publication",
+    "Activate path-specific 301 redirects after destination validation",
+    "Keep sport booking and management pages noindex",
+    "Publish separate sitemaps and verify the three Search Console properties",
+    "Do not use whole-domain Change of Address: kevcoachfit.com remains active for sport",
+    "Update only the matching Google Business Profile website and social links",
+    "Monitor old URLs, redirect chains and search indexing; rankings are not guaranteed"
+  ],
+  "activation_blockers": [
+    "Ownership and exact names of the two additional domains",
+    "Current hosting provider and offer capabilities",
+    "Owner readiness for each activity launch"
+  ],
+  "current_public_site": "unchanged; shared four-page navigation retained for present-day testing"
+}

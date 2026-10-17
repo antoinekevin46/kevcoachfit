@@ -65,3 +65,5 @@ Correctif de réservation 1.0.1 préparé : séparation essais/réel, migration 
 Vitrine publique actualisée à la demande de Kévin : [publication 22](docs/publication-22.md). Réservations toujours fermées, profils Instagram liés sans flux automatique de publications.
 
 Correction mobile 23 : [menu des quatre pages et photo continue](docs/mobile-23.md), déployée sur les sept pages publiques et leurs brouillons.
+
+Trois futurs sites à domaines propres préparés sans achat ni DNS : [organisation et migration 26](docs/independent-sites-26.md). Trois aperçus privés WordPress ; la vitrine publique actuelle reste en place pour les essais.

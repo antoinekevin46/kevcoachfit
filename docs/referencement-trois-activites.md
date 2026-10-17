@@ -1,29 +1,28 @@
-# Référencement — trois activités, un site
+# Référencement — trois futurs sites spécialisés
 
-## Décision et état de la mise à jour
+## Décision mise à jour le 17 octobre 2026
 
-Kévin valide trois espaces autonomes au sein d’un seul site. Il prévoit trois noms de domaine supplémentaires ou dédiés, dont les noms et l’affectation restent à préciser. Aucune modification WordPress, DNS ou redirection n’est encore effectuée : les sources précédentes, initialement absentes de cet environnement, ont été restaurées depuis le pack fourni par Kévin. Les versions de test 16 puis 17 sont préparées localement ; l’accès WordPress distant n’a pas été utilisé pour écrire.
+Kévin confirme que l’organisation par domaines propres doit s’appliquer aux trois espaces. Vitali’Van conserve kevcoachfit.com ; A.K Nuisibles aura un domaine dédié (`aknuisible.com` est une idée non vérifiée et non achetée), et les miels avec les vins de Yohan auront un troisième domaine dont le nom reste à choisir. Le miel et le vin restent deux catalogues et deux vendeurs dans ce troisième espace.
 
-Un seul site ne garantit pas un classement ; trois sites ne le garantissent pas davantage. Organiser les pages pour répondre à des besoins précis, avec des informations réelles, utiles et vérifiables.
+Les domaines supplémentaires ne sont pas achetés. La vitrine publique actuelle et son menu commun restent en place pour les essais. Trois nouveaux aperçus privés préparent la future séparation avec un menu, des liens et un contact propres à chaque activité. Les anciens paragraphes qui proposaient seulement de rediriger les nouveaux noms vers des pages de kevcoachfit.com sont remplacés par cette décision.
 
-## Architecture retenue
+## Architecture cible
 
-- `/` : portail KevCoachFit et parcours de Kévin ; trois portes clairement identifiées.
-- `/vitalivan/` : espace sport, programme, lieux, prix, préparation du premier cours et contact.
-- `/ak-anti-nuisible/` : espace A.K Nuisibles jaune/noir, prestations détaillées, secteur et contact direct. Publication selon l’ouverture réelle de l’activité.
-- `/terroir-loupiac/` : Kev’Miel et Maison Lou’piac ; deux producteurs et deux demandes séparées, paiement au retrait après confirmation.
-- `/contact/` : contacts orientés par activité, sans communiquer automatiquement l’adresse privée de départ des trajets.
-- Réservation et suivi : espaces fonctionnels à terminer ; ne pas les présenter comme opérationnels et ne pas les inclure dans les pages prioritaires à indexer.
+Préférence de préparation : trois installations WordPress séparées sur un même hébergement, si l’offre actuelle accepte les domaines, répertoires, bases de données et certificats nécessaires. Le prestataire et l’offre restent à confirmer. Il n’est pas nécessaire d’acheter trois abonnements d’hébergement par principe, et aucune compatibilité de l’offre actuelle n’est garantie sans vérification.
 
-Chaque espace doit porter sa propre marque et ses propres appels à l’action. Les visiteurs venant des réseaux, des flyers et des fiches Google arrivent directement sur l’activité recherchée. Un lien discret permet de retrouver les autres activités. Garder la structure mobile, les identités et les visuels originaux approuvés.
+Chaque domaine affichera réellement son propre site et ses propres URL. Les menus d’A.K ne mèneront pas aux cours ou au miel ; les menus du terroir ne mèneront pas aux nuisibles. Le site sport conservera les programmes, les tarifs, le planning et ses pages de réservation et de suivi. Le menu commun actuel est maintenu uniquement pendant cette phase d’essai.
 
-## Noms de domaine
+## Migration du référencement
 
-Faire pointer chaque domaine vers l’espace correspondant par redirection permanente, après validation des noms et de leur propriété. Le domaine du sport mène à `/vitalivan/`, celui d’A.K à `/ak-anti-nuisible/` et celui du terroir à `/terroir-loupiac/`. Les URL de destination sont les URL canoniques sous kevcoachfit.com.
+Le domaine A.K ne sera pas une simple redirection vers kevcoachfit.com : il hébergera ses propres pages. Après préparation, vérification et ouverture de la destination, l’ancienne page `/ak-anti-nuisible/` sur kevcoachfit.com sera redirigée en 301 vers la nouvelle page A.K. Même principe pour `/terroir-loupiac/`. L’ancienne page `/vitalivan/` pourra mener à la nouvelle page d’accueil sportive sur kevcoachfit.com, une fois le portail remplacé par l’accueil sport.
 
-Ne pas activer trois copies du même site ou une redirection masquée dans une iframe. Chaque domaine source doit avoir un certificat HTTPS valide ; sa version avec et sans www doit être traitée. Conserver les chemins utiles si d’anciens liens existent ; ne pas rediriger aveuglément toutes les pages vers un contenu sans rapport. Une redirection ne donne pas trois présences indépendantes dans les résultats de recherche. Si Kévin souhaite conserver chacun des domaines dans la barre d’adresse, revoir le choix technique : ce serait une autre organisation que trois domaines redirigés vers un site.
+Ne pas modifier les DNS, les URL canoniques ou les redirections avant la validation des domaines et la préparation des destinations. Ne pas publier de domaine provisoire comme URL canonique. Importer les images et les contenus propres à chaque activité, conserver les ancres utiles et réaffecter les liens internes. Chaque destination aura son certificat HTTPS, ses titres, ses descriptions et son plan de site. Les réservations et liens de suivi resteront exclus de l’indexation.
 
-Les trois domaines ne justifient pas trois hébergements : vérifier les possibilités de l’offre actuelle, dont le prestataire exact reste à confirmer.
+La migration concerne deux sections d’un domaine qui continue d’exister : ne pas utiliser le changement d’adresse de l’ensemble du domaine dans Search Console. Vérifier les propriétés des trois sites, déclarer leurs plans, conserver les anciennes redirections et surveiller les erreurs. Les fiches Google et réseaux doivent pointer vers le site correspondant après lancement. Une fiche Google reste soumise à l’éligibilité de l’activité réelle ; un domaine ne remplace pas ces conditions.
+
+Aucun nom de domaine ne garantit un classement sur les recherches génériques. Utiliser les prestations réellement proposées et les communes réellement desservies, sans multiplier des pages presque identiques pour chaque village ni inventer avis, certifications ou établissements.
+
+Le plan exploitable, les URL actuelles et les redirections futures inactives sont conservés dans `domain-migration-plan.json`. Les textes ci-dessous restent une bibliothèque : ils doivent être affectés au bon site, puis relus au moment du lancement.
 
 ## Titres et descriptions à intégrer
 
