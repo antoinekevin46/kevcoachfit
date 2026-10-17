@@ -45,6 +45,7 @@ def load_sources():
  for key,data in payload['assets'].items():styles=styles.replace('kcf-asset://'+key,data)
  # Same current assets as the standalone showcase, scoped by distinct class names.
  styles+='\n'+(ROOT/'wordpress/themes/kevcoachfit/draft-reservations.css').read_text()
+ styles+='\n'+(ROOT/'wordpress/themes/kevcoachfit/mobile-navigation.css').read_text()
  styles=styles.replace('kcf-','kcf20-')
  styles+='''
 body:has(.kcf20-preview-root) .wp-site-blocks > header,

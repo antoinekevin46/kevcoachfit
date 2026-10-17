@@ -1,0 +1,30 @@
+
+/* KCF_MOBILE_23: continuous hero image, persistent header and four-page menu. */
+.kcf-preview-root > header.wp-block-template-part{position:sticky;top:0;z-index:100;margin:0!important;background:#17251c}
+body.admin-bar .kcf-preview-root > header.wp-block-template-part{top:32px}
+.kcf-preview-root .kcf-site-header{background:#17251c}
+.kcf-preview-root .kcf-section-protection{background:#111}
+.kcf-preview-root .kcf-section-terroir{background:#302519}
+.kcf-preview-root .kcf-menu-toggle::after{content:'Menu';font:700 14px/1.2 Arial,sans-serif;margin-left:10px;letter-spacing:0;text-transform:none}
+.kcf-preview-root .kcf-menu-toggle{min-width:88px;min-height:44px}
+.kcf-preview-root .kcf-site-header .kcf-dropdown-panel .wp-block-navigation-item:last-child{padding-top:0}
+.kcf-preview-root .kcf-site-header .kcf-dropdown-panel .wp-block-navigation-item:last-child a{display:flex;width:100%;padding:12px 0;color:#fff;background:transparent}
+.kcf-preview-root .kcf-sport-hero .kcf-sport-photo img{max-height:none!important;height:100%;width:100%;object-fit:cover}
+@media(max-width:782px){body.admin-bar .kcf-preview-root > header.wp-block-template-part{top:46px}}
+@media(max-width:599px){
+ .kcf-preview-root .kcf-site-header{padding:14px 20px;gap:12px}
+ .kcf-preview-root .kcf-site-header .kcf-brand{max-width:calc(100% - 104px)}
+ .kcf-preview-root .kcf-brand-location{font-size:10px;line-height:1.5}
+ .kcf-preview-root .kcf-section-header .wp-block-site-title{font-size:24px;line-height:1.1;margin-block:0 6px}
+ .kcf-preview-root .kcf-site-header .kcf-dropdown-panel.is-menu-open{max-height:min(360px,calc(100svh - 110px));background:#17251c;padding:8px 20px 12px}
+ .kcf-preview-root .kcf-sport-hero{min-height:0;padding-block:36px}
+ .kcf-preview-root .kcf-sport-hero .kcf-title{font-size:clamp(3rem,13.5vw,4.6rem);line-height:.98;max-width:100%;margin-block:20px}
+ .kcf-preview-root .kcf-sport-hero .kcf-intro{font-size:18px;line-height:1.65}
+ .kcf-preview-root .kcf-sport-hero .kcf-sport-photo img{max-height:none!important;height:100%;object-position:62% top;filter:brightness(.42)}
+ .kcf-preview-root .kcf-sport-hero::before{background:linear-gradient(180deg,#1118 0%,#1116 45%,#111e 100%)}
+ .kcf-preview-root .kcf-sport-hero .wp-block-buttons{width:100%}
+ .kcf-preview-root .kcf-sport-hero .wp-block-button{width:100%}
+ .kcf-preview-root .kcf-sport-hero .wp-block-button__link{box-sizing:border-box;width:100%;white-space:normal}
+}
+
+.kcf-preview-root .kcf-section-protection .kcf-dropdown-panel.is-menu-open{background:#111}.kcf-preview-root .kcf-section-terroir .kcf-dropdown-panel.is-menu-open{background:#302519}

@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-17",
+  "pages": [
+    {
+      "id": 35,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 36,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 37,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 38,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 39,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 40,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 41,
+      "status": "publish",
+      "verified": true
+    },
+    {
+      "id": 63,
+      "status": "draft",
+      "verified": true
+    },
+    {
+      "id": 64,
+      "status": "draft",
+      "verified": true
+    },
+    {
+      "id": 65,
+      "status": "draft",
+      "verified": true
+    },
+    {
+      "id": 66,
+      "status": "draft",
+      "verified": true
+    },
+    {
+      "id": 67,
+      "status": "draft",
+      "verified": true
+    },
+    {
+      "id": 68,
+      "status": "draft",
+      "verified": true
+    },
+    {
+      "id": 69,
+      "status": "draft",
+      "verified": true
+    }
+  ],
+  "public_bookings_open": false,
+  "mobile_menu": [
+    "Accueil",
+    "Vitali’Van",
+    "A.K Nuisibles",
+    "Miel & vin"
+  ],
+  "header_sticky": true,
+  "hero_image_height_limit_removed": true,
+  "local_renders": 28,
+  "local_widths": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "source_of_bug": "480px max-height applied to the sport hero image while its container exceeded 1000px on mobile"
+}

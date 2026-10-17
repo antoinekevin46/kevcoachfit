@@ -34,7 +34,8 @@ function kcf_section_link($item) {
 function kcf_section_header($section) {
     $info=kcf_section_info($section); if (!$info) { return ''; }
     $html='<div class="wp-block-group kcf-site-header kcf-section-header kcf-section-'.$section.'"><div class="wp-block-group kcf-brand"><p class="wp-block-site-title"><a href="'.esc_url(kcf_section_url($info['home'])).'">'.esc_html($info['brand']).'</a></p><p class="kcf-brand-location">'.esc_html($info['tag']).'</p></div><nav class="wp-block-navigation" aria-label="'.esc_attr('Navigation '.$info['brand']).'"><ul class="wp-block-navigation__container">';
-    foreach($info['links'] as $item) { $html.='<li class="wp-block-navigation-item">'.kcf_section_link($item).'</li>'; }
+    $page_links=array(array('Accueil','accueil',''),array('Vitali’Van','vitalivan',''),array('A.K Nuisibles','ak-anti-nuisible',''),array('Miel & vin','terroir-loupiac',''));
+    foreach($page_links as $item) { $html.='<li class="wp-block-navigation-item">'.kcf_section_link($item).'</li>'; }
     return '<header class="wp-block-template-part">'.$html.'</ul></nav></div></header>';
 }
 function kcf_section_footer($section) {
