@@ -67,3 +67,11 @@ Kev’Miel — Le miel du coach ; garder l’abeille musclée, y compris sur les
 ## Ce qui peut attendre
 
 Connexion des services, achats de domaines, publication, tarifs d’intervention A.K non fournis, informations légales non connues et vrais avis consentis. Aucun avis ni prix d’intervention inventé. Les maquettes peuvent être revues sans ces éléments.
+
+## Reconnexion WordPress — 17 octobre 2026
+
+Connexion distante vérifiée en lecture seule à la demande de Kévin : API WordPress publique 200, compte authentifié 200 avec capacité edit_pages, liste des pages/brouillons 200 et médiathèque 200. Aucun contenu créé, modifié ou publié. Les accès enregistrés fonctionnent ; ne pas demander un nouveau mot de passe.
+
+La variable KEVCOACHFIT_WP_URL contient le domaine sans schéma HTTPS. Normaliser en ajoutant https:// puis vérifier que l’hôte est kevcoachfit.com ou www.kevcoachfit.com avant d’envoyer l’authentification. Utiliser les variables existantes KEVCOACHFIT_WP_USERNAME et KEVCOACHFIT_WP_APPLICATION_PASSWORD pour HTTP Basic sans afficher, stocker ou journaliser leurs valeurs. Ne pas suivre une redirection authentifiée vers un autre hôte. Les secrets réseau sont utilisables via la route HTTPS autorisée.
+
+Cette reconnexion autorise les vérifications demandées, pas la publication de la maquette. Continuer à travailler ici tant que Kévin ne demande pas de transfert ou de mise en ligne. Google Agenda reste distinct et non connecté.
