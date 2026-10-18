@@ -1,0 +1,31 @@
+/* Equal cards despite Gutenberg's default sibling margins; a readable film frame. */
+.kcf-choice-grid { align-items:stretch; grid-auto-rows:1fr; }
+.kcf-choice-grid > .kcf-choice-card {
+ margin:0 !important; align-self:stretch; box-sizing:border-box; height:100%;
+}
+.kcf-choice-card > .wp-block-buttons { margin-top:auto !important; }
+.kcf-sport .kcf-video-section {
+ width:100%; max-width:1200px; box-sizing:border-box;
+ margin-inline:auto; padding:clamp(16px,3vw,32px);
+}
+.kcf-sport .kcf-video-section .wp-block-video { margin:0; }
+.kcf-sport .kcf-video-section video {
+ display:block; width:100%; height:auto !important; max-height:none !important;
+ aspect-ratio:16/9; object-fit:contain; border-radius:12px; background:#101b16;
+}
+.kcf-sport .kcf-video-section figcaption { font-size:.875rem; line-height:1.6; margin-top:12px; }
+@media(max-width:700px) {
+ .kcf-choice-grid { grid-auto-rows:auto; }
+ .kcf-sport .kcf-video-section { padding:16px; }
+}
+
+/* Compact coach presentation, without an oversized empty portrait slot. */
+.kcf-sport .kcf-coach-section { max-width:1200px; width:100%; margin-inline:auto; box-sizing:border-box; align-items:start; }
+.kcf-coach-section > .kcf-coach-approach { margin:0 !important; padding:clamp(24px,3vw,36px); background:#1d2d23; border:0; border-left:4px solid #b8e85c; align-self:start; box-sizing:border-box; }
+.kcf-coach-approach h3 { font-size:clamp(1.5rem,3vw,2rem); line-height:1.2; margin:16px 0 24px; }
+.kcf-coach-approach p { font-size:1rem; line-height:1.7; }
+.kcf-coach-approach strong { display:block; color:#b8e85c; margin-bottom:4px; }
+.kcf-coach-section > .kcf-coach-story { margin:0 !important; }
+.kcf-program-card > p:not(.kcf-program-number) { line-height:1.75; }
+.kcf-program-card > p > strong { color:#e4e9df; }
+@media(max-width:700px) { .kcf-coach-section { gap:24px; padding-block:24px; } }

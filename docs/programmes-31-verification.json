@@ -1,0 +1,25 @@
+{
+  "pages": [
+    {
+      "id": 36,
+      "status": "publish",
+      "course_descriptions": 4,
+      "empty_portrait_removed": true
+    },
+    {
+      "id": 64,
+      "status": "draft",
+      "course_descriptions": 4,
+      "empty_portrait_removed": true
+    },
+    {
+      "id": 126,
+      "status": "draft",
+      "course_descriptions": 4,
+      "empty_portrait_removed": true
+    }
+  ],
+  "prices_changed": false,
+  "schedules_changed": false,
+  "reservations_opened": false
+}

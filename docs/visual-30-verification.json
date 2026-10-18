@@ -1,0 +1,39 @@
+{
+  "pages": [
+    {
+      "page_id": 36,
+      "status": "publish",
+      "cards": "equal grid rows; sibling margins reset",
+      "video_url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf-film30-dbe88e31e164-vitalivan-film-2026.mp4"
+    },
+    {
+      "page_id": 64,
+      "status": "draft",
+      "cards": "equal grid rows; sibling margins reset",
+      "video_url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf-film30-dbe88e31e164-vitalivan-film-2026.mp4"
+    },
+    {
+      "page_id": 126,
+      "status": "draft",
+      "cards": "equal grid rows; sibling margins reset",
+      "video_url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf-film30-dbe88e31e164-vitalivan-film-2026.mp4"
+    }
+  ],
+  "media": {
+    "vitalivan-film-2026.mp4": {
+      "id": 146,
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf-film30-dbe88e31e164-vitalivan-film-2026.mp4",
+      "sha256": "dbe88e31e1648f4a764399aea1f7cb69cb45ef67c8781109fd1556be6288e6ca",
+      "bytes": 3382902
+    },
+    "vitalivan-film-poster.webp": {
+      "id": 147,
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf-film30-351bd35429bf-vitalivan-film-poster.webp",
+      "sha256": "351bd35429bf9c0538a8c367ce2591199948d99b21c9ba91ca724f7ccb3b20af",
+      "bytes": 54478
+    }
+  },
+  "footage": "motion montage from existing fictional images, not real recorded classes",
+  "audio": "original synthetic instrumental; muted until visitor enables sound",
+  "reservations_opened": false
+}

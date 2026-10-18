@@ -47,6 +47,7 @@ def load_sources():
  styles+='\n'+(ROOT/'wordpress/themes/kevcoachfit/draft-reservations.css').read_text()
  styles+='\n'+(ROOT/'wordpress/themes/kevcoachfit/mobile-navigation.css').read_text()
  styles+='\n'+(ROOT/'wordpress/themes/kevcoachfit/booking-shortcut.css').read_text()
+ styles+='\n'+(ROOT/'wordpress/themes/kevcoachfit/programme-presentation.css').read_text()
  styles=styles.replace('kcf-','kcf20-')
  styles+='''
 body:has(.kcf20-preview-root) .wp-site-blocks > header,

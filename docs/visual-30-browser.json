@@ -1,0 +1,126 @@
+{
+  "actual_anonymous_homepage": true,
+  "renders": [
+    {
+      "viewport": 320,
+      "horizontal_overflow": false,
+      "cards": [
+        {
+          "top": 1526.859375,
+          "height": 315.5625
+        },
+        {
+          "top": 1862.421875,
+          "height": 315.5625
+        },
+        {
+          "top": 2197.984375,
+          "height": 340.75
+        },
+        {
+          "top": 2558.734375,
+          "height": 315.5625
+        }
+      ],
+      "video_frame": {
+        "x": 40,
+        "y": 3113.953125,
+        "width": 240,
+        "height": 135
+      },
+      "video_duration": 26,
+      "playback": "passed"
+    },
+    {
+      "viewport": 390,
+      "horizontal_overflow": false,
+      "cards": [
+        {
+          "top": 1457.859375,
+          "height": 294.25
+        },
+        {
+          "top": 1772.109375,
+          "height": 294.25
+        },
+        {
+          "top": 2086.359375,
+          "height": 319.921875
+        },
+        {
+          "top": 2426.28125,
+          "height": 294.25
+        }
+      ],
+      "video_frame": {
+        "x": 40,
+        "y": -6218.71875,
+        "width": 310,
+        "height": 174.375
+      },
+      "video_duration": 26,
+      "playback": "passed"
+    },
+    {
+      "viewport": 1440,
+      "horizontal_overflow": false,
+      "cards": [
+        {
+          "top": 1451.9375,
+          "height": 357.515625
+        },
+        {
+          "top": 1451.9375,
+          "height": 357.515625
+        },
+        {
+          "top": 1829.453125,
+          "height": 357.515625
+        },
+        {
+          "top": 1829.453125,
+          "height": 357.515625
+        }
+      ],
+      "video_frame": {
+        "x": 152,
+        "y": -3324.890625,
+        "width": 1136,
+        "height": 639
+      },
+      "video_duration": 26,
+      "playback": "passed"
+    },
+    {
+      "viewport": 2507,
+      "horizontal_overflow": false,
+      "cards": [
+        {
+          "top": 1459.5625,
+          "height": 325.125
+        },
+        {
+          "top": 1459.5625,
+          "height": 325.125
+        },
+        {
+          "top": 1804.6875,
+          "height": 325.125
+        },
+        {
+          "top": 1804.6875,
+          "height": 325.125
+        }
+      ],
+      "video_frame": {
+        "x": 685.5,
+        "y": 2354.953125,
+        "width": 1136,
+        "height": 639
+      },
+      "video_duration": 26,
+      "playback": "passed"
+    }
+  ],
+  "javascript_errors": []
+}

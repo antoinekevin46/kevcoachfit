@@ -189,3 +189,24 @@ Kévin a enregistré le secret directement dans WordPress, ajouté son compte pa
 Kévin demande de poursuivre le site et revient sur le choix de trois domaines pour faire bénéficier le miel/vin des visites des autres activités. Conserver la cible de trois sites spécialisés pour la clarté des marques, en expliquant qu’un même domaine est également possible pour le SEO et que le volume de visites ne donne pas automatiquement un bonus de classement aux autres activités. Pas de garantie d’audience, pas d’achat de domaines. Les espaces A.K et terroir restent provisoirement sur les URL existantes.
 
 Page terroir37 : titre principal plus explicite « Miel et vins à Loupiac » et trois questions pratiques sur les miels présentés, Yohan et le retrait commun avec demandes et paiements séparés. Même amélioration sur les brouillons66/128 et la source Gutenberg. Tarifs, formulaires de démonstration, menus spécialisés et statut des brouillons préservés. Sauvegardes privées avant/après `artifacts/terroir-28/`, rapports `terroir-28-*.json`. Aucune commande ni notification envoyée.
+
+
+## Ouverture demandée et hébergement o2switch — 18 octobre 2026
+
+Kévin demande « fait le » pour terminer les réservations et autorise donc l’ouverture après vérifications. Diagnostic actuel : ancien module1.0.0, Google connecté mais synchronisation désactivée, `mail_verified=false` (la réception avait pourtant été confirmée), cron régulier non attesté. Ne pas contourner ces prérequis en cochant sans preuve. Installer1.0.1 reste une action du propriétaire dans Extensions, faute d’API d’installation de ZIP personnalisé. Lien de remplacement fourni pendant la préparation.
+
+Kévin confirme o2switch. Préparation concrète de lancement avec `scripts/prepare-booking-launch.py` : sauvegardes, contenus39/40 réutilisant les vrais shortcodes, en-têtes publics conservés, messages périmés de démonstration remplacés. Aucun changement public ni ouverture pendant cette préparation ; plan cPanel, Google et bascule dans `ouverture-reservations-o2switch.md`. Ne pas redemander l’hébergeur. Les contrôles de liste d’attente locaux précédents restent valables ; aucune notification à un vrai participant pour tester.
+
+## Cartes et film Vitali’Van — 18 octobre 2026
+
+Pendant l’ouverture, Kévin signale les tailles inégales des cartes de choix et le lecteur trop aplati, et demande une vidéo plus travaillée. Conserver la tâche réservations en cours. Correctif CSS : marges Gutenberg des cartes remises à zéro, lignes égales sur ordinateur, boutons alignés ; lecteur16:9 sans hauteur maximale écrasante et largeur limitée pour la lisibilité.
+
+Film de26secondes préparé à partir des quatre scènes fictives existantes : images conservant les exercices, fond latéral flouté, titres de programmes, transitions et musique instrumentale originale synthétisée localement. Ce sont des images animées, pas de nouvelles prises de vue ni des personnes réellement filmées. Lecture à la demande et son coupé au départ. À remplacer plus tard par les vrais cours. Source reproductible `render-vitalivan-film.py` ; aucune dépendance ou musique externe payante.
+
+Le réglage `mail_verified=true` a été rétabli par API, sur la base de la réception déjà confirmée par Kévin ; aucun nouvel e-mail envoyé. Contrôle suivant : module encore1.0.0, livefalse, cronfalse, Google connecté et synchronisationfalse. Ne pas confondre ce rétablissement avec la validation du transport pour tous les destinataires.
+
+## Descriptions des cours et présentation du coach — 18 octobre 2026
+
+Kévin demande des descriptions plus complètes que le flyer et signale le grand bloc « Photo à venir » comme peu esthétique. Les quatre programmes sont enrichis : public, contenu de la pratique, intensité, première séance et coaching à domicile, sans nouvelles promesses de résultat. Horaires et tarifs vérifiés préservés, rappel du financement seniors géré par Kévin et crédit d’impôt conditionnel pour le coaching. Les cartes de comparaison restent courtes.
+
+Le grand portrait vide du bloc votre-coach est remplacé par une présentation compacte en trois étapes : échange, choix du programme, accompagnement. Texte biographique existant conservé, pas de faux portrait créé. Mêmes modifications sur la page publique36, les brouillons64/126 et la source Gutenberg. Sauvegardes `artifacts/programmes-31/`, rapport `programmes-31-verification.json`. Les photos réelles restent attendues. Le film30 est effectivement publié dans ces trois versions ; contrôles du lecteur et des cartes sur la page publique anonyme à320/390/1440/2507px, lecture effective et durée26s vérifiées.

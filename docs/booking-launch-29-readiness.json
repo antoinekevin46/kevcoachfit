@@ -1,0 +1,51 @@
+{
+  "published": false,
+  "reservations_opened": false,
+  "pages": [
+    {
+      "public_page_id": 39,
+      "functional_forms": [
+        "kcfr_booking",
+        "kcfr_coaching"
+      ],
+      "source_sha256": "d77725e115560e3433ace751930c8882bb90d897ae0406b6c40b5c0a7e690d90",
+      "prepared_file": "ready-39.html"
+    },
+    {
+      "public_page_id": 40,
+      "functional_forms": [
+        "kcfr_manage"
+      ],
+      "source_sha256": "ec63c99672e620aef00fc09e1d4d4964371fea87b9befca0a31d244e4b9d428d",
+      "prepared_file": "ready-40.html"
+    }
+  ],
+  "health": {
+    "version": "1.0.0",
+    "live": false,
+    "mail_verified": true,
+    "cron_verified": false,
+    "last_worker_run": 1792317351,
+    "google_connected": true,
+    "google_sync": false,
+    "google_secret_configured": true,
+    "google_redirect_uri": "https://kevcoachfit.com/wp-admin/admin-post.php?action=kcfr_google_callback",
+    "next_worker": 1792317400,
+    "validated_until": "2026-12-20",
+    "sessions": 30,
+    "outbox_failed": 0,
+    "booking_page_id": 68,
+    "manage_page_id": 69,
+    "sms_connected": false,
+    "automatic_travel": false,
+    "coaching_confirmation": "manual"
+  },
+  "remaining": [
+    "Install tested 1.0.1 or later without deleting existing data",
+    "Verify Google free/busy access and chosen calendar; sync real courses and confirm result",
+    "Resolve Google External Testing token lifetime for daily use",
+    "Configure and verify regular hosting cron",
+    "Publish functional content and change page IDs to 39/40 after confirming mail setting remains verified",
+    "Verify anonymous booking, cancellation and FIFO notifications before announcing launch"
+  ]
+}
