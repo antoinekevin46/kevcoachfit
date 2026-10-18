@@ -28,3 +28,8 @@ body.admin-bar .kcf-preview-root > header.wp-block-template-part{top:32px}
 }
 
 .kcf-preview-root .kcf-section-protection .kcf-dropdown-panel.is-menu-open{background:#111}.kcf-preview-root .kcf-section-terroir .kcf-dropdown-panel.is-menu-open{background:#302519}
+
+/* Keep section headings below the persistent navigation on every activity. */
+.kcf-page [id] { scroll-margin-top:132px; }
+@media(max-width:599px) { .kcf-page [id] { scroll-margin-top:124px; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }

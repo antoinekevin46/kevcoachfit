@@ -1,0 +1,227 @@
+{
+  "pages": [
+    {
+      "id": 36,
+      "status": "publish",
+      "images_with_dimensions_added": 11
+    },
+    {
+      "id": 41,
+      "status": "publish",
+      "images_with_dimensions_added": 11
+    },
+    {
+      "id": 37,
+      "status": "publish",
+      "images_with_dimensions_added": 4
+    },
+    {
+      "id": 38,
+      "status": "publish",
+      "images_with_dimensions_added": 1
+    },
+    {
+      "id": 39,
+      "status": "publish",
+      "images_with_dimensions_added": 1
+    },
+    {
+      "id": 40,
+      "status": "publish",
+      "images_with_dimensions_added": 0
+    },
+    {
+      "id": 64,
+      "status": "draft",
+      "images_with_dimensions_added": 11
+    },
+    {
+      "id": 65,
+      "status": "draft",
+      "images_with_dimensions_added": 11
+    },
+    {
+      "id": 66,
+      "status": "draft",
+      "images_with_dimensions_added": 4
+    },
+    {
+      "id": 67,
+      "status": "draft",
+      "images_with_dimensions_added": 1
+    },
+    {
+      "id": 68,
+      "status": "draft",
+      "images_with_dimensions_added": 1
+    },
+    {
+      "id": 69,
+      "status": "draft",
+      "images_with_dimensions_added": 0
+    },
+    {
+      "id": 126,
+      "status": "draft",
+      "images_with_dimensions_added": 11
+    },
+    {
+      "id": 127,
+      "status": "draft",
+      "images_with_dimensions_added": 11
+    },
+    {
+      "id": 128,
+      "status": "draft",
+      "images_with_dimensions_added": 4
+    }
+  ],
+  "public_link_audit": [
+    {
+      "path": "/",
+      "broken_known_anchors": [],
+      "images_missing_alt": [],
+      "open_graph": [
+        {
+          "property": "og:type",
+          "content": "website"
+        },
+        {
+          "property": "og:title",
+          "content": "Fitness à Payrac et Calès, coaching à Loupiac | Vitali’Van"
+        },
+        {
+          "property": "og:description",
+          "content": "Cours seniors, renforcement musculaire et cross-training à Calès et Payrac. Coaching privé autour de Loupiac, dans le Lot. Horaires, tarifs et réservations."
+        },
+        {
+          "property": "og:url",
+          "content": "https://kevcoachfit.com/"
+        },
+        {
+          "property": "og:locale",
+          "content": "fr_FR"
+        }
+      ]
+    },
+    {
+      "path": "/ak-anti-nuisible/",
+      "broken_known_anchors": [],
+      "images_missing_alt": [],
+      "open_graph": [
+        {
+          "property": "og:type",
+          "content": "website"
+        },
+        {
+          "property": "og:title",
+          "content": "Frelons, guêpes et dératisation à Payrac | A.K Nuisibles"
+        },
+        {
+          "property": "og:description",
+          "content": "Activité en préparation : destruction de nids de frelons et de guêpes, dératisation et piégeage, 20 minutes autour de Payrac. Loupiac, Souillac, Gourdon."
+        },
+        {
+          "property": "og:url",
+          "content": "https://kevcoachfit.com/ak-anti-nuisible/"
+        },
+        {
+          "property": "og:locale",
+          "content": "fr_FR"
+        }
+      ]
+    },
+    {
+      "path": "/terroir-loupiac/",
+      "broken_known_anchors": [],
+      "images_missing_alt": [],
+      "open_graph": [
+        {
+          "property": "og:type",
+          "content": "website"
+        },
+        {
+          "property": "og:title",
+          "content": "Miel et vins à Loupiac (46350, Lot) | Terroir Antoine"
+        },
+        {
+          "property": "og:description",
+          "content": "Kev’Miel : miel toutes fleurs et miel de forêt de Kévin. Vins et alcools Maison Lou’Piac de Yohan Antoine. Deux catalogues, retrait à Loupiac dans le Lot."
+        },
+        {
+          "property": "og:url",
+          "content": "https://kevcoachfit.com/terroir-loupiac/"
+        },
+        {
+          "property": "og:locale",
+          "content": "fr_FR"
+        }
+      ]
+    },
+    {
+      "path": "/contac/",
+      "broken_known_anchors": [],
+      "images_missing_alt": [],
+      "open_graph": [
+        {
+          "property": "og:type",
+          "content": "website"
+        },
+        {
+          "property": "og:title",
+          "content": "Contacter Kévin Antoine à Loupiac | KevCoachFit"
+        },
+        {
+          "property": "og:description",
+          "content": "Contactez Kévin Antoine pour les cours Vitali’Van, le coaching et le miel à Loupiac. Retrouvez aussi le contact de Yohan pour les vins Maison Lou’Piac."
+        },
+        {
+          "property": "og:url",
+          "content": "https://kevcoachfit.com/contac/"
+        },
+        {
+          "property": "og:locale",
+          "content": "fr_FR"
+        }
+      ]
+    },
+    {
+      "path": "/reserver/",
+      "broken_known_anchors": [],
+      "images_missing_alt": [],
+      "open_graph": [
+        {
+          "property": "og:type",
+          "content": "website"
+        },
+        {
+          "property": "og:title",
+          "content": "Réserver un cours à Calès ou Payrac | Vitali’Van"
+        },
+        {
+          "property": "og:description",
+          "content": "Choisissez votre séance Vitali’Van à Calès ou Payrac : 15 places par cours, liste d’attente et paiement sur place. Demande de coaching privé à domicile."
+        },
+        {
+          "property": "og:url",
+          "content": "https://kevcoachfit.com/reserver/"
+        },
+        {
+          "property": "og:locale",
+          "content": "fr_FR"
+        }
+      ]
+    },
+    {
+      "path": "/mes-reservations/",
+      "broken_known_anchors": [],
+      "images_missing_alt": [],
+      "open_graph": []
+    }
+  ],
+  "changes": [
+    "Explicit intrinsic image sizes where missing",
+    "Section scroll offsets below persistent header"
+  ],
+  "sharing_images": "Open Graph image metadata absent on audited pages. Theme integration remains pending; no workaround tags inserted in page body."
+}

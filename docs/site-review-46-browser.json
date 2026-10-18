@@ -1,0 +1,167 @@
+{
+  "checks": [
+    {
+      "path": "/",
+      "width": 320,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 8,
+      "section_top": 123.609375,
+      "mobile_menu": "passed",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/",
+      "width": 390,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 8,
+      "section_top": 123.6875,
+      "mobile_menu": "passed",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/",
+      "width": 1440,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 8,
+      "section_top": 132.28125,
+      "mobile_menu": "desktop",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/ak-anti-nuisible/",
+      "width": 320,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 12,
+      "section_top": 123.6875,
+      "mobile_menu": "passed",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/ak-anti-nuisible/",
+      "width": 390,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 12,
+      "section_top": 123.5625,
+      "mobile_menu": "passed",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/ak-anti-nuisible/",
+      "width": 1440,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 12,
+      "section_top": 132.28125,
+      "mobile_menu": "desktop",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/terroir-loupiac/",
+      "width": 320,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 4,
+      "section_top": 123.921875,
+      "mobile_menu": "passed",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/terroir-loupiac/",
+      "width": 390,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 4,
+      "section_top": 124.40625,
+      "mobile_menu": "passed",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/terroir-loupiac/",
+      "width": 1440,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 4,
+      "section_top": 132.390625,
+      "mobile_menu": "desktop",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/contac/",
+      "width": 320,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 1,
+      "section_top": null,
+      "mobile_menu": "passed",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/contac/",
+      "width": 390,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 1,
+      "section_top": null,
+      "mobile_menu": "passed",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/contac/",
+      "width": 1440,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 1,
+      "section_top": null,
+      "mobile_menu": "desktop",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/reserver/",
+      "width": 320,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 1,
+      "section_top": null,
+      "mobile_menu": "passed",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/reserver/",
+      "width": 390,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 1,
+      "section_top": null,
+      "mobile_menu": "passed",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/reserver/",
+      "width": 1440,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 1,
+      "section_top": null,
+      "mobile_menu": "desktop",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/mes-reservations/",
+      "width": 320,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 0,
+      "section_top": null,
+      "mobile_menu": "passed",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/mes-reservations/",
+      "width": 390,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 0,
+      "section_top": null,
+      "mobile_menu": "passed",
+      "booking_status_changed": false
+    },
+    {
+      "path": "/mes-reservations/",
+      "width": 1440,
+      "overflow": false,
+      "images_with_intrinsic_sizes": 0,
+      "section_top": null,
+      "mobile_menu": "desktop",
+      "booking_status_changed": false
+    }
+  ],
+  "javascript_errors": []
+}
