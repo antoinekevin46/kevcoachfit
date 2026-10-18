@@ -8,7 +8,7 @@ function kcf_map_data(){
 }
 function kcf_map_point($lon,$lat){return array(($lon-1.46)*cos(deg2rad(44.82))*3000+500,(44.82-$lat)*3000+360);}
 function kcf_map_description($code,$profile){
-    $course=array('46047'=>'Calès · salle des fêtes. Vitali’Seniors lundi 17 h, Vitali’Renfort jeudi 18 h.','46215'=>'Payrac · salle polyvalente. Vitali’Seniors mardi 17 h 30, Vitali’Training mardi 18 h 30, Vitali’Renfort jeudi 19 h 05.','46290'=>'Saint-Projet · salle des fêtes. Cours seniors prévu le mercredi à 17 h 45 à partir de janvier 2027. Lancement et modalités à confirmer.');
+    $course=array('46047'=>'Calès · salle des fêtes, Rue du Foyer Rural, 46350 Calès. Vitali’Seniors lundi 17 h, Vitali’Renfort jeudi 18 h.','46215'=>'Payrac · salle polyvalente, 3 place Zimmermann, 46350 Payrac. Vitali’Seniors mardi 17 h 30, Vitali’Training mardi 18 h 30, Vitali’Renfort jeudi 19 h 05.','46290'=>'Saint-Projet · salle des fêtes. Cours seniors prévu le mercredi à 17 h 45 à partir de janvier 2027. Lancement et modalités à confirmer.');
     if($profile==='sport'&&isset($course[$code])){return $course[$code];}
     if($profile==='sport'&&$code==='46178'){return 'Loupiac 46350 · point de référence du coaching à domicile. Secteur annoncé : environ 15 minutes de trajet ; disponibilité et adresse à confirmer avec Kévin.';}
     if($profile==='protection'&&$code==='46215'){return 'Payrac · point de référence du secteur A.K Nuisibles : environ 20 minutes de trajet. Activité en préparation, intervention à confirmer avec Kévin.';}

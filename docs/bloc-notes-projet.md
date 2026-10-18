@@ -210,3 +210,19 @@ Le réglage `mail_verified=true` a été rétabli par API, sur la base de la ré
 Kévin demande des descriptions plus complètes que le flyer et signale le grand bloc « Photo à venir » comme peu esthétique. Les quatre programmes sont enrichis : public, contenu de la pratique, intensité, première séance et coaching à domicile, sans nouvelles promesses de résultat. Horaires et tarifs vérifiés préservés, rappel du financement seniors géré par Kévin et crédit d’impôt conditionnel pour le coaching. Les cartes de comparaison restent courtes.
 
 Le grand portrait vide du bloc votre-coach est remplacé par une présentation compacte en trois étapes : échange, choix du programme, accompagnement. Texte biographique existant conservé, pas de faux portrait créé. Mêmes modifications sur la page publique36, les brouillons64/126 et la source Gutenberg. Sauvegardes `artifacts/programmes-31/`, rapport `programmes-31-verification.json`. Les photos réelles restent attendues. Le film30 est effectivement publié dans ces trois versions ; contrôles du lecteur et des cartes sur la page publique anonyme à320/390/1440/2507px, lecture effective et durée26s vérifiées.
+
+
+## Itinéraires vers les salles — 18 octobre 2026
+
+Kévin demande un itinéraire depuis la position du visiteur ou son adresse et fournit les adresses : salle polyvalente de Payrac, 3 place Zimmermann,46350Payrac ; salle des fêtes de Calès, Rue du Foyer Rural,46350Calès. Ces adresses publiques des salles peuvent être affichées. Ne plus les redemander. Les photos, le parking et l’accessibilité restent à documenter.
+
+Ajout de deux boutons « Itinéraire vers [commune] · Google Maps » dans les fiches d’accès, avec destination préremplie et sans origine imposée. Google Maps propose la position actuelle si disponible et autorisée, ou la saisie d’un départ. Aucun appel à la géolocalisation du navigateur par le site, aucune collecte de position, aucune carte Google chargée avant clic. Les liens ouvrent un nouvel onglet ; la navigation GPS dépend de l’appareil et de Google Maps, ne pas promettre de navigation embarquée dans le site. L’adresse personnelle de Kévin n’est pas publiée ; un itinéraire de retrait à domicile ne doit être communiqué qu’avec le rendez-vous.
+
+Mise à jour de la page publique36, des brouillons64/126, de la source Gutenberg et des descriptions textuelles de la carte (les points restent des centres de communes ; pas de GPS de salle inventé). Sauvegardes privées `artifacts/directions-32/`, rapport `directions-32-verification.json`. Réservations publiques toujours en préparation, aucun changement de coordonnées d’événement Google ni envoi d’e-mail déclenché.
+
+
+## Corrections d’alignement, contraste et palette claire — 18 octobre 2026
+
+Kévin signale successivement les cartes des salles et photos décalées, la section Instagram presque noire sur fond sombre, le bloc première séance trop sombre et le lexique décalé. Cause commune des décalages : marges de frères Gutenberg dans des conteneurs CSS grid. Correctif appliqué aux grilles cours/choix/salles/photos/lexique/planning/coach ; marges verticales des enfants remises à zéro, cartes étirées, boutons des salles alignés. Cadres photo provisoires réduits à155–160px et conservés pour les futures photos réelles.
+
+Palette de la page sportive éclaircie à la demande : fond crème, cartes blanches, verts doux, textes foncés explicites, bandeau photo et navigation conservant leur contraste. Première séance : trois cartes colorées pour le sac, la tenue et le premier contact, sans modifier les conditions de réservation ou le financement seniors. Instagram rendu lisible, titre/textes/bouton avec couleurs explicites ; il reste un lien de profil, pas un flux de publications connecté. Mises à jour publiques36 et brouillons64/126 ; sources et CSS partagés mis à jour. Sauvegardes `artifacts/layout-33/` et `artifacts/light-sport-34/`. Aucun changement des autres marques, des tarifs ni de l’état de réservation.

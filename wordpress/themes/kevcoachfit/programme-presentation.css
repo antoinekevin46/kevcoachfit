@@ -29,3 +29,81 @@
 .kcf-program-card > p:not(.kcf-program-number) { line-height:1.75; }
 .kcf-program-card > p > strong { color:#e4e9df; }
 @media(max-width:700px) { .kcf-coach-section { gap:24px; padding-block:24px; } }
+
+/* Reset block sibling margins inside both levels of the venue grids. */
+.kcf-venue-grid { align-items:stretch; grid-auto-rows:1fr; }
+.kcf-venue-grid > .kcf-venue-card { margin:0 !important; height:100%; box-sizing:border-box; display:flex; flex-direction:column; }
+.kcf-venue-card > .kcf-eyebrow { margin-top:0 !important; }
+.kcf-venue-card > h3 { margin-top:16px; min-height:2.4em; }
+.kcf-venue-card > .kcf-venue-photos { margin:24px 0 !important; align-items:stretch; }
+.kcf-venue-photos > .kcf-photo-slot { margin:0 !important; aspect-ratio:auto; height:160px; min-height:160px; box-sizing:border-box; }
+.kcf-venue-photos .kcf-photo-tag { margin-bottom:12px; }
+.kcf-venue-photos .kcf-photo-pending { margin-top:12px; }
+.kcf-venue-card > .wp-block-buttons { margin-top:auto !important; padding-top:20px; align-items:stretch; }
+.kcf-venue-card .wp-block-button__link { white-space:normal; line-height:1.5; text-align:center; }
+body:has(.kcf-sport) .kcf-social-follow {
+ max-width:1200px; width:calc(100% - 32px); box-sizing:border-box; margin:40px auto !important;
+ padding:clamp(24px,4vw,44px); background:#1d2d23; color:#f5f7f3; border-left:4px solid #b8e85c;
+}
+body:has(.kcf-sport) .kcf-social-follow h2 { color:#f5f7f3 !important; font-size:clamp(1.7rem,3.5vw,2.5rem); line-height:1.2; margin-top:0; }
+body:has(.kcf-sport) .kcf-social-follow p { color:#e2e9e1 !important; max-width:65ch; font-size:1.0625rem; line-height:1.8; }
+body:has(.kcf-sport) .kcf-social-follow .wp-block-button__link { background:#b8e85c; color:#102016 !important; padding:14px 22px; }
+body:has(.kcf-sport) .kcf-social-follow a:focus-visible { outline:3px solid #f5f7f3; outline-offset:5px; }
+@media(max-width:650px) {
+ .kcf-venue-grid { grid-auto-rows:auto; }
+ .kcf-venue-card > h3 { min-height:0; }
+ .kcf-venue-photos { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .kcf-venue-photos > .kcf-photo-slot { height:155px; min-height:155px; }
+ .kcf-venue-photos .kcf-photo-slot-label { font-size:1.125rem; }
+ .kcf-venue-photos .kcf-photo-tag { font-size:.6rem; }
+}
+
+/* A lighter sport page, with explicit colors on every card family. */
+.kcf-sport { background:#f5f7f0; color:#1b3529; }
+.kcf-sport :is(.kcf-choice-grid,.kcf-program-grid,.kcf-venue-grid,.kcf-venue-photos,.kcf-lexicon-grid,.kcf-planning-layout,.kcf-coach-section) > * { margin-top:0 !important; margin-bottom:0 !important; min-width:0; box-sizing:border-box; }
+.kcf-sport > h2,.kcf-course-guide h2,.kcf-coach-story h2,.kcf-venues h2,.kcf-faq h2 { color:#173e2d; }
+.kcf-sport .kcf-eyebrow { color:#315b31; }
+.kcf-sport .kcf-sport-hero { color:#fff; }
+.kcf-sport .kcf-sport-hero .kcf-eyebrow { color:#b8e85c; }
+.kcf-sport .kcf-sport-hero h1 { color:#fff; }
+.kcf-choice-card,.kcf-sport .kcf-program-card,.kcf-sport .kcf-program-card:first-child {
+ background:#fff !important; color:#1b3529 !important; border-radius:14px; border-top:4px solid var(--choice-color,var(--program-color,#b8e85c)); box-shadow:0 6px 20px #244c2510;
+}
+.kcf-sport :is(.kcf-choice-card,.kcf-program-card) h3 { color:#173e2d; }
+.kcf-sport :is(.kcf-choice-tag,.kcf-program-number) { color:#315b31 !important; }
+.kcf-sport .kcf-program-card > p > strong { color:#173e2d; }
+.kcf-sport .kcf-program-photo figcaption { color:#47604d; }
+.kcf-sport .kcf-program-card .wp-block-button__link { color:#163b28; border-color:#50753e; }
+.kcf-sport .kcf-video-section { background:#fff; color:#173e2d; border-radius:16px; border:1px solid #d7e2cd; }
+.kcf-sport .kcf-video-section figcaption { color:#47604d; }
+.kcf-sport .kcf-coach-approach { background:#e4efd8; color:#1b3529; border-radius:0 14px 14px 0; }
+.kcf-sport .kcf-coach-approach strong { color:#315b31; }
+.kcf-sport .kcf-venue-card { background:#fff; border-color:#d0dfc3; border-radius:14px; }
+.kcf-sport .kcf-venue-card h3 { color:#173e2d; }
+.kcf-sport .kcf-venue-photos .kcf-photo-slot { background:#eaf1e1; border-color:#7e9a65; border-radius:10px; }
+.kcf-sport .kcf-venue-photos :is(.kcf-photo-tag,.kcf-photo-slot-label,.kcf-photo-pending) { color:#315137; }
+.kcf-sport .kcf-lexicon-grid { align-items:stretch; grid-auto-rows:1fr; }
+.kcf-sport .kcf-lexicon-card { height:100%; background:#fff; color:#1b3529; border-color:#7baf44; border-radius:0 0 12px 12px; }
+.kcf-sport .kcf-lexicon-card h3 { color:#315b31; }
+.kcf-sport .kcf-jump-links { background:#e5efd9; border-color:#b4cba2; }
+.kcf-sport .kcf-jump-links a,.kcf-sport .kcf-program-shortcuts a { color:#315b31; border-color:#83a265; }
+.kcf-sport .wp-block-table { background:#fff; color:#1b3529; }
+.kcf-sport .wp-block-table thead { background:#24523a; color:#fff; }
+.kcf-sport .wp-block-table :is(td,th) { border-color:#c4d4b7; }
+.kcf-sport .kcf-practical { background:#e8f2db; color:#1b3529; border:1px solid #b7d19a; border-radius:16px; max-width:1200px; margin-inline:auto; box-sizing:border-box; }
+.kcf-sport .kcf-practical h2 { color:#173e2d; }
+.kcf-practical-kit { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-block:24px; }
+.kcf-practical-kit > div { margin:0 !important; padding:20px; background:#fff; border-radius:12px; border-top:3px solid #82af43; min-width:0; }
+.kcf-practical-kit > div:nth-child(2) { border-color:#edaa62; }
+.kcf-practical-kit > div:nth-child(3) { border-color:#d990b0; }
+.kcf-practical-kit p { margin:0 !important; font-size:1rem; line-height:1.7; }
+.kcf-practical-kit strong { display:block; color:#214b32; font-size:1.125rem; margin-bottom:8px; }
+.kcf-sport .kcf-faq-item { background:#fff; border:1px solid #d0dfc3; border-radius:12px; padding:20px; margin-block:12px; }
+.kcf-sport .kcf-faq-item[open] summary { color:#315b31; }
+.kcf-sport .kcf-participant-reviews { background:#e9f0e2; color:#1b3529; border-color:#7baf44; }
+.kcf-sport .kcf-social-links a { background:#fff; color:#214b32; padding:8px 16px; border:1px solid #c6d8b6; border-radius:24px; }
+body:has(.kcf-sport) .kcf-social-follow { background:#e4efd8; color:#1b3529; border-radius:0 16px 16px 0; }
+body:has(.kcf-sport) .kcf-social-follow h2 { color:#173e2d !important; }
+body:has(.kcf-sport) .kcf-social-follow p { color:#294832 !important; }
+.kcf-sport .kcf-print-reference { border-color:#b1c5a1; }
+@media(max-width:650px) { .kcf-practical-kit { grid-template-columns:1fr; } .kcf-sport .kcf-lexicon-grid { grid-auto-rows:auto; } }

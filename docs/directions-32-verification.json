@@ -1,0 +1,24 @@
+{
+  "pages": [
+    {
+      "page_id": 36,
+      "status": "publish"
+    },
+    {
+      "page_id": 64,
+      "status": "draft"
+    },
+    {
+      "page_id": 126,
+      "status": "draft"
+    }
+  ],
+  "addresses_source": "provided by owner 18 October 2026",
+  "directions": {
+    "Calès": "https://www.google.com/maps/dir/?api=1&destination=Salle+des+f%C3%AAtes+de+Cal%C3%A8s%2C+Rue+du+Foyer+Rural%2C+46350+Cal%C3%A8s%2C+France&travelmode=driving",
+    "Payrac": "https://www.google.com/maps/dir/?api=1&destination=Salle+polyvalente%2C+3+Place+Zimmermann%2C+46350+Payrac%2C+France&travelmode=driving"
+  },
+  "location_collected_by_site": false,
+  "private_home_address_published": false,
+  "external_provider": "Google Maps; opened on visitor click; origin omitted so visitor can use current position or type their departure"
+}

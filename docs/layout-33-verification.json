@@ -1,0 +1,22 @@
+{
+  "pages": [
+    {
+      "page_id": 36,
+      "status": "publish"
+    },
+    {
+      "page_id": 64,
+      "status": "draft"
+    },
+    {
+      "page_id": 126,
+      "status": "draft"
+    }
+  ],
+  "changes": [
+    "venue cards and nested photo slots aligned",
+    "shorter photo placeholders",
+    "Instagram explicit text/background/button contrast"
+  ],
+  "reservations_opened": false
+}

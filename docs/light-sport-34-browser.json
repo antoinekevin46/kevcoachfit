@@ -1,0 +1,97 @@
+{
+  "actual_anonymous_homepage": true,
+  "renders": [
+    {
+      "width": 320,
+      "overflow": false,
+      "grids_aligned": [
+        "choice-grid",
+        "program-grid",
+        "venue-grid",
+        "venue-photos",
+        "lexicon-grid",
+        "practical-kit"
+      ],
+      "directions_links": 2,
+      "instagram_colors": {
+        "background": "rgb(228, 239, 216)",
+        "heading": "rgb(23, 62, 45)",
+        "text": "rgb(41, 72, 50)"
+      }
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "grids_aligned": [
+        "choice-grid",
+        "program-grid",
+        "venue-grid",
+        "venue-photos",
+        "lexicon-grid",
+        "practical-kit"
+      ],
+      "directions_links": 2,
+      "instagram_colors": {
+        "background": "rgb(228, 239, 216)",
+        "heading": "rgb(23, 62, 45)",
+        "text": "rgb(41, 72, 50)"
+      }
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "grids_aligned": [
+        "choice-grid",
+        "program-grid",
+        "venue-grid",
+        "venue-photos",
+        "lexicon-grid",
+        "practical-kit"
+      ],
+      "directions_links": 2,
+      "instagram_colors": {
+        "background": "rgb(228, 239, 216)",
+        "heading": "rgb(23, 62, 45)",
+        "text": "rgb(41, 72, 50)"
+      }
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "grids_aligned": [
+        "choice-grid",
+        "program-grid",
+        "venue-grid",
+        "venue-photos",
+        "lexicon-grid",
+        "practical-kit"
+      ],
+      "directions_links": 2,
+      "instagram_colors": {
+        "background": "rgb(228, 239, 216)",
+        "heading": "rgb(23, 62, 45)",
+        "text": "rgb(41, 72, 50)"
+      }
+    },
+    {
+      "width": 2507,
+      "overflow": false,
+      "grids_aligned": [
+        "choice-grid",
+        "program-grid",
+        "venue-grid",
+        "venue-photos",
+        "lexicon-grid",
+        "practical-kit"
+      ],
+      "directions_links": 2,
+      "instagram_colors": {
+        "background": "rgb(228, 239, 216)",
+        "heading": "rgb(23, 62, 45)",
+        "text": "rgb(41, 72, 50)"
+      }
+    }
+  ],
+  "javascript_errors": [],
+  "google_maps_not_contacted": true
+}

@@ -1,0 +1,23 @@
+{
+  "pages": [
+    {
+      "id": 36,
+      "status": "publish"
+    },
+    {
+      "id": 64,
+      "status": "draft"
+    },
+    {
+      "id": 126,
+      "status": "draft"
+    }
+  ],
+  "changes": [
+    "light sport background and white cards",
+    "sage practical kit with three colored cards",
+    "consistent Gutenberg grid child margins",
+    "explicit contrast for Instagram, FAQ, lexicon and venues"
+  ],
+  "reservations_opened": false
+}
