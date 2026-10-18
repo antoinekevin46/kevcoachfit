@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "width": 320,
+      "overflow": false,
+      "hero_photo": {
+        "src": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf45-9268c42d25e5-ak-frelon-asiatique-macro.webp",
+        "fit": "contain",
+        "width": 1800,
+        "position": "static"
+      },
+      "hero_height": 1154,
+      "map_selection": "passed",
+      "faq": "passed",
+      "motion_pause_resume": "passed"
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "hero_photo": {
+        "src": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf45-9268c42d25e5-ak-frelon-asiatique-macro.webp",
+        "fit": "contain",
+        "width": 1800,
+        "position": "static"
+      },
+      "hero_height": 1117,
+      "map_selection": "passed",
+      "faq": "passed",
+      "motion_pause_resume": "passed"
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "hero_photo": {
+        "src": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf45-9268c42d25e5-ak-frelon-asiatique-macro.webp",
+        "fit": "contain",
+        "width": 1800,
+        "position": "static"
+      },
+      "hero_height": 762,
+      "map_selection": "passed",
+      "faq": "passed",
+      "motion_pause_resume": "passed"
+    },
+    {
+      "width": 1920,
+      "overflow": false,
+      "hero_photo": {
+        "src": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf45-9268c42d25e5-ak-frelon-asiatique-macro.webp",
+        "fit": "contain",
+        "width": 1800,
+        "position": "static"
+      },
+      "hero_height": 786,
+      "map_selection": "passed",
+      "faq": "passed",
+      "motion_pause_resume": "passed"
+    }
+  ],
+  "javascript_errors": []
+}

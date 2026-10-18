@@ -1,0 +1,59 @@
+{
+  "pages": [
+    {
+      "id": 41,
+      "status": "publish"
+    },
+    {
+      "id": 65,
+      "status": "draft"
+    },
+    {
+      "id": 127,
+      "status": "draft"
+    }
+  ],
+  "photos": {
+    "asian": {
+      "asset": "ak-frelon-asiatique-macro.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Asian_hornet_(33283876513)_(2).jpg",
+      "title": "File:Asian hornet (33283876513) (2).jpg",
+      "artist": "Gilles San Martin from Namur, Belgium",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "description": "Male Asian hornet (Vespa velutina). Location: Guignies - Belgium",
+      "changes": "Redimensionnement et conversion WebP sans recadrage ni retouche.",
+      "id": 255,
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf45-9268c42d25e5-ak-frelon-asiatique-macro.webp",
+      "sha256": "9268c42d25e51c0f94bf80fc03a56ca70c0ba35c2203699e765cd4f91132ee50"
+    },
+    "european": {
+      "asset": "ak-frelon-europeen-face.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Vespa_crabro_head_01.jpg",
+      "title": "File:Vespa crabro head 01.jpg",
+      "artist": "H. Zell",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "description": "European hornet. Studio shot. Animal originating from a meadow at Weingarten near Karlsruhe, Germany (geocoding vide infra).",
+      "changes": "Redimensionnement et conversion WebP sans recadrage ni retouche.",
+      "id": 256,
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf45-3f0d63ec82d0-ak-frelon-europeen-face.webp",
+      "sha256": "3f0d63ec82d0076be874afeffb558b06b493da8c7f05a7d489ee997eb6214085"
+    },
+    "rat": {
+      "asset": "ak-rat-brun-adulte.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Rattus_norvegicus_-Fairlands_Valley_Park,_Stevenage,_England-8.jpg",
+      "title": "File:Rattus norvegicus -Fairlands Valley Park, Stevenage, England-8.jpg",
+      "artist": "AnemoneProjectors (talk)",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "description": "A brown rat at Fairlands Valley Park, Stevenage, England.",
+      "changes": "Redimensionnement et conversion WebP sans recadrage ni retouche.",
+      "id": 257,
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf45-0340c1e47bdc-ak-rat-brun-adulte.webp",
+      "sha256": "0340c1e47bdcc6a202c2156d7d5da43296bf1a5a875c5cea4e2f37af416d2bb1"
+    }
+  },
+  "species_verified_from_source_metadata": true,
+  "scene_or_animal_retouched": false
+}
