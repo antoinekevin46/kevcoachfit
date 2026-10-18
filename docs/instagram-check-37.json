@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-18",
+  "owner_report": "Instagram connection step completed",
+  "private_shortcode_probe": "[instagram-feed]",
+  "probe_page_id": 184,
+  "probe_page_status": "trash",
+  "render_result": "Aucun flux trouvé",
+  "actual_posts_displayed": false,
+  "public_content_changed": false,
+  "remaining": "Finalize source if prompted, create user feed for kev_coach_fit, obtain actual public shortcode; verify and embed without exposing credentials"
+}

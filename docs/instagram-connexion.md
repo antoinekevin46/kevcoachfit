@@ -21,3 +21,10 @@ Avant modification, relire et sauvegarder les pages actuelles. Vérifier le bon 
 Les outils disponibles utilisent l’API REST WordPress avec un mot de passe d’application. Le plugin gère les sources et flux depuis des actions de l’administration avec session et nonce ; il n’expose pas d’API REST de configuration des flux. L’autorisation Instagram appartient au titulaire et ne peut pas être faite par l’assistant avec son seul accès WordPress. Aucun contournement d’authentification ni collecte de mot de passe.
 
 Affichage des publications sur le site uniquement : aucune publication automatique du site vers Instagram ou Facebook n’est activée.
+
+
+## Vérification du 18 octobre 2026 après retour de connexion Instagram
+
+Kévin a terminé une étape officielle de connexion du compte @kev_coach_fit. Ne pas recopier les paramètres de retour contenant un jeton. Test de rendu privé avec le shortcode officiel sans numéro `[instagram-feed]` : WordPress répond « Erreur. Aucun flux trouvé ». Cela ne permet pas encore de confirmer une source enregistrée et un flux utilisable. Ne pas afficher un shortcode en erreur sur le site public.
+
+Le brouillon technique184 a été créé pour ce contrôle puis mis à la corbeille ; aucune publication de cette page. Le propriétaire doit valider l’ajout de source si l’interface le demande, puis créer un flux utilisateur avec la source kev_coach_fit. Demander seulement le shortcode public affiché par le constructeur, jamais le jeton ou le mot de passe. Après réception, le tester en brouillon, vérifier le bon compte et ses vraies publications, puis intégrer au bloc Instagram public36 et aux brouillons64/126. La présentation colorée et le lien de profil restent visibles en attendant.
