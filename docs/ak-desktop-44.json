@@ -1,0 +1,25 @@
+{
+  "pages": [
+    {
+      "id": 41,
+      "status": "publish"
+    },
+    {
+      "id": 65,
+      "status": "draft"
+    },
+    {
+      "id": 127,
+      "status": "draft"
+    }
+  ],
+  "hero_photo": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf41-dbbff9d6d3fb-ak-photo-asian-hornet.webp",
+  "photo_credit": "Charles J. Sharp, CC BY-SA 4.0; full attribution retained on page",
+  "changes": [
+    "Compact responsive hero",
+    "Whole high-resolution photograph replaces enlarged flyer fragment",
+    "Aligned service headings and useful request preparation descriptions",
+    "Original flyer retained separately",
+    "No change to future opening or booking status"
+  ]
+}

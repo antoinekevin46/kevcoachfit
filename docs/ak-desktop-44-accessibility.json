@@ -1,0 +1,10 @@
+{
+  "modes": [
+    "reduced-motion",
+    "javascript-disabled"
+  ],
+  "width": 390,
+  "content_visible": true,
+  "animations_disabled": true,
+  "overflow": false
+}

@@ -18,3 +18,34 @@
 .kcf-pest .kcf-ak-species { align-items:stretch; }
 .kcf-pest .kcf-species-card { display:flex; flex-direction:column; margin:0 !important; height:100%; }
 .kcf-pest .kcf-species-label { display:flex; align-items:center; justify-content:center; flex:1; box-sizing:border-box; min-height:72px; }
+
+/* Desktop review: compact introduction, uncropped original photo and consistent cards. */
+.kcf-pest { max-width:1600px; margin-inline:auto; }
+.kcf-pest .kcf-pest-hero { grid-template-columns:minmax(0,1fr) minmax(0,1fr); column-gap:clamp(28px,4vw,64px); padding-block:40px 52px; }
+.kcf-pest .kcf-pest-hero > :not(.kcf-ak-web-hero) { min-width:0; margin-block:0 16px; }
+.kcf-pest .kcf-pest-hero .kcf-title { font-size:clamp(4rem,6.4vw,6.5rem); line-height:.95; margin-block:4px 20px; }
+.kcf-pest .kcf-pest-hero .kcf-local-signature { font-size:1rem; line-height:1.65; }
+.kcf-pest .kcf-pest-hero .kcf-pest-promise { font-size:clamp(1.25rem,1.8vw,1.7rem); padding:12px 16px; border-radius:8px; }
+.kcf-pest .kcf-pest-hero .kcf-pest-name { font-size:1.7rem; margin-bottom:4px; }
+.kcf-pest .kcf-pest-hero .kcf-pest-tagline { font-size:1rem; }
+.kcf-pest .kcf-pest-hero > .kcf-ak-web-hero { grid-column:2; grid-row:1 / span 10; position:relative; aspect-ratio:auto; align-self:center; padding:14px; box-sizing:border-box; background:#fff8d9; border:1px solid #f1d552; border-radius:18px; overflow:hidden; }
+.kcf-pest .kcf-ak-web-hero img { position:static; width:100%; height:auto; max-width:100%; display:block; object-fit:contain; border-radius:10px; transform:none; }
+.kcf-pest .kcf-ak-web-hero figcaption { font-size:.8125rem; line-height:1.6; color:#493c1a; padding:12px 4px 0; }
+.kcf-pest .kcf-pest-services h2 { font-size:clamp(1.7rem,2.3vw,2.6rem); line-height:1.15; min-height:88px; display:flex; align-items:center; box-sizing:border-box; border-radius:8px; }
+.kcf-pest .kcf-pest-services .kcf-ak-real-species img { height:180px !important; }
+.kcf-pest .kcf-pest-services .kcf-service-detail { font-size:1rem; line-height:1.8; padding:16px 0 0; margin-top:24px; border-top:1px solid #e8dfc4; color:#4b503e; }
+.kcf-pest .kcf-pest-services .kcf-service-detail::before { content:none; }
+.kcf-pest .kcf-ak-extra-card .kcf-ak-extra-photo { margin:20px 0; }
+.kcf-pest .kcf-ak-extra-card p { line-height:1.8; }
+.kcf-pest .kcf-ak-faq { max-width:1100px; margin-inline:auto; }
+.kcf-pest .kcf-ak-faq-item summary { cursor:pointer; font-weight:700; line-height:1.6; }
+.kcf-pest .kcf-ak-faq-item summary:focus-visible { outline:3px solid #9c8000; outline-offset:5px; }
+.kcf-pest .kcf-route-panel { max-width:1240px; margin-inline:auto; box-sizing:border-box; }
+@media(min-width:782px) and (max-width:1100px) { .kcf-pest .kcf-pest-services { flex-direction:column; } }
+@media(max-width:900px) {
+ .kcf-pest .kcf-pest-hero { display:flex; padding-block:28px 42px; }
+ .kcf-pest .kcf-pest-hero > .kcf-ak-web-hero { width:100%; max-width:620px; align-self:center; margin:0 0 20px; }
+ .kcf-pest .kcf-pest-hero .kcf-title { font-size:clamp(3.4rem,13vw,5.5rem); }
+ .kcf-pest .kcf-pest-services h2 { min-height:0; }
+}
+@media(max-width:600px) { .kcf-pest .kcf-pest-services .kcf-ak-real-species img { height:150px !important; } }
