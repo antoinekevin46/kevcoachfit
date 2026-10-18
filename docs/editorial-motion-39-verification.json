@@ -1,0 +1,70 @@
+{
+  "pages": [
+    {
+      "id": 36,
+      "status": "publish"
+    },
+    {
+      "id": 41,
+      "status": "publish"
+    },
+    {
+      "id": 37,
+      "status": "publish"
+    },
+    {
+      "id": 38,
+      "status": "publish"
+    },
+    {
+      "id": 39,
+      "status": "publish"
+    },
+    {
+      "id": 40,
+      "status": "publish"
+    },
+    {
+      "id": 64,
+      "status": "draft"
+    },
+    {
+      "id": 65,
+      "status": "draft"
+    },
+    {
+      "id": 66,
+      "status": "draft"
+    },
+    {
+      "id": 67,
+      "status": "draft"
+    },
+    {
+      "id": 68,
+      "status": "draft"
+    },
+    {
+      "id": 69,
+      "status": "draft"
+    },
+    {
+      "id": 126,
+      "status": "draft"
+    },
+    {
+      "id": 127,
+      "status": "draft"
+    },
+    {
+      "id": 128,
+      "status": "draft"
+    }
+  ],
+  "motion": "one light entry per card; gentle photo hover",
+  "content_visible_without_js": true,
+  "respects_reduced_motion": true,
+  "scroll_hijacking": false,
+  "remote_scripts_added": false,
+  "reservation_state_changed": false
+}

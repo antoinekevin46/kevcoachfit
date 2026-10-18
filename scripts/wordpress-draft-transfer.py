@@ -49,6 +49,8 @@ def load_sources():
  styles+='\n'+(ROOT/'wordpress/themes/kevcoachfit/booking-shortcut.css').read_text()
  styles+='\n'+(ROOT/'wordpress/themes/kevcoachfit/programme-presentation.css').read_text()
  styles+='\n'+(ROOT/'wordpress/themes/kevcoachfit/vivid-activities.css').read_text()
+ styles+='\n'+(ROOT/'wordpress/themes/kevcoachfit/lively-pages.css').read_text()
+ styles+='\n'+(ROOT/'wordpress/themes/kevcoachfit/editorial-motion.css').read_text()
  styles=styles.replace('kcf-','kcf20-')
  styles+='''
 body:has(.kcf20-preview-root) .wp-site-blocks > header,
@@ -62,6 +64,7 @@ body:has(.kcf20-preview-root .kcf20-pest) { background:#0d0d0c; }
 body:has(.kcf20-preview-root .kcf20-terroir) { background:#f7f1e6; }
 '''
  scripts=(ROOT/'wordpress/themes/kevcoachfit/theme.js').read_text()+'\n'+(ROOT/'wordpress/themes/kevcoachfit/map.js').read_text()
+ scripts+='\n'+(ROOT/'wordpress/themes/kevcoachfit/editorial-motion.js').read_text()
  scripts=scripts.replace('kcf-','kcf20-')
  scripts+='''
 // Drafts are visual previews; never call the old public workflow endpoints.

@@ -1,0 +1,89 @@
+{
+  "pages": [
+    {
+      "id": 36,
+      "key": "sport",
+      "status": "publish"
+    },
+    {
+      "id": 64,
+      "key": "sport",
+      "status": "draft"
+    },
+    {
+      "id": 126,
+      "key": "sport",
+      "status": "draft"
+    },
+    {
+      "id": 41,
+      "key": "ak",
+      "status": "publish"
+    },
+    {
+      "id": 65,
+      "key": "ak",
+      "status": "draft"
+    },
+    {
+      "id": 127,
+      "key": "ak",
+      "status": "draft"
+    },
+    {
+      "id": 37,
+      "key": "terroir",
+      "status": "publish"
+    },
+    {
+      "id": 66,
+      "key": "terroir",
+      "status": "draft"
+    },
+    {
+      "id": 128,
+      "key": "terroir",
+      "status": "draft"
+    },
+    {
+      "id": 38,
+      "key": "contact",
+      "status": "publish"
+    },
+    {
+      "id": 67,
+      "key": "contact",
+      "status": "draft"
+    },
+    {
+      "id": 39,
+      "key": "booking",
+      "status": "publish"
+    },
+    {
+      "id": 68,
+      "key": "booking",
+      "status": "draft"
+    },
+    {
+      "id": 40,
+      "key": "tracking",
+      "status": "publish"
+    },
+    {
+      "id": 69,
+      "key": "tracking",
+      "status": "draft"
+    }
+  ],
+  "generated_nature_image": {
+    "id": 186,
+    "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf38-67c416c8fc98-abeilles-verger-presentation.webp",
+    "sha256": "67c416c8fc98e9c4e2a5fdd3b1ee9228db0bdf16387b5951bbe2ab2fb90be3f4"
+  },
+  "ak_google_maps": "https://www.google.com/maps/dir/?api=1&destination=Payrac+46350+France&travelmode=driving",
+  "personal_address_published": false,
+  "instagram_posts_displayed": false,
+  "illustrations_labeled": true,
+  "reservations_opened": false
+}

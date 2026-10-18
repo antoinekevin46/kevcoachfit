@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "path": "/",
+      "mode": "normal",
+      "visible": true,
+      "overflow": false
+    },
+    {
+      "path": "/ak-anti-nuisible/",
+      "mode": "normal",
+      "visible": true,
+      "overflow": false
+    },
+    {
+      "path": "/terroir-loupiac/",
+      "mode": "normal",
+      "visible": true,
+      "overflow": false
+    },
+    {
+      "path": "/",
+      "mode": "reduced",
+      "visible": true,
+      "overflow": false
+    },
+    {
+      "path": "/ak-anti-nuisible/",
+      "mode": "reduced",
+      "visible": true,
+      "overflow": false
+    },
+    {
+      "path": "/terroir-loupiac/",
+      "mode": "reduced",
+      "visible": true,
+      "overflow": false
+    },
+    {
+      "path": "/",
+      "mode": "no-js",
+      "visible": true,
+      "overflow": false
+    },
+    {
+      "path": "/ak-anti-nuisible/",
+      "mode": "no-js",
+      "visible": true,
+      "overflow": false
+    },
+    {
+      "path": "/terroir-loupiac/",
+      "mode": "no-js",
+      "visible": true,
+      "overflow": false
+    }
+  ],
+  "javascript_errors": [],
+  "remote_external_calls": false
+}

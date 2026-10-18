@@ -1,0 +1,56 @@
+/* Readable, photographic layouts for each business and practical page. */
+.kcf-social-photo-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-block:28px; }
+.kcf-social-photo-grid > figure { min-width:0; margin:0 !important; background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 6px 20px #592b5014; }
+.kcf-social-photo-grid img { display:block; width:100%; aspect-ratio:3/2; height:auto; object-fit:cover; }
+.kcf-social-photo-grid figcaption { color:#31203d; font-size:1rem; font-weight:700; padding:14px 16px; margin:0; }
+body:has(.kcf-sport) .kcf-social-follow .kcf-social-gallery-note { font-size:.875rem; }
+.kcf-pest { background:#fff9e9; color:#26291f; }
+.kcf-pest :is(h2,h3) { color:#292c20; }
+.kcf-pest .kcf-pest-hero { color:#fff; background:#171710; border-radius:0 0 20px 20px; }
+.kcf-pest .kcf-pest-hero :is(h1,h2,h3) { color:#ffe600; }
+.kcf-pest .kcf-ak-shortcuts a { color:#3c3e1f; background:#ffeb78; border-color:#d3b400; }
+.kcf-pest .kcf-pest-services > .wp-block-column { background:#fff; color:#26291f; border-radius:16px; border:1px solid #e6dbab; box-shadow:0 5px 20px #514b1510; }
+.kcf-pest .kcf-service-number { color:#756000; }
+.kcf-pest :is(.kcf-ak-extra-card,.kcf-ak-hours-card,.kcf-ak-step) { background:#fff; color:#26291f; border:1px solid #e4d9a5; border-top:5px solid #ecd000; border-radius:14px; box-shadow:0 5px 18px #514b150b; }
+.kcf-pest :is(.kcf-ak-extra-card,.kcf-ak-hours-card) h3 { color:#3c3e1f; }
+.kcf-pest .kcf-ak-step-number { display:inline-flex; justify-content:center; align-items:center; width:48px; height:48px; border-radius:50%; background:#ffe600; color:#24271c; font-size:1.5rem; }
+.kcf-pest .kcf-ak-prelaunch-note { background:#fff0a7; color:#3b3a18; border-radius:0 10px 10px 0; }
+.kcf-pest .kcf-ak-hours-card:nth-child(2),.kcf-pest .kcf-ak-extra-card:nth-child(2) { background:#fff1be; }
+.kcf-pest .kcf-ak-hours-card:last-child { background:#edf2d9; }
+.kcf-pest .kcf-ak-contact-card { background:#fff; border:1px solid #e6d58f; border-top:5px solid #ecd000; border-radius:16px; }
+.kcf-pest .kcf-ak-mail-note { color:#515640; }
+.kcf-pest .kcf-ak-faq-item { padding:20px; background:#fff; border:1px solid #e1d8b7; border-radius:12px; margin-block:12px; }
+.kcf-pest .kcf-ak-faq-item[open] summary { color:#655400; }
+.kcf-pest .kcf-pest-bees { background:#ffeb78; color:#26291f; border-radius:18px; }
+.kcf-nature-photo { margin:0 0 24px; border-radius:14px; overflow:hidden; background:#fff; }
+.kcf-nature-photo img { width:100%; height:clamp(220px,28vw,380px); object-fit:cover; object-position:center 40%; display:block; }
+.kcf-nature-photo figcaption { padding:10px 16px; font-size:.8125rem; color:#424632; background:#fff; }
+.kcf-route-panel { margin-block:28px; background:#fff; color:#26291f; padding:clamp(24px,4vw,36px); border:1px solid #e4d9a5; border-left:5px solid #ecd000; border-radius:0 14px 14px 0; }
+.kcf-route-panel h3 { margin-top:0; }
+.kcf-route-panel p { max-width:85ch; line-height:1.8; }
+.kcf-route-panel .wp-block-button__link { background:#ffe600; color:#24271c; border-color:#c6b000; }
+.kcf-terroir-perks { display:flex; flex-wrap:wrap; gap:10px; margin:24px 0 0; }
+.kcf-terroir-perks span { display:inline-flex; padding:10px 14px; background:#fff9e8; border:1px solid #d5b36c; border-radius:24px; color:#493413; font-size:.9375rem; font-weight:700; }
+.kcf-terroir-story { display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,4vw,48px); align-items:center; clear:both; margin-block:32px; padding:clamp(20px,3vw,32px); background:#ffedbc; border-radius:18px; }
+.kcf-terroir-story > * { min-width:0; margin:0 !important; }
+.kcf-terroir-story h3 { font-family:Georgia,serif; font-size:clamp(1.6rem,3vw,2.4rem); margin-top:0; line-height:1.2; color:#493413; }
+.kcf-terroir-story p { color:#493413; line-height:1.8; }
+.kcf-terroir-story .kcf-nature-photo img { height:auto; aspect-ratio:3/2; object-fit:cover; }
+.kcf-terroir .kcf-honey-section { padding-top:40px; }
+.kcf-terroir .kcf-honey-logo { max-width:160px; }
+.kcf-terroir .kcf-portal { border-radius:14px; overflow:hidden; }
+:is(.kcf-contact-page,.kcf-booking-page,.kcf-tracking-page) { max-width:1320px; margin-inline:auto; box-sizing:border-box; background:#f5f7f0; color:#1b3529; }
+:is(.kcf-contact-page,.kcf-booking-page,.kcf-tracking-page) .kcf-title { font-size:clamp(2.8rem,6vw,5.2rem); line-height:1.05; color:#173e2d; }
+.kcf-contact-grid { align-items:start; }
+.kcf-contact-grid > * { min-width:0; margin:0 !important; box-sizing:border-box; }
+.kcf-contact-page .kcf-contact-sport { background:#e6f0dc; padding:clamp(24px,3vw,36px); border-radius:16px; }
+.kcf-contact-page .kcf-contact-sport h2 { color:#173e2d; }
+.kcf-contact-portrait { border-radius:16px; overflow:hidden; background:#fff; }
+.kcf-contact-portrait img { display:block; width:100%; height:auto; }
+.kcf-contact-portrait figcaption { padding:12px 16px; color:#47604d; font-size:.8125rem; }
+.kcf-page-banner { margin:28px 0; border-radius:16px; overflow:hidden; background:#fff; }
+.kcf-page-banner img { display:block; width:100%; height:clamp(190px,23vw,310px); object-fit:cover; object-position:center 35%; }
+.kcf-page-banner figcaption { padding:10px 16px; font-size:.8125rem; color:#47604d; }
+.kcf-booking-page .kcf-practical { background:#e6f0dc; color:#1b3529; border-radius:14px; }
+.kcf-tracking-page > p:not(.kcf-eyebrow) { max-width:80ch; line-height:1.8; padding:20px; background:#fff; border-left:4px solid #9ac65a; border-radius:0 12px 12px 0; }
+@media(max-width:700px) { .kcf-social-photo-grid,.kcf-terroir-story { grid-template-columns:1fr; } .kcf-social-photo-grid img { max-height:320px; } .kcf-terroir-story { padding:20px; } }
