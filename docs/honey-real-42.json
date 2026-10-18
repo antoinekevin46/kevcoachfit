@@ -1,0 +1,36 @@
+{
+  "pages": [
+    {
+      "id": 37,
+      "status": "publish",
+      "real_photos": 2,
+      "logo_preserved": true
+    },
+    {
+      "id": 66,
+      "status": "draft",
+      "real_photos": 2,
+      "logo_preserved": true
+    },
+    {
+      "id": 128,
+      "status": "draft",
+      "real_photos": 2,
+      "logo_preserved": true
+    }
+  ],
+  "media": [
+    {
+      "id": 247,
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf42-357c6eed6f66-kevmiel-photo-exterieur.webp",
+      "file": "kevmiel-photo-exterieur.webp"
+    },
+    {
+      "id": 248,
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf42-86374134d755-kevmiel-photo-soleil.webp",
+      "file": "kevmiel-photo-soleil.webp"
+    }
+  ],
+  "edits": "Format conversion only; no scene, label, jar, weight or colour changes.",
+  "private_address_published": false
+}

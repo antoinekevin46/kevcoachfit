@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "width": 320,
+      "overflow": false,
+      "zoom": "passed",
+      "photos": [
+        {
+          "src": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf42-357c6eed6f66-kevmiel-photo-exterieur.webp",
+          "width": 964,
+          "height": 1280,
+          "fit": "contain",
+          "animation": "none"
+        },
+        {
+          "src": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf42-86374134d755-kevmiel-photo-soleil.webp",
+          "width": 964,
+          "height": 1280,
+          "fit": "contain",
+          "animation": "none"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "zoom": "passed",
+      "photos": [
+        {
+          "src": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf42-357c6eed6f66-kevmiel-photo-exterieur.webp",
+          "width": 964,
+          "height": 1280,
+          "fit": "contain",
+          "animation": "none"
+        },
+        {
+          "src": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf42-86374134d755-kevmiel-photo-soleil.webp",
+          "width": 964,
+          "height": 1280,
+          "fit": "contain",
+          "animation": "none"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "zoom": "passed",
+      "photos": [
+        {
+          "src": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf42-357c6eed6f66-kevmiel-photo-exterieur.webp",
+          "width": 964,
+          "height": 1280,
+          "fit": "contain",
+          "animation": "none"
+        },
+        {
+          "src": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf42-86374134d755-kevmiel-photo-soleil.webp",
+          "width": 964,
+          "height": 1280,
+          "fit": "contain",
+          "animation": "none"
+        }
+      ]
+    },
+    {
+      "width": 2507,
+      "overflow": false,
+      "zoom": "passed",
+      "photos": [
+        {
+          "src": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf42-357c6eed6f66-kevmiel-photo-exterieur.webp",
+          "width": 964,
+          "height": 1280,
+          "fit": "contain",
+          "animation": "none"
+        },
+        {
+          "src": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf42-86374134d755-kevmiel-photo-soleil.webp",
+          "width": 964,
+          "height": 1280,
+          "fit": "contain",
+          "animation": "none"
+        }
+      ]
+    }
+  ],
+  "javascript_errors": []
+}

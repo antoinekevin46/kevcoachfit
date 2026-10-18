@@ -54,3 +54,15 @@ body:has(.kcf-sport) .kcf-social-follow .kcf-social-gallery-note { font-size:.87
 .kcf-booking-page .kcf-practical { background:#e6f0dc; color:#1b3529; border-radius:14px; }
 .kcf-tracking-page > p:not(.kcf-eyebrow) { max-width:80ch; line-height:1.8; padding:20px; background:#fff; border-left:4px solid #9ac65a; border-radius:0 12px 12px 0; }
 @media(max-width:700px) { .kcf-social-photo-grid,.kcf-terroir-story { grid-template-columns:1fr; } .kcf-social-photo-grid img { max-height:320px; } .kcf-terroir-story { padding:20px; } }
+
+/* Genuine honey photos: preserve the whole jars and original framing. */
+.kcf-terroir .kcf-terroir-cover img { animation:none !important; transform:none !important; object-fit:contain; padding:22px 22px 56px; }
+.kcf-terroir .kcf-terroir-cover { background:#f5ead3; }
+.kcf-terroir .kcf-terroir-story .kcf-nature-photo { background:#efe2c5; border-radius:20px; overflow:hidden; }
+.kcf-terroir .kcf-terroir-story .kcf-nature-photo img { width:100%; height:auto; max-height:520px; object-fit:contain; aspect-ratio:auto; }
+.kcf-terroir .kcf-terroir-story .kcf-nature-photo .kcf-image-zoom { display:block; width:100%; height:auto; }
+.kcf-terroir .kcf-terroir-story .kcf-nature-photo figcaption { color:#493318; background:#fff8e8; padding:12px 16px; line-height:1.6; }
+@media(max-width:781px) {
+ .kcf-terroir .kcf-terroir-cover img { height:auto; max-height:none; aspect-ratio:auto; padding:16px; }
+ .kcf-terroir .kcf-terroir-cover figcaption { position:static; padding:0 16px 18px; margin:0; }
+}
