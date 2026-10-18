@@ -1,0 +1,60 @@
+{
+  "pages": [
+    {
+      "id": 36,
+      "status": "publish"
+    },
+    {
+      "id": 64,
+      "status": "draft"
+    },
+    {
+      "id": 126,
+      "status": "draft"
+    }
+  ],
+  "media": {
+    "vitali-seniors-elastiques.webp": {
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf36-b4c684a24491-vitali-seniors-elastiques.webp",
+      "id": 178,
+      "sha256": "b4c684a24491acfb1f157ea94ebd0e2e5aae32ba20344c27b9a03716520cc005",
+      "bytes": 157062
+    },
+    "vitalivan-film-2026.mp4": {
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf36-ab0532c0eacc-vitalivan-film-2026.mp4",
+      "id": 179,
+      "sha256": "ab0532c0eacc5090d72c1716c28802988b31253199f71efc97bb178b78c38da4",
+      "bytes": 3409815
+    },
+    "vitalivan-film-poster.webp": {
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf36-77051b150459-vitalivan-film-poster.webp",
+      "id": 180,
+      "sha256": "77051b150459900493d33592096d29246d33ca36e4e97a5909c3c5775c29e5c1",
+      "bytes": 52096
+    }
+  },
+  "image_generation": "edited with image_gen; fictional standing seniors with resistance bands and no chairs",
+  "video": "existing still-image motion montage updated to remove chair scene; not generated continuous human movement",
+  "actual_recorded_video": false,
+  "external_video_tool_available": false,
+  "brief": "docs/video-vitalivan-tournage.md",
+  "reservations_opened": false,
+  "actual_public_media_checks": [
+    {
+      "name": "vitali-seniors-elastiques.webp",
+      "bytes": 157062,
+      "sha256_verified": true
+    },
+    {
+      "name": "vitalivan-film-2026.mp4",
+      "bytes": 3409815,
+      "sha256_verified": true
+    },
+    {
+      "name": "vitalivan-film-poster.webp",
+      "bytes": 52096,
+      "sha256_verified": true
+    }
+  ],
+  "public_homepage_updated": true
+}

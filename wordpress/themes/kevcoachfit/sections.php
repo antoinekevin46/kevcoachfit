@@ -54,6 +54,7 @@ function kcf_section_footer($section) {
     if ($section==='protection') { $html.='<p>Devis gratuit · prestations et ouverture à confirmer avec Kévin.</p>'; }
     $html.='</div></div>';
     if($section==='portail'){$html.='<details class="kcf-other-spaces"><summary>Les autres univers de Kévin</summary><p><a href="'.esc_url(kcf_section_url('accueil')).'">Le portail KevCoachFit</a> · <a href="'.esc_url(kcf_section_url('vitalivan')).'">Vitali’Van</a> · <a href="'.esc_url(kcf_section_url('ak-anti-nuisible')).'">A.K Nuisibles</a> · <a href="'.esc_url(kcf_section_url('terroir-loupiac')).'">Terroir Antoine</a></p></details>';}
+    $html.='<nav class="kcf-activity-switch" aria-label="Découvrir les activités de Kévin"><p>Les activités de Kévin et de sa famille</p><ul><li><a href="'.esc_url(kcf_section_url('vitalivan')).'">Vitali’Van · sport et coaching</a></li><li><a href="'.esc_url(kcf_section_url('ak-anti-nuisible')).'">A.K Nuisibles</a></li><li><a href="'.esc_url(kcf_section_url('terroir-loupiac')).'">Miel et vin · Terroir Antoine</a></li></ul></nav>';
     $html.='</div>';
     return '<footer class="wp-block-template-part">'.$html.'</footer>';
 }

@@ -32,7 +32,7 @@ for i,(slug,title,hook,subtitle,color) in enumerate(scenes):
  f"drawbox=x=0:y=858:w='iw*t/6':h=6:color=0x{color}:t=fill[v]")
  # drawbox evaluates time differently; progress uses width animation via overlay instead.
  filters=filters.replace(f",drawbox=x=0:y=858:w='iw*t/6':h=6:color=0x{color}:t=fill",'')
- f=OUT/f'scene-{i}.mp4';run(['-loop','1','-i',str(ASSETS/f'vitali-{slug}-interieur.webp'),'-filter_complex_threads','2','-filter_complex',filters,'-map','[v]','-t','6','-r','24','-c:v','libx264','-threads','2','-preset','fast','-crf','21','-pix_fmt','yuv420p',str(f)]);clips.append(f);print('Rendered',slug,flush=True)
+ f=OUT/f'scene-{i}.mp4';run(['-loop','1','-i',str(ASSETS/('vitali-seniors-elastiques.webp' if slug=='seniors' else f'vitali-{slug}-interieur.webp')),'-filter_complex_threads','2','-filter_complex',filters,'-map','[v]','-t','6','-r','24','-c:v','libx264','-threads','2','-preset','fast','-crf','21','-pix_fmt','yuv420p',str(f)]);clips.append(f);print('Rendered',slug,flush=True)
 endtitle=text('endtitle','VOTRE ÉNERGIE. VOTRE RYTHME.')
 endline=text('endline','Cours à Calès et Payrac · Coaching autour de Loupiac')
 endcta=text('endcta','Choisissez votre programme sur kevcoachfit.com')

@@ -1,0 +1,43 @@
+/* Distinct colors, readable text and activity discovery without merging main menus. */
+.kcf-sport .kcf-choice-seniors { background:#d4f46b !important; --choice-color:#83ba20; }
+.kcf-sport .kcf-choice-renfort { background:#ffc16b !important; --choice-color:#df7718; }
+.kcf-sport .kcf-choice-training { background:#ffad97 !important; --choice-color:#d85b3c; }
+.kcf-sport .kcf-choice-coach { background:#dfc1ff !important; --choice-color:#9861c5; }
+.kcf-sport .kcf-choice-card { border:0; padding:clamp(24px,3vw,36px); }
+.kcf-sport .kcf-choice-card :is(h3,p) { color:#192f25 !important; }
+.kcf-sport .kcf-choice-card .wp-block-button__link { background:#173e2d; color:#fff; border-color:#173e2d; }
+.kcf-sport .kcf-program-card { border-top-width:6px; }
+.kcf-sport .kcf-program-renfort { --program-color:#f5a02f; }
+.kcf-sport .kcf-program-training { --program-color:#ee785a; }
+.kcf-sport .kcf-program-coach { --program-color:#ab79d0; }
+body:has(.kcf-sport) .kcf-social-follow {
+ position:relative; overflow:hidden; padding:clamp(28px,5vw,56px);
+ background:linear-gradient(115deg,#ffe4b7 0%,#ffd4dc 50%,#e2c9ff 100%);
+ color:#391a4c; border:0; border-top:6px solid #a73e91; border-radius:22px;
+ box-shadow:0 12px 34px #6e266f15;
+}
+body:has(.kcf-sport) .kcf-social-follow h2 {
+ color:#391a4c !important; font-family:'KCF Display',Impact,sans-serif;
+ font-size:clamp(2rem,4.5vw,3.5rem); max-width:22ch;
+}
+body:has(.kcf-sport) .kcf-social-follow p { color:#4a2c53 !important; }
+body:has(.kcf-sport) .kcf-social-follow .wp-block-button__link { background:#6b287d; color:#fff !important; border:1px solid #6b287d; }
+body:has(.kcf-sport) .kcf-social-follow .wp-block-button__link:hover { background:#4d195d; }
+.kcf-pest :is(.kcf-ak-extra-grid,.kcf-ak-hours-grid,.kcf-ak-steps) > * { margin-block:0 !important; min-width:0; box-sizing:border-box; }
+.kcf-pest :is(.kcf-ak-extra-card,.kcf-ak-hours-card) { border-top:5px solid #ffe600; background:#252719; border-radius:12px; }
+.kcf-pest .kcf-ak-extra-card:nth-child(2) { background:#303016; }
+.kcf-pest .kcf-ak-hours-card:nth-child(2) { background:#303016; }
+.kcf-pest .kcf-ak-hours-card:last-child { background:#252b20; }
+.kcf-terroir .kcf-honey-section { border-top:6px solid #e0a527; }
+.kcf-terroir .kcf-honey-section .kcf-product-visual { background:#f6d783; border-color:#c68c1e; color:#493413; }
+.kcf-terroir .kcf-honey-section .kcf-portal:nth-child(2) .kcf-product-visual { background:#695024; color:#fff8e7; }
+.kcf-terroir .kcf-wine-section { background:#481d35; border-top:6px solid #d6a06d; }
+.kcf-terroir .kcf-wine-section .kcf-product-visual { background:#622a47; border-color:#d6a06d; }
+.kcf-terroir .kcf-wine-section .kcf-portal:nth-child(2) .kcf-product-visual { background:#71334c; }
+.kcf-activity-switch { max-width:1200px; box-sizing:border-box; margin:32px auto 0; padding:24px; background:#24382e; color:#fff; border:1px solid #697d65; border-radius:12px; }
+.kcf-activity-switch p { margin:0 0 16px; color:#fff; font-size:1rem; font-weight:700; }
+.kcf-activity-switch ul { display:flex; flex-wrap:wrap; gap:12px; list-style:none; padding:0; margin:0; }
+.kcf-activity-switch li { margin:0; }
+.kcf-activity-switch a { display:inline-flex; align-items:center; min-height:44px; padding:8px 16px; box-sizing:border-box; background:#fff; color:#173e2d !important; border-radius:8px; text-decoration:none; font-weight:700; font-size:1rem; }
+.kcf-activity-switch a:hover { background:#d4f46b; }
+.kcf-activity-switch a:focus-visible { outline:3px solid #d4f46b; outline-offset:4px; }

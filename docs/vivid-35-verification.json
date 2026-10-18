@@ -1,0 +1,77 @@
+{
+  "pages": [
+    {
+      "id": 36,
+      "status": "publish"
+    },
+    {
+      "id": 41,
+      "status": "publish"
+    },
+    {
+      "id": 37,
+      "status": "publish"
+    },
+    {
+      "id": 38,
+      "status": "publish"
+    },
+    {
+      "id": 39,
+      "status": "publish"
+    },
+    {
+      "id": 40,
+      "status": "publish"
+    },
+    {
+      "id": 64,
+      "status": "draft"
+    },
+    {
+      "id": 65,
+      "status": "draft"
+    },
+    {
+      "id": 66,
+      "status": "draft"
+    },
+    {
+      "id": 67,
+      "status": "draft"
+    },
+    {
+      "id": 68,
+      "status": "draft"
+    },
+    {
+      "id": 69,
+      "status": "draft"
+    },
+    {
+      "id": 126,
+      "status": "draft"
+    },
+    {
+      "id": 127,
+      "status": "draft"
+    },
+    {
+      "id": 128,
+      "status": "draft"
+    }
+  ],
+  "instagram_posts_displayed": false,
+  "instagram_plugin_active": true,
+  "instagram_permission_step_pending": true,
+  "domains_changed": false,
+  "reservation_status_changed": false,
+  "research_sources": [
+    "https://www.lesmills.com/fr/",
+    "https://wordpress.org/plugins/instagram-feed/"
+  ],
+  "research_notes": [
+    "fitness programmes grouped by objective; preserve clear calls to action",
+    "official free plugin supports separate account feeds; owner source authorization is required"
+  ]
+}
