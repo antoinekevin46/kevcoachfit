@@ -1,0 +1,104 @@
+{
+  "public_checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "final_url": "https://kevcoachfit.com/",
+      "title": "Fitness à Payrac et Calès, coaching à Loupiac | Vitali’Van",
+      "description": "Cours seniors, renforcement musculaire et cross-training à Calès et Payrac. Coaching privé autour de Loupiac, dans le Lot. Horaires, tarifs et réservations.",
+      "robots": "max-image-preview:large",
+      "canonical": [
+        "https://kevcoachfit.com/"
+      ],
+      "h1_count": 1,
+      "structured_data_blocks": 1,
+      "security_headers": {
+        "Strict-Transport-Security": null,
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Content-Security-Policy": null,
+        "Referrer-Policy": null
+      }
+    },
+    {
+      "path": "/ak-anti-nuisible/",
+      "status": 200,
+      "final_url": "https://kevcoachfit.com/ak-anti-nuisible/",
+      "title": "Frelons, guêpes et dératisation à Payrac | A.K Nuisibles",
+      "description": "Activité en préparation : destruction de nids de frelons et de guêpes, dératisation et piégeage, 20 minutes autour de Payrac. Loupiac, Souillac, Gourdon.",
+      "robots": "max-image-preview:large",
+      "canonical": [
+        "https://kevcoachfit.com/ak-anti-nuisible/"
+      ],
+      "h1_count": 1,
+      "structured_data_blocks": 0,
+      "security_headers": {
+        "Strict-Transport-Security": null,
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Content-Security-Policy": null,
+        "Referrer-Policy": null
+      }
+    },
+    {
+      "path": "/terroir-loupiac/",
+      "status": 200,
+      "final_url": "https://kevcoachfit.com/terroir-loupiac/",
+      "title": "Miel et vins à Loupiac (46350, Lot) | Terroir Antoine",
+      "description": "Kev’Miel : miel toutes fleurs et miel de forêt de Kévin. Vins et alcools Maison Lou’Piac de Yohan Antoine. Deux catalogues, retrait à Loupiac dans le Lot.",
+      "robots": "max-image-preview:large",
+      "canonical": [
+        "https://kevcoachfit.com/terroir-loupiac/"
+      ],
+      "h1_count": 1,
+      "structured_data_blocks": 0,
+      "security_headers": {
+        "Strict-Transport-Security": null,
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Content-Security-Policy": null,
+        "Referrer-Policy": "no-referrer"
+      }
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "final_url": "https://kevcoachfit.com/robots.txt",
+      "title": "",
+      "description": null,
+      "robots": null,
+      "canonical": [],
+      "h1_count": 0,
+      "structured_data_blocks": 0,
+      "security_headers": {
+        "Strict-Transport-Security": null,
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Content-Security-Policy": null,
+        "Referrer-Policy": null
+      },
+      "content_excerpt": "User-agent: *\nDisallow: /wp-content/uploads/wc-logs/\nDisallow: /wp-content/uploads/woocommerce_transient_files/\nDisallow: /wp-content/uploads/woocommerce_uploads/\nDisallow: /*?add-to-cart=\nDisallow: /*?*add-to-cart=\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://kevcoachfit.com/wp-sitemap.xml\n"
+    },
+    {
+      "path": "/wp-sitemap.xml",
+      "status": 200,
+      "final_url": "https://kevcoachfit.com/wp-sitemap.xml",
+      "title": "",
+      "description": null,
+      "robots": null,
+      "canonical": [],
+      "h1_count": 0,
+      "structured_data_blocks": 0,
+      "security_headers": {
+        "Strict-Transport-Security": null,
+        "X-Content-Type-Options": null,
+        "X-Frame-Options": null,
+        "Content-Security-Policy": null,
+        "Referrer-Policy": null
+      },
+      "content_excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<?xml-stylesheet type=\"text/xsl\" href=\"https://kevcoachfit.com/wp-sitemap-index.xsl\" ?>\n<sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"><sitemap><loc>https://kevcoachfit.com/wp-sitemap-posts-post-1.xml</loc></sitemap><sitemap><loc>https://kevcoachfit.com/wp-sitemap-posts-page-1.xml</loc></sitemap><sitemap><loc>https://kevcoachfit.com/wp-sitemap-taxonomies-category-1.xml</loc></sitemap><sitemap><loc>https://kevcoachfit.com/wp-sitemap-users-1.xml</loc></sitemap></sitemapindex>\n"
+    }
+  ],
+  "http_final_url": "https://kevcoachfit.com/",
+  "scope": "Read-only public checks; no penetration test or hosting/backup audit."
+}

@@ -1,6 +1,9 @@
 # Bloc-notes KevCoachFit — décisions et suivi
 
-Dernière mise à jour : 17 octobre 2026 (Europe/Paris).
+Dernière mise à jour : 18 octobre 2026 (Europe/Paris).
+
+
+Liste de référence actuelle : [Actions restantes](suivi-actions-restantes.md). Elle précise les actions réalisables sur le site et celles nécessitant Kévin ; les entrées datées ci-dessous conservent l’historique.
 
 ## Consigne permanente de Kévin
 
@@ -289,3 +292,8 @@ Validation40/41 : trois espaces publics testés à390et1440px, bandeaux effectiv
 Kévin fournit trois photographies de ses deux pots. Les deux prises dehors remplacent les pots générés dans le bandeau Terroir et l’illustration du verger dans la présentation Kev’Miel. La photo intérieure est conservée parmi les originaux privés, sans publication. Conversion WebP sans retouche, recadrage ni ajout d’étiquette ; aucun poids ou type de miel déduit de la taille des pots. Le logo à l’abeille musclée reste séparé. Le rapprochement animé de la photo principale est désactivé pour préserver les pots entiers ; les autres animations restent présentes.
 
 Page publique37 et brouillons66/128 actualisés, statuts préservés. Affichage et agrandissement au clic contrôlés à320/390/1440/2507px : photos chargées, object-fit:contain, aucun débordement ni erreur JavaScript. Les prix restent provisoires et les formulaires ne sont pas ouverts aux commandes. Rapports honey-real-42.json et honey-real-42-browser.json.
+
+
+## Suivi sécurité, SEO et éléments manquants — 18 octobre 2026
+
+Kévin demande de consigner tout ce qui exige son intervention pour le reprendre plus tard. Liste regroupée dans suivi-actions-restantes.md : Search Console/indexation, fiches Google, domaines, sauvegardes/restauration, mises à jour/comptes/protections, réservations et cron o2switch, synchronisation Agenda existante à vérifier, vrais flux sociaux, photos et données métier manquantes. Pas de répétition de mots-clés artificielle : développer des réponses utiles aux recherches réelles. Contrôle public HTTPS et métadonnées réalisé ; ni classement Google ni sécurité complète certifiés. Aucun achat, envoi, ouverture ou nouvelle configuration de sécurité appliqués pendant ce bilan.
