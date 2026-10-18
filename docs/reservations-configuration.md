@@ -2,6 +2,10 @@
 
 Décision de Kévin du 17 octobre 2026 : aucune licence payante. Aucun achat, aucune facturation ni abonnement engagé.
 
+## Point actuel — 18 octobre 2026
+
+Autorisation Google enregistrée : contrôle distant `google_connected=true`, secret présent, synchronisation et réservations publiques désactivées. Cela confirme l’enregistrement de l’autorisation, pas encore le test d’accès à l’agenda ni la création effective d’événements. Le projet Google reste en mode Test ; régler la durée de l’autorisation avant usage quotidien. La mise à jour 1.0.1 et les autres prérequis de lancement restent à terminer. Les passages suivants décrivent aussi les étapes historiques du 17 octobre.
+
 ## Situation sur le WordPress distant
 
 Le thème et le module atelier 0.11.1 restent actifs. Les sept maquettes 20 restent en brouillon. Amelia 2.4.11 est installé mais son interface authentifiée ne retourne encore aucun service, intervenant ni événement. Son interface MCP a été testée en lecture seule : aucune réservation ni fiche client créée et aucune notification envoyée.

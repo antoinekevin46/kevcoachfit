@@ -180,3 +180,12 @@ Validation : 28 rendus locaux, menus et liens par activité, contact sans autres
 Limite SEO repérée : la description de la page Contact38 dans le thème distant ancien mentionne encore les producteurs. Le texte visible est désormais sportif. Les champs personnalisés SEO ne sont pas exposés par cette API REST (seulement footnotes) ; leur correction est préparée dans `seo.php` et doit être appliquée via le champ SEO de l’éditeur WordPress ou lors de la prochaine mise à jour du thème. Les trois pages principales ont des titres/descriptions propres et leurs URL canoniques ont été vérifiées. Ne pas annoncer le référencement entier comme terminé.
 
 Sauvegardes : `artifacts/specialisation-27/`. Rapports : `specialisation-27-*.json`. Le domaine du sport reste kevcoachfit.com ; A.K et terroir attendent leurs vrais domaines, pas une simple redirection vers le sport.
+
+
+## Google connecté et poursuite du terroir — 18 octobre 2026
+
+Kévin a enregistré le secret directement dans WordPress, ajouté son compte parmi les utilisateurs test Google et terminé le consentement. Contrôle réel : `google_connected=true`, `google_secret_configured=true`, `google_sync=false`, `live=false`. Ne pas redemander les identifiants. La vérification Free/Busy n’a pas été observée par l’API ; aucune synchronisation ni ouverture déclenchée. L’expiration potentielle à sept jours en mode Test reste à traiter.
+
+Kévin demande de poursuivre le site et revient sur le choix de trois domaines pour faire bénéficier le miel/vin des visites des autres activités. Conserver la cible de trois sites spécialisés pour la clarté des marques, en expliquant qu’un même domaine est également possible pour le SEO et que le volume de visites ne donne pas automatiquement un bonus de classement aux autres activités. Pas de garantie d’audience, pas d’achat de domaines. Les espaces A.K et terroir restent provisoirement sur les URL existantes.
+
+Page terroir37 : titre principal plus explicite « Miel et vins à Loupiac » et trois questions pratiques sur les miels présentés, Yohan et le retrait commun avec demandes et paiements séparés. Même amélioration sur les brouillons66/128 et la source Gutenberg. Tarifs, formulaires de démonstration, menus spécialisés et statut des brouillons préservés. Sauvegardes privées avant/après `artifacts/terroir-28/`, rapports `terroir-28-*.json`. Aucune commande ni notification envoyée.

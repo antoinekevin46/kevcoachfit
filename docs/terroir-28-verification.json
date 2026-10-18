@@ -1,0 +1,22 @@
+{
+  "pages": [
+    {
+      "page_id": 37,
+      "status": "publish",
+      "updated": "descriptive H1 and three practical questions; forms and menus preserved"
+    },
+    {
+      "page_id": 66,
+      "status": "draft",
+      "updated": "descriptive H1 and three practical questions; forms and menus preserved"
+    },
+    {
+      "page_id": 128,
+      "status": "draft",
+      "updated": "descriptive H1 and three practical questions; forms and menus preserved"
+    }
+  ],
+  "email_sent": false,
+  "sales_opened": false,
+  "domains_changed": false
+}

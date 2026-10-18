@@ -6,6 +6,16 @@ Kévin confirme que l’organisation par domaines propres doit s’appliquer aux
 
 Les domaines supplémentaires ne sont pas achetés. Après les trois aperçus privés, la mise en place progressive27 a consacré la page d’accueil de kevcoachfit.com au sport et séparé la navigation des trois activités, en conservant provisoirement les URL A.K et terroir sur le même domaine. Voir `specialisation-27.md`. Les trois aperçus privés sont conservés pour préparer les vrais domaines. Les anciens paragraphes qui proposaient seulement de rediriger les nouveaux noms vers des pages de kevcoachfit.com sont remplacés par cette décision.
 
+## Visites, ventes et choix des domaines — 18 octobre 2026
+
+Le nombre total de clics ne constitue pas un bonus de classement automatiquement partagé entre activités. Les résultats dépendent notamment de la pertinence de chaque page pour la recherche, de la qualité du contenu et des liens reçus. Un même domaine peut référencer plusieurs activités ; trois domaines ne garantissent pas un meilleur classement et demandent chacun du contenu, de la maintenance et de la notoriété.
+
+La recommandation reste trois sites spécialisés pour clarifier les marques et les parcours, pas pour promettre un avantage SEO mécanique. Le miel et le vin restent ensemble dans le troisième site. Les mesures de visites seront propres à chaque domaine ; un tableau de suivi peut les rassembler sans fusionner leur référencement. Ne pas inventer de chiffres de fréquentation sans données Search Console ou statistiques réelles.
+
+Le lancement peut être progressif, sans acheter immédiatement : les deux espaces restent accessibles à leurs URL provisoires sur kevcoachfit.com. Pour faire connaître le terroir aux clients sportifs, préférer une présentation volontaire à l’issue des cours, un QR code ou un lien pertinent et discret lors du lancement. Éviter d’imposer les produits aux visiteurs qui cherchent une intervention nuisibles. Ces actions apportent un passage vers le catalogue, sans garantie d’achat ou de classement.
+
+Amélioration publiée : titre principal « Miel et vins à Loupiac » et réponses pratiques sur les miels, le contact de Yohan et le retrait commun avec paiements séparés. Pas d’ouverture des commandes en ligne ni d’affirmation d’indexation Google.
+
 ## Architecture cible
 
 Préférence de préparation : trois installations WordPress séparées sur un même hébergement, si l’offre actuelle accepte les domaines, répertoires, bases de données et certificats nécessaires. Le prestataire et l’offre restent à confirmer. Il n’est pas nécessaire d’acheter trois abonnements d’hébergement par principe, et aucune compatibilité de l’offre actuelle n’est garantie sans vérification.
