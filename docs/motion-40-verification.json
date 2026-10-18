@@ -1,0 +1,72 @@
+{
+  "pages": [
+    {
+      "id": 36,
+      "status": "publish"
+    },
+    {
+      "id": 64,
+      "status": "draft"
+    },
+    {
+      "id": 126,
+      "status": "draft"
+    },
+    {
+      "id": 41,
+      "status": "publish"
+    },
+    {
+      "id": 65,
+      "status": "draft"
+    },
+    {
+      "id": 127,
+      "status": "draft"
+    },
+    {
+      "id": 37,
+      "status": "publish"
+    },
+    {
+      "id": 66,
+      "status": "draft"
+    },
+    {
+      "id": 128,
+      "status": "draft"
+    },
+    {
+      "id": 38,
+      "status": "publish"
+    },
+    {
+      "id": 39,
+      "status": "publish"
+    },
+    {
+      "id": 40,
+      "status": "publish"
+    },
+    {
+      "id": 67,
+      "status": "draft"
+    },
+    {
+      "id": 68,
+      "status": "draft"
+    },
+    {
+      "id": 69,
+      "status": "draft"
+    }
+  ],
+  "features": [
+    "animated hero titles and images",
+    "continuous activity ribbon with pause control",
+    "staggered card entrances",
+    "flowing sport social gradient"
+  ],
+  "respects_reduced_motion": true,
+  "reservation_state_changed": false
+}

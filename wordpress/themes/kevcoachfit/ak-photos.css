@@ -1,0 +1,20 @@
+/* Original photo proportions replace enlarged fragments of the printed flyer. */
+.kcf-pest .kcf-pest-services { max-width:1400px; margin-inline:auto; }
+.kcf-pest .kcf-ak-real-species { margin:0 !important; background:#f0f2eb; overflow:hidden; }
+.kcf-pest .kcf-ak-real-species img { position:static !important; display:block; width:100% !important; height:210px !important; object-fit:contain !important; transform:none !important; max-width:100%; }
+.kcf-pest .kcf-species-label { font-size:1rem; line-height:1.5; padding:12px 6px; }
+.kcf-pest .kcf-ak-extra-photo { margin:20px 0; background:#f0f2eb; border-radius:10px; overflow:hidden; }
+.kcf-pest .kcf-ak-extra-photo img { display:block; width:100%; height:220px; object-fit:contain; transform:none !important; }
+.kcf-pest .kcf-swarm-gallery { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:24px 0; }
+.kcf-pest .kcf-swarm-photo { margin:0 !important; background:#fff; border-radius:14px; overflow:hidden; }
+.kcf-pest .kcf-swarm-photo img { display:block; width:100%; height:460px; max-height:none; object-fit:contain; transform:none !important; background:#f7f5e9; }
+.kcf-pest .kcf-swarm-photo figcaption { background:#fff; color:#303b25; padding:14px 18px; font-size:.9375rem; line-height:1.6; }
+.kcf-pest .kcf-service-map { max-width:1240px; margin-inline:auto; }
+.kcf-pest .kcf-service-map .kcf-map-heading h3 { color:#fff !important; }
+.kcf-pest .kcf-map-info h4 { color:#202019; }
+.kcf-pest .kcf-photo-credits { max-width:1240px; margin:28px auto; padding:20px; border:1px solid #d7cfac; background:#fff; border-radius:12px; color:#303b25; }
+.kcf-photo-credits li { margin-block:12px; overflow-wrap:anywhere; font-size:.875rem; line-height:1.7; }
+@media(max-width:700px) { .kcf-pest .kcf-swarm-gallery { grid-template-columns:1fr; } .kcf-pest .kcf-swarm-photo img { height:auto; max-height:520px; } .kcf-pest .kcf-ak-real-species img { height:155px !important; } }
+.kcf-pest .kcf-ak-species { align-items:stretch; }
+.kcf-pest .kcf-species-card { display:flex; flex-direction:column; margin:0 !important; height:100%; }
+.kcf-pest .kcf-species-label { display:flex; align-items:center; justify-content:center; flex:1; box-sizing:border-box; min-height:72px; }

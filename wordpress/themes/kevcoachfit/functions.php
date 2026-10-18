@@ -7,6 +7,7 @@ add_action( 'wp_enqueue_scripts', function () {
     wp_enqueue_style( 'kevcoachfit-lively-pages', get_stylesheet_directory_uri() . '/lively-pages.css', array('kevcoachfit-vivid-activities'), filemtime(__DIR__ . '/lively-pages.css') );
     wp_enqueue_style( 'kevcoachfit-editorial-motion', get_stylesheet_directory_uri() . '/editorial-motion.css', array('kevcoachfit-lively-pages'), filemtime(__DIR__ . '/editorial-motion.css') );
     wp_enqueue_script( 'kevcoachfit-editorial-motion', get_stylesheet_directory_uri() . '/editorial-motion.js', array(), filemtime(__DIR__ . '/editorial-motion.js'), true );
+    wp_enqueue_style( 'kevcoachfit-ak-photos', get_stylesheet_directory_uri() . '/ak-photos.css', array('kevcoachfit-lively-pages'), filemtime(__DIR__ . '/ak-photos.css') );
     wp_enqueue_script( 'kevcoachfit-effects', get_stylesheet_directory_uri() . '/theme.js', array(), filemtime( get_stylesheet_directory() . '/theme.js' ), true );
 } );
 add_action( 'after_setup_theme', function () {

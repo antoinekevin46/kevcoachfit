@@ -14,7 +14,7 @@
   const stateCopy=()=>{
    if(mode==='courses')return {name:'Cours en salle',description:'Calès et Payrac : cours actuels. Saint-Projet : cours seniors à venir. Les points indiquent les communes, pas l’entrée exacte des salles.',legend:'Lieu de cours · pointillé : à venir',scope:'Les cours se déroulent dans les salles, aux créneaux indiqués. Le coaching à domicile correspond à une autre prestation.'};
    if(mode==='coaching')return {name:'Coaching à domicile',description:'Point de référence : Loupiac 46350. Le coaching se déroule chez vous, dans un secteur d’environ 15 minutes de trajet.',legend:'Loupiac · point de référence',scope:'Les communes voisines sont des repères. Kévin confirme votre adresse et le trajet avant le rendez-vous ; la carte ne calcule pas un temps de conduite.'};
-   return {name:'A.K Nuisibles',description:'Environ 20 minutes autour de Payrac : Loupiac, Souillac et Gourdon sont cités dans le flyer. Activité en préparation.',legend:'Payrac · point de référence',scope:'La présence d’une commune ne garantit pas la prise en charge de chaque adresse. Appelez Kévin pour confirmer le secteur et la disponibilité.'};
+   return {name:'A.K Nuisibles',description:'Base de départ : Loupiac. Environ 20 minutes autour de Payrac : Loupiac, Souillac et Gourdon sont cités dans le flyer. Activité en préparation.',legend:'Payrac · point de référence',scope:'La présence d’une commune ne garantit pas la prise en charge de chaque adresse. Appelez Kévin pour confirmer le secteur et la disponibilité.'};
   };
   const describe=()=>{
    const copy=stateCopy(),option=[...select.options].find(o=>o.value===selected);

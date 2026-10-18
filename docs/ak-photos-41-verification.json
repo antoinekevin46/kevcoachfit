@@ -1,0 +1,132 @@
+{
+  "pages": [
+    {
+      "id": 41,
+      "status": "publish"
+    },
+    {
+      "id": 65,
+      "status": "draft"
+    },
+    {
+      "id": 127,
+      "status": "draft"
+    }
+  ],
+  "photos": {
+    "swarm": {
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf41-8fa10636d416-ak-photo-swarm.webp",
+      "id": 232,
+      "sha256": "8fa10636d416a47b0de1399ece70ff6855ca272ee7567fb0f8cdbeaf02a28c4e",
+      "asset": "ak-photo-swarm.webp",
+      "artist": "Ellin Beltz",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Beekeeper_at_Swarm.jpg",
+      "original_title": "File:Beekeeper at Swarm.jpg",
+      "changes": "Redimensionnement sans recadrage et conversion WebP."
+    },
+    "asian-hornet": {
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf41-dbbff9d6d3fb-ak-photo-asian-hornet.webp",
+      "id": 233,
+      "sha256": "dbbff9d6d3fbbea6c7fd8206ecb74b8b347bef9119079bab7daac254c9f92759",
+      "asset": "ak-photo-asian-hornet.webp",
+      "artist": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Asian_hornet_(Vespa_velutina).jpg",
+      "original_title": "File:Asian hornet (Vespa velutina).jpg",
+      "changes": "Redimensionnement sans recadrage et conversion WebP."
+    },
+    "european-hornet": {
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf41-5c979202e8bf-ak-photo-european-hornet.webp",
+      "id": 234,
+      "sha256": "5c979202e8bf4e0593b48f786a597dadd350433efd02cc1279b2f4b5218a142b",
+      "asset": "ak-photo-european-hornet.webp",
+      "artist": "Richard Bartz, Munich aka Makro Freak",
+      "license": "CC BY-SA 2.5",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Vespa_crabro_germana_with_prey_Richard_Bartz.jpg",
+      "original_title": "File:Vespa crabro germana with prey Richard Bartz.jpg",
+      "changes": "Redimensionnement sans recadrage et conversion WebP."
+    },
+    "caterpillar": {
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf41-f3b9616bc666-ak-photo-caterpillar.webp",
+      "id": 235,
+      "sha256": "f3b9616bc6665c97ec1d4aa7fefef5710a013fd3e6ef86d2c51330eed09aaf5e",
+      "asset": "ak-photo-caterpillar.webp",
+      "artist": "Arthur Badel",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Thaumetopoea_pityocampa_chenille.jpg",
+      "original_title": "File:Thaumetopoea pityocampa chenille.jpg",
+      "changes": "Redimensionnement sans recadrage et conversion WebP."
+    },
+    "ant": {
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf41-58260b056719-ak-photo-ant.webp",
+      "id": 236,
+      "sha256": "58260b056719c156f688011bafd247bcfd0abe2516cbe00860c6399d1c4a2d89",
+      "asset": "ak-photo-ant.webp",
+      "artist": "Jens Buurgaard Nielsen",
+      "license": "CC BY-SA 2.5",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+      "source": "https://commons.wikimedia.org/wiki/File:Lasius_Niger.jpg",
+      "original_title": "File:Lasius Niger.jpg",
+      "changes": "Redimensionnement sans recadrage et conversion WebP."
+    },
+    "cockroach": {
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf41-bc780c91e4fa-ak-photo-cockroach.webp",
+      "id": 237,
+      "sha256": "bc780c91e4fa91ebc2a54e87791c25104bc7f332b3ca90a45c0cd17c837b5b22",
+      "asset": "ak-photo-cockroach.webp",
+      "artist": "Lmbuga",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Blattodea._Cascuda._Santiago_de_Compostela_1.jpg",
+      "original_title": "File:Blattodea. Cascuda. Santiago de Compostela 1.jpg",
+      "changes": "Redimensionnement sans recadrage et conversion WebP."
+    },
+    "mole": {
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf41-af38858e3511-ak-photo-mole.webp",
+      "id": 238,
+      "sha256": "af38858e3511857119034510149326a3ee533736c1a51fb3dd3350fc12c97380",
+      "asset": "ak-photo-mole.webp",
+      "artist": "Christoph Moning",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Talpa_europaea_(Freising,_Deutschland)_4.jpg",
+      "original_title": "File:Talpa europaea (Freising, Deutschland) 4.jpg",
+      "changes": "Redimensionnement sans recadrage et conversion WebP."
+    },
+    "rat": {
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf41-44ea3e490ee7-ak-photo-rat.webp",
+      "id": 239,
+      "sha256": "44ea3e490ee762ec1c0aa2e6ccaf578c77e9bbb2e940937ebb9156444ea7b6ef",
+      "asset": "ak-photo-rat.webp",
+      "artist": "Zeynel Cebeci",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rattus_norvegicus_-_Brown_rat_02.jpg",
+      "original_title": "File:Rattus norvegicus - Brown rat 02.jpg",
+      "changes": "Redimensionnement sans recadrage et conversion WebP."
+    },
+    "swarm-cluster": {
+      "url": "https://kevcoachfit.com/wp-content/uploads/2026/10/kcf41-ab736bd99eee-ak-photo-swarm-cluster.webp",
+      "id": 240,
+      "sha256": "ab736bd99eee634b78776f53a1ac8652dd3968738566faeef1cff6a147005a74",
+      "asset": "ak-photo-swarm-cluster.webp",
+      "artist": "Sandy Beekeeper",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Honey_Bee_Swarm.jpg",
+      "original_title": "File:Honey Bee Swarm.jpg",
+      "changes": "Redimensionnement sans recadrage et conversion WebP."
+    }
+  },
+  "public_route_reference": "Loupiac 46350",
+  "intervention_area": "about 20 minutes around Payrac; actual availability confirmed by owner",
+  "private_street_published": false,
+  "owner_address_preference": "Loupiac only; by appointment",
+  "flyer_original_preserved": true,
+  "reservations_opened": false
+}

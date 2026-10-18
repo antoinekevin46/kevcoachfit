@@ -1,0 +1,200 @@
+{
+  "checks": [
+    {
+      "path": "/",
+      "mode": "normal",
+      "width": 390,
+      "title": {
+        "duration": "1.15s",
+        "name": "kcf20-title-enter"
+      },
+      "card": {
+        "duration": "0.95s",
+        "delay": "0s"
+      },
+      "first_card_delays": [
+        "0s",
+        "0s",
+        "0s"
+      ],
+      "pause_resume": "passed",
+      "overflow": false
+    },
+    {
+      "path": "/ak-anti-nuisible/",
+      "mode": "normal",
+      "width": 390,
+      "title": {
+        "duration": "1.15s",
+        "name": "kcf20-title-enter"
+      },
+      "card": {
+        "duration": "0.95s",
+        "delay": "0s"
+      },
+      "first_card_delays": [
+        "0s",
+        "0.12s",
+        "0.24s"
+      ],
+      "pause_resume": "passed",
+      "overflow": false
+    },
+    {
+      "path": "/terroir-loupiac/",
+      "mode": "normal",
+      "width": 390,
+      "title": {
+        "duration": "1.15s",
+        "name": "kcf20-title-enter"
+      },
+      "card": {
+        "duration": "0.95s",
+        "delay": "0.12s"
+      },
+      "first_card_delays": [
+        "0.12s"
+      ],
+      "pause_resume": "passed",
+      "overflow": false
+    },
+    {
+      "path": "/",
+      "mode": "normal",
+      "width": 1440,
+      "title": {
+        "duration": "1.15s",
+        "name": "kcf20-title-enter"
+      },
+      "card": {
+        "duration": "0.95s",
+        "delay": "0s"
+      },
+      "first_card_delays": [
+        "0s",
+        "0.12s",
+        "0s"
+      ],
+      "pause_resume": "passed",
+      "overflow": false
+    },
+    {
+      "path": "/ak-anti-nuisible/",
+      "mode": "normal",
+      "width": 1440,
+      "title": {
+        "duration": "1.15s",
+        "name": "kcf20-title-enter"
+      },
+      "card": {
+        "duration": "0.95s",
+        "delay": "0s"
+      },
+      "first_card_delays": [
+        "0s",
+        "0.12s",
+        "0.24s"
+      ],
+      "pause_resume": "passed",
+      "overflow": false
+    },
+    {
+      "path": "/terroir-loupiac/",
+      "mode": "normal",
+      "width": 1440,
+      "title": {
+        "duration": "1.15s",
+        "name": "kcf20-title-enter"
+      },
+      "card": {
+        "duration": "0.95s",
+        "delay": "0.12s"
+      },
+      "first_card_delays": [
+        "0.12s"
+      ],
+      "pause_resume": "passed",
+      "overflow": false
+    },
+    {
+      "path": "/",
+      "mode": "reduced",
+      "width": 390,
+      "title": {
+        "duration": "0s",
+        "name": "none"
+      },
+      "card": null,
+      "first_card_delays": [],
+      "pause_resume": "motion disabled",
+      "overflow": false
+    },
+    {
+      "path": "/ak-anti-nuisible/",
+      "mode": "reduced",
+      "width": 390,
+      "title": {
+        "duration": "0s",
+        "name": "none"
+      },
+      "card": null,
+      "first_card_delays": [],
+      "pause_resume": "motion disabled",
+      "overflow": false
+    },
+    {
+      "path": "/terroir-loupiac/",
+      "mode": "reduced",
+      "width": 390,
+      "title": {
+        "duration": "0s",
+        "name": "none"
+      },
+      "card": null,
+      "first_card_delays": [],
+      "pause_resume": "motion disabled",
+      "overflow": false
+    },
+    {
+      "path": "/",
+      "mode": "no-js",
+      "width": 390,
+      "title": {
+        "duration": "0s",
+        "name": "none"
+      },
+      "card": null,
+      "first_card_delays": [],
+      "pause_resume": "motion disabled",
+      "overflow": false
+    },
+    {
+      "path": "/ak-anti-nuisible/",
+      "mode": "no-js",
+      "width": 390,
+      "title": {
+        "duration": "0s",
+        "name": "none"
+      },
+      "card": null,
+      "first_card_delays": [],
+      "pause_resume": "motion disabled",
+      "overflow": false
+    },
+    {
+      "path": "/terroir-loupiac/",
+      "mode": "no-js",
+      "width": 390,
+      "title": {
+        "duration": "0s",
+        "name": "none"
+      },
+      "card": null,
+      "first_card_delays": [],
+      "pause_resume": "motion disabled",
+      "overflow": false
+    }
+  ],
+  "javascript_errors": [],
+  "external_google_maps_not_contacted": true
+}

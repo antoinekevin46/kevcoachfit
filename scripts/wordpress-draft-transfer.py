@@ -51,6 +51,7 @@ def load_sources():
  styles+='\n'+(ROOT/'wordpress/themes/kevcoachfit/vivid-activities.css').read_text()
  styles+='\n'+(ROOT/'wordpress/themes/kevcoachfit/lively-pages.css').read_text()
  styles+='\n'+(ROOT/'wordpress/themes/kevcoachfit/editorial-motion.css').read_text()
+ styles+='\n'+(ROOT/'wordpress/themes/kevcoachfit/ak-photos.css').read_text()
  styles=styles.replace('kcf-','kcf20-')
  styles+='''
 body:has(.kcf20-preview-root) .wp-site-blocks > header,
